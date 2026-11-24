@@ -1,0 +1,5 @@
+{
+  "origin": "results/baseline_v1",
+  "recorded_config": "run_config.json",
+  "note": "Original run configuration retained unchanged; experiment config.json sets the directory for future reruns."
+}

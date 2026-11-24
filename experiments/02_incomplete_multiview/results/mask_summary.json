@@ -1,0 +1,329 @@
+{
+  "definition": "fraction_of_samples_missing_exactly_one_view",
+  "masks": [
+    {
+      "pattern": "random",
+      "requested_rate": 0.2,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        2142,
+        2153
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.2,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        2150,
+        2145
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.2,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        2168,
+        2127
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.4,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1890,
+        1928
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.4,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1916,
+        1902
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.4,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1932,
+        1886
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.6,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1647,
+        1694
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.6,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1673,
+        1668
+      ]
+    },
+    {
+      "pattern": "random",
+      "requested_rate": 0.6,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1690,
+        1651
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.2,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1909,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.2,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1909,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.2,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1909,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.4,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1432,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.4,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1432,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.4,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1432,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.6,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        955,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.6,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        955,
+        2386
+      ]
+    },
+    {
+      "pattern": "single_view",
+      "requested_rate": 0.6,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        955,
+        2386
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.2,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        2071,
+        2224
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.2,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        2068,
+        2227
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.2,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.19991617770326908,
+      "missing_block_fraction": 0.09995808885163454,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        2062,
+        2233
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.4,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1738,
+        2080
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.4,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1740,
+        2078
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.4,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1732,
+        2086
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.6,
+      "seed": 1,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1381,
+        1960
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.6,
+      "seed": 2,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1399,
+        1942
+      ]
+    },
+    {
+      "pattern": "class_related",
+      "requested_rate": 0.6,
+      "seed": 3,
+      "incomplete_sample_fraction": 0.5997485331098072,
+      "missing_block_fraction": 0.2998742665549036,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1379,
+        1962
+      ]
+    }
+  ]
+}

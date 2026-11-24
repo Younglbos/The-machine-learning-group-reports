@@ -1,0 +1,6 @@
+-r requirements.txt
+munkres==1.1.4
+einops==0.8.1
+h5py>=3.10
+tqdm>=4.48
+# Install the CUDA-compatible PyTorch build separately, as documented in README.md.

@@ -1,0 +1,42 @@
+[
+  {
+    "kind": "paper",
+    "name": "MIMB_2024.pdf",
+    "url": "https://arxiv.org/pdf/2405.10987",
+    "source": "https://arxiv.org/abs/2405.10987"
+  },
+  {
+    "kind": "paper",
+    "name": "DSVC_ICML2025.pdf",
+    "url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/yuan25d/yuan25d.pdf",
+    "source": "https://proceedings.mlr.press/v267/yuan25d.html"
+  },
+  {
+    "kind": "paper",
+    "name": "HSACC_NeurIPS2025.pdf",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/4b2a917e30e1bb1aff055b4d8c6c081c-Paper-Conference.pdf",
+    "source": "https://papers.nips.cc/paper_files/paper/2025/hash/4b2a917e30e1bb1aff055b4d8c6c081c-Abstract-Conference.html"
+  },
+  {
+    "kind": "paper",
+    "name": "Survey_IMC_2022_preprint.pdf",
+    "url": "https://arxiv.org/pdf/2208.08040",
+    "source": "https://ieeexplore.ieee.org/document/9845473"
+  },
+  {
+    "kind": "code",
+    "name": "HSACC_author_code.zip",
+    "url": "https://codeload.github.com/XiaojianDing/2025-NeurIPS-HSACC/zip/eb53c217a1e1ac7f8550978981e762f33cce4c97",
+    "source": "https://github.com/XiaojianDing/2025-NeurIPS-HSACC",
+    "commit": "eb53c217a1e1ac7f8550978981e762f33cce4c97",
+    "extract_to": "HSACC"
+  },
+  {
+    "kind": "code",
+    "name": "DSVC_author_code.zip",
+    "url": "https://codeload.github.com/hl-yuan/DSVC/zip/0fb55660b2418b20d9ac7cd6ed0118522a324878",
+    "source": "https://github.com/hl-yuan/DSVC",
+    "commit": "0fb55660b2418b20d9ac7cd6ed0118522a324878",
+    "extract_to": "DSVC"
+  }
+]

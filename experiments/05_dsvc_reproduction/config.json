@@ -1,0 +1,6 @@
+{
+  "dataset": "HandWritten",
+  "seeds": "11,21,22",
+  "epochs": 200,
+  "output": "experiments/05_dsvc_reproduction/results"
+}

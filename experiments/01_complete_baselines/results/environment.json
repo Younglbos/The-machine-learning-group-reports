@@ -1,0 +1,17 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+  "logical_cpus": 16,
+  "gpu": "NVIDIA GeForce RTX 5070, 12227 MiB, 610.88",
+  "packages": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "pandas": "3.0.2",
+    "torch": null,
+    "threadpoolctl": "3.6.0"
+  },
+  "memory_protocol": "absolute process working set sampled every 20 ms; includes shared data and libraries; not an isolated algorithm allocation"
+}

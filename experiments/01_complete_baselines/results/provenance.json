@@ -1,0 +1,6 @@
+{
+  "origin": "direct experiment execution",
+  "config_source": "experiments/01_complete_baselines/config.json",
+  "recorded_config": "run_config.json",
+  "stage": "complete"
+}

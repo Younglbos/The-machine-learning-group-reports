@@ -1,0 +1,54 @@
+{
+  "datasets": [
+    {
+      "name": "BBC4view.mat",
+      "source_url": "https://github.com/ChuanbinZhang/Multi-view-datasets/blob/master/BBC4view.mat",
+      "download_url": "https://raw.githubusercontent.com/ChuanbinZhang/Multi-view-datasets/master/BBC4view.mat",
+      "expected_bytes": 326766,
+      "git_blob_sha1": "916836f021fbbe840dff3071ef4f01225011e627",
+      "view_key": "X",
+      "label_key": "y",
+      "read_note": "The source file contains 983 trailing bytes after X and y. Read only variable_names=['X', 'y']; raw file is preserved unchanged.",
+      "local_path": "data/raw/BBC4view.mat",
+      "sha256": "b319f3887f068064c8608753fcc9e49b8d437b025266f52f47b1b39c44f01500",
+      "verified": true
+    },
+    {
+      "name": "BBCSport.mat",
+      "source_url": "https://github.com/ChuanbinZhang/Multi-view-datasets/blob/master/BBCSport.mat",
+      "download_url": "https://raw.githubusercontent.com/ChuanbinZhang/Multi-view-datasets/master/BBCSport.mat",
+      "expected_bytes": 873335,
+      "git_blob_sha1": "95384fc1c3e65efe686508a8accb26bc45f515c0",
+      "view_key": "X",
+      "label_key": "y",
+      "local_path": "data/raw/BBCSport.mat",
+      "sha256": "98dbf2c405c132cc7e6558fd5da904626e7069915c510392e71baeaf4925d708",
+      "verified": true
+    },
+    {
+      "name": "Caltech101-20.mat",
+      "source_url": "https://github.com/XLearning-SCU/2021-CVPR-Completer/blob/main/data/Caltech101-20.mat",
+      "download_url": "https://raw.githubusercontent.com/XLearning-SCU/2021-CVPR-Completer/main/data/Caltech101-20.mat",
+      "expected_bytes": 36482487,
+      "git_blob_sha1": "f61831f54343b90b1adc8da218a98ee855fe8974",
+      "view_key": "X",
+      "label_key": "Y",
+      "local_path": "data/raw/Caltech101-20.mat",
+      "sha256": "aa51f62a9f37e177fb74abf7eab1bbe8c9a160e831835e20c3ff292793ac5658",
+      "verified": true
+    },
+    {
+      "name": "NUS-WIDE.mat",
+      "source_url": "https://github.com/ChuanbinZhang/Multi-view-datasets/blob/master/NUS-WIDE.mat",
+      "download_url": "https://raw.githubusercontent.com/ChuanbinZhang/Multi-view-datasets/master/NUS-WIDE.mat",
+      "expected_bytes": 9981162,
+      "git_blob_sha1": "7d27532e7e949a17578d399c15ae82a2980ceb76",
+      "view_key": "X",
+      "label_key": "y",
+      "local_path": "data/raw/NUS-WIDE.mat",
+      "sha256": "f1171f38374ea3645975de25ebc4b71f077a4365270906d6aadfc76118b7cf84",
+      "verified": true
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,9 @@
+{
+  "protocol": "author",
+  "seeds": "1,2,3",
+  "rates": "0.5",
+  "patterns": "random",
+  "epochs": 500,
+  "variant": "full",
+  "output": "experiments/04_hsacc_reproduction/results"
+}

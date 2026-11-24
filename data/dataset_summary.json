@@ -1,0 +1,291 @@
+[
+  {
+    "name": "BBC4view.mat",
+    "samples": 685,
+    "views": 4,
+    "classes": 5,
+    "feature_dimensions": [
+      4659,
+      4633,
+      4665,
+      4684
+    ],
+    "class_counts": {
+      "1": 134,
+      "2": 82,
+      "3": 226,
+      "4": 70,
+      "5": 173
+    },
+    "view_details": [
+      {
+        "view": 1,
+        "shape": [
+          685,
+          4659
+        ],
+        "dtype": "uint8",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 2,
+        "shape": [
+          685,
+          4633
+        ],
+        "dtype": "uint8",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 3,
+        "shape": [
+          685,
+          4665
+        ],
+        "dtype": "uint8",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 4,
+        "shape": [
+          685,
+          4684
+        ],
+        "dtype": "uint8",
+        "sparse": false,
+        "zero_rows": 0
+      }
+    ],
+    "all_features_finite": true,
+    "sample_counts_match": true,
+    "source_url": "https://github.com/ChuanbinZhang/Multi-view-datasets/blob/master/BBC4view.mat"
+  },
+  {
+    "name": "BBCSport.mat",
+    "samples": 544,
+    "views": 2,
+    "classes": 5,
+    "feature_dimensions": [
+      3183,
+      3203
+    ],
+    "class_counts": {
+      "1": 62,
+      "2": 104,
+      "3": 193,
+      "4": 124,
+      "5": 61
+    },
+    "view_details": [
+      {
+        "view": 1,
+        "shape": [
+          544,
+          3183
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 2,
+        "shape": [
+          544,
+          3203
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      }
+    ],
+    "all_features_finite": true,
+    "sample_counts_match": true,
+    "source_url": "https://github.com/ChuanbinZhang/Multi-view-datasets/blob/master/BBCSport.mat"
+  },
+  {
+    "name": "NUS-WIDE.mat",
+    "samples": 2400,
+    "views": 5,
+    "classes": 12,
+    "feature_dimensions": [
+      64,
+      144,
+      73,
+      128,
+      225
+    ],
+    "class_counts": {
+      "1": 200,
+      "2": 200,
+      "3": 200,
+      "4": 200,
+      "5": 200,
+      "6": 200,
+      "7": 200,
+      "8": 200,
+      "9": 200,
+      "10": 200,
+      "11": 200,
+      "12": 200
+    },
+    "view_details": [
+      {
+        "view": 1,
+        "shape": [
+          2400,
+          64
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 2,
+        "shape": [
+          2400,
+          144
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 3,
+        "shape": [
+          2400,
+          73
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 4,
+        "shape": [
+          2400,
+          128
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 5,
+        "shape": [
+          2400,
+          225
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      }
+    ],
+    "all_features_finite": true,
+    "sample_counts_match": true,
+    "source_url": "https://github.com/ChuanbinZhang/Multi-view-datasets/blob/master/NUS-WIDE.mat"
+  },
+  {
+    "name": "Caltech101-20.mat",
+    "samples": 2386,
+    "views": 6,
+    "classes": 20,
+    "feature_dimensions": [
+      48,
+      40,
+      254,
+      1984,
+      512,
+      928
+    ],
+    "class_counts": {
+      "1": 435,
+      "2": 200,
+      "3": 798,
+      "4": 33,
+      "5": 98,
+      "6": 50,
+      "7": 123,
+      "8": 52,
+      "9": 67,
+      "10": 34,
+      "11": 54,
+      "12": 47,
+      "13": 59,
+      "14": 35,
+      "15": 45,
+      "16": 64,
+      "17": 37,
+      "18": 56,
+      "19": 39,
+      "20": 60
+    },
+    "view_details": [
+      {
+        "view": 1,
+        "shape": [
+          2386,
+          48
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 2,
+        "shape": [
+          2386,
+          40
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 3,
+        "shape": [
+          2386,
+          254
+        ],
+        "dtype": "uint16",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 4,
+        "shape": [
+          2386,
+          1984
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 5,
+        "shape": [
+          2386,
+          512
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      },
+      {
+        "view": 6,
+        "shape": [
+          2386,
+          928
+        ],
+        "dtype": "float64",
+        "sparse": false,
+        "zero_rows": 0
+      }
+    ],
+    "all_features_finite": true,
+    "sample_counts_match": true,
+    "source_url": "https://github.com/XLearning-SCU/2021-CVPR-Completer/blob/main/data/Caltech101-20.mat"
+  }
+]
