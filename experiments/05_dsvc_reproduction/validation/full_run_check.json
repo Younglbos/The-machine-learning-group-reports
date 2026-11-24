@@ -1,0 +1,8 @@
+{
+  "status": "passed_configured_budget",
+  "records": 18,
+  "prediction_files_match_reported_metrics": true,
+  "complete_paper_reproduction": false,
+  "course_design_complete": false,
+  "note": "One dataset/configuration at the author code budget, not all tables or course extension experiments."
+}

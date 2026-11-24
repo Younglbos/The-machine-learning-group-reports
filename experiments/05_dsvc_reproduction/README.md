@@ -1,6 +1,6 @@
 # 实验05 DSVC论文复现
 
-**状态：作者源码已按固定提交获取，适配入口已编写；尚未完成训练验证，没有本地论文复现指标。**
+**状态：已完成已有Conda环境的六视图短流程验证，以及HandWritten上200轮/视图、3种子的完整预算运行。** 这只覆盖一个数据集；原论文其余设置及课程统一协议实验尚未完成。短流程结果单独保存在 `validation/`，不作为论文性能结果。
 
 ## 论文与源码
 
@@ -20,11 +20,11 @@
 本实验需要可用的CUDA GPU。先完成根README中的依赖与作者资源下载，再运行：
 
 ```powershell
-python experiments/05_dsvc_reproduction/run.py --smoke
-python experiments/05_dsvc_reproduction/run.py
+python scripts/run_in_environment.py experiments/05_dsvc_reproduction/run.py --smoke
+python scripts/run_in_environment.py experiments/05_dsvc_reproduction/run.py
 ```
 
-短流程为2轮/视图、1个种子，保存到 `smoke_results/`；原预算为200轮/视图，使用作者种子列表中的前3个11、21、22。
+短流程为2轮/视图、1个种子，保存到 `smoke_results/`；原预算为200轮/视图，使用作者种子列表中的前3个11、21、22。运行前按根README指定已有解释器，启动器将临时文件和缓存统一重定向到项目 `.cache/`，不安装PyTorch。
 
 ## 协议与边界
 
@@ -35,5 +35,21 @@ python experiments/05_dsvc_reproduction/run.py
 当前入口保留已安装scikit-learn版本的K-means默认 `n_init` 并记录其值；这与作者旧依赖的默认值可能不同，是正式复现前必须核对的兼容差异。
 
 预期输出 `runs.csv`、`summary.csv`、环境与配置、每个视图的标签和新视图表示、时间、GPU峰值分配、历史嵌入与原型缓冲大小。作者训练包含周期评估，耗时单独标注。
+
+## 当前已运行结果
+
+采用已有Conda环境：Python 3.10.20、PyTorch 2.11.0+cu128、RTX 5070。最终第6个视图到达后的3种子统计为：
+
+| 指标 | 均值±样本标准差 |
+| --- | --- |
+| ACC | 83.53% ± 11.06个百分点 |
+| NMI | 84.68% ± 4.80个百分点 |
+| ARI | 79.17% ± 9.81个百分点 |
+
+三个种子的最终ACC分别为73.00%、95.05%、82.55%；波动较大，不能以最好一次代表结果。平均累计运行时间约132.36±0.73秒，包含作者周期评估及各视图的聚类。每阶段结果见 `results/runs.csv` 与 `results/summary.csv`，已与保存的预测逐条核对。
+
+![视图流聚类指标](results/figures/view_stream_metrics.png)
+
+该曲线呈现的是同一批对象逐步增加视图的结果。视图数量增多并不保证每个种子或每个指标单调提升；不将其作为新增样本流或课程显式漂移实验的结果。
 
 该作者原协议不能直接替代实验03的课程样本流对照；要完成场景B，还需在一致数据与协议下比较在线改进方法、加入显式漂移条件，并审查历史访问、固定时间预算和遗忘分析。

@@ -1,6 +1,8 @@
 # 实验04 HSACC论文复现
 
-**状态：作者源码已按固定提交获取，适配入口已编写；完整训练与GPU运行验证尚未完成，没有本地论文复现指标。**
+**状态：已在现有Conda环境中完成5轮短流程，以及Caltech101-20上500轮、3个数据种子的作者代码运行。** 这只覆盖原论文的一个缺失参数和一个数据集；论文表格一致性及课程统一协议实验仍待完成。
+
+环境为Python 3.10.20、PyTorch 2.11.0+cu128、RTX 5070，详细版本在 `validation/environment.json`。该环境与论文环境不同，不能把结果差异简单解释为算法差异。
 
 ## 论文与源码
 
@@ -21,11 +23,33 @@
 先按根README安装基线和深度学习依赖、下载数据及作者资源，再运行：
 
 ```powershell
-python experiments/04_hsacc_reproduction/run.py --smoke
-python experiments/04_hsacc_reproduction/run.py
+python scripts/run_in_environment.py experiments/04_hsacc_reproduction/run.py --smoke
+python scripts/run_in_environment.py experiments/04_hsacc_reproduction/run.py
 ```
 
-短流程为5轮、1个种子，保存在 `smoke_results/`；完整配置为500轮、3个种子，保存在 `results/`。完整结果出现前，不报告论文方法已复现。
+短流程为5轮、1个种子，保存在 `smoke_results/`；完整配置为500轮、3个种子，保存在 `results/`。运行前按根README指定已有解释器，启动器将所有临时文件和缓存放在项目 `.cache/`，不安装PyTorch。
+
+## 当前已运行结果
+
+参数为作者生成器 `missing_rate=0.5`，实际缺失块约12.3%—12.6%，并不是50%的视图块缺失。
+
+| 固定最后一轮指标 | 3个数据种子的均值±样本标准差 |
+| --- | --- |
+| ACC | 71.88% ± 8.26个百分点 |
+| NMI | 71.59% ± 1.74个百分点 |
+| ARI | 78.38% ± 12.57个百分点 |
+
+数值来自 `results/runs.csv` 和 `results/summary.csv`；不挑选最好种子。作者周期评估的最好结果另保存在 `upstream_best_*`，没有替代本表。训练耗时约52.17±4.27秒/次，包含作者的周期评估，不与纯K-means拟合时间直接等同。
+
+![周期评估曲线](results/figures/training_metrics.png)
+
+![邻域保持情况](results/figures/neighborhood_overlap.png)
+
+![表示的二维PCA](results/figures/representation_pca.png)
+
+在本配置的编码空间中，缺失行的10邻域重合率仅约6.6%，已观测行约89%。这表明较高聚类指标不等于恢复了真实样本的局部邻域；不能只展示补全后有利的聚类分数。该诊断使用训练后编码的完整真值作为参考，不是原始特征空间的重建误差。完整定量数据在 `results/neighborhood_runs.csv`、`results/neighborhood_summary.csv`。
+
+二维图使用种子1，四个面板分别拟合PCA，坐标尺度不能直接比较；颜色来自评估标签，不参与训练。
 
 ## 协议与适配说明
 

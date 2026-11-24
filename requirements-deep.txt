@@ -1,6 +1,12 @@
--r requirements.txt
+# Observed Conda environment used for GPU validation. PyTorch is reused, not installed.
+# Do not bulk-install over an existing working environment; use the launcher and add only missing packages.
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.7.1
+matplotlib==3.10.9
+pandas==2.3.3
+threadpoolctl==3.5.0
 munkres==1.1.4
-einops==0.8.1
-h5py>=3.10
-tqdm>=4.48
-# Install the CUDA-compatible PyTorch build separately, as documented in README.md.
+einops==0.8.0
+h5py==3.14.0
+tqdm==4.67.3

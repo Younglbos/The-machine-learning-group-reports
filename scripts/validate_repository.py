@@ -1,5 +1,6 @@
 """Validate experiment documentation, local Markdown links and recorded run counts."""
 
+import argparse
 import csv
 import json
 from pathlib import Path
@@ -9,6 +10,9 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--include-paper-results',action='store_true')
+    args=parser.parse_args()
     experiments=sorted((ROOT/'experiments').glob('[0-9][0-9]_*'))
     if len(experiments)!=5:
         raise ValueError('Expected five documented experiments')
@@ -36,7 +40,23 @@ def main():
             for field in ['acc','nmi','ari']:
                 value=float(row[field])
                 if not -1<=value<=1: raise ValueError(f'Invalid {field}: {filename}')
-    print('Verified 5 experiment directories, documentation links and 396 recorded evaluations.')
+    paper_records=0
+    if args.include_paper_results:
+        checks=[('04_hsacc_reproduction/results/runs.csv',3,{1,2,3},'epochs',500),
+                ('05_dsvc_reproduction/results/runs.csv',18,{11,21,22},'epochs_per_view',200)]
+        for filename,count,seeds,epoch_key,epochs in checks:
+            with (ROOT/'experiments'/filename).open(encoding='utf-8-sig',newline='') as source:
+                rows=list(csv.DictReader(source))
+            if len(rows)!=count or {int(row['seed']) for row in rows}!=seeds:
+                raise ValueError(f'Incomplete paper-code results: {filename}')
+            if any(row['run_type']!='full_length' or int(row[epoch_key])!=epochs for row in rows):
+                raise ValueError(f'Smoke or unexpected budget in full results: {filename}')
+            for row in rows:
+                for metric in ['acc','nmi','ari']:
+                    if not -1<=float(row[metric])<=1:
+                        raise ValueError(f'Invalid {metric}: {filename}')
+            paper_records+=len(rows)
+    print(f'Verified 5 experiment directories, documentation links, 396 baseline records and {paper_records} requested paper-code records.')
 
 
 if __name__=='__main__': main()

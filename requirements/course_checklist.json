@@ -45,13 +45,23 @@
     {
       "id": "A4",
       "requirement": "实现视图内编码/降维、共识融合和聚类；在至少2种缺失率下稳定改进，或给出失败分析。",
-      "status": "pending",
-      "note": "HSACC为论文方法候选；下载源码不代表已实现或已复现，采用前需核对论文与代码。"
+      "status": "partial",
+      "note": "HSACC为论文方法候选；下载源码不代表已实现或已复现，采用前需核对论文与代码。",
+      "evidence": [
+        "experiments/04_hsacc_reproduction/results/summary.csv",
+        "experiments/04_hsacc_reproduction/validation/full_run_check.json"
+      ],
+      "progress_note": "作者单配置500轮、3种子已完成；课程统一缺失率和基线下的改进/失败对照待完成。"
     },
     {
       "id": "A5",
       "requirement": "比较真实视图、补全视图、共识表示的邻域一致性；提供至少2张可视化图和定量分析。",
-      "status": "pending"
+      "status": "partial",
+      "evidence": [
+        "experiments/04_hsacc_reproduction/results/figures",
+        "experiments/04_hsacc_reproduction/results/neighborhood_summary.csv"
+      ],
+      "progress_note": "作者协议已有表示PCA、邻域图及定量分析；课程协议下还需验证。"
     },
     {
       "id": "A_key_experiments",
@@ -87,8 +97,13 @@
     {
       "id": "B3",
       "requirement": "视图权重、共识原型或共识图在线更新，每批不超过预先固定的时间预算。",
-      "status": "pending",
-      "note": "运行前声明预算，超时照实记录，不在看到结果后修改阈值。"
+      "status": "partial",
+      "note": "运行前声明预算，超时照实记录，不在看到结果后修改阈值。",
+      "evidence": [
+        "experiments/05_dsvc_reproduction/results/summary.csv",
+        "experiments/05_dsvc_reproduction/validation/full_run_check.json"
+      ],
+      "progress_note": "作者六视图、200轮/视图、3种子已完成；课程统一数据与预先固定时间预算的验证待完成。"
     },
     {
       "id": "B4",
@@ -151,7 +166,7 @@
         "experiments/02_incomplete_multiview/results",
         "experiments/03_streaming_baselines/results"
       ],
-      "progress_note": "基线3种子、配置、日志、标签和CSV已在本地保存；GitHub保留CSV和图表，标签可重跑生成。论文训练与最终报告待完成。"
+      "progress_note": "基线及两个作者单配置运行已保存配置、环境、种子、日志、最终标签和CSV；完整课程扩展与最终报告待完成。"
     },
     {
       "id": "literature",

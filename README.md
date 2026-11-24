@@ -2,7 +2,7 @@
 
 本仓库按课程任务书实现不完整多视图聚类与多视图流式聚类，并整理 HSACC、DSVC 的论文复现入口。
 
-**当前进度：传统基线已运行并保存真实结果；两篇论文的复现入口已编写，尚未完成训练验证。** 本仓库目前是阶段性实验代码，不代表课程设计或论文复现已经全部完成。
+**当前进度：传统基线已运行；HSACC和DSVC均已在已有Conda环境完成单数据集、单配置的完整预算运行和3种子统计。** 本仓库目前是阶段性实验代码，不代表原论文全部表格或课程设计已经全部完成。
 
 ## 实验目录
 
@@ -13,12 +13,38 @@
 | [01_complete_baselines](experiments/01_complete_baselines/) | 4个数据集的完整特征拼接和各单视图 K-means | 已运行，3个种子 | 63条评测记录 |
 | [02_incomplete_multiview](experiments/02_incomplete_multiview/) | 随机、单视图集中、类别相关缺失；零/均值填充；完整数据参考 | 基线已运行，3个种子 | 54条缺失实验与9条匹配视图参考 |
 | [03_streaming_baselines](experiments/03_streaming_baselines/) | warm-start、滑动窗口、全量重训练；无漂移、均值漂移、视图噪声 | 基线已运行，3个种子 | 270条批次评测记录 |
-| [04_hsacc_reproduction](experiments/04_hsacc_reproduction/) | HSACC，NeurIPS 2025，不完整视图 | 入口已实现，待训练验证 | 暂无论文复现指标 |
-| [05_dsvc_reproduction](experiments/05_dsvc_reproduction/) | DSVC，ICML 2025，视图流 | 入口已实现，待训练验证 | 暂无论文复现指标 |
+| [04_hsacc_reproduction](experiments/04_hsacc_reproduction/) | HSACC，NeurIPS 2025，不完整视图 | 已完成单配置500轮、3个数据种子 | 3条最终指标、邻域分析和图表 |
+| [05_dsvc_reproduction](experiments/05_dsvc_reproduction/) | DSVC，ICML 2025，视图流 | 已完成单数据集6视图、200轮/视图、3种子 | 18条视图阶段指标与曲线 |
 
 基线合计396条评测记录，均来自实际运行。流式实验的一条记录表示一个种子、条件、方法下的一个批次，不应当作一次独立的完整流实验。
 
-## 环境与快速开始
+另有21条完整预算作者代码记录：HSACC固定最后一轮ACC为71.88%±8.26个百分点；DSVC最终视图ACC为83.53%±11.06个百分点。两者使用不同数据和协议，不能互相比较高低，也不能直接与课程基线表作公平性能比较。短流程证据另存 `validation/`；最终指标已经逐条与本地预测文件核对。
+
+## 复用已有Conda环境
+
+本项目已切换到已有的 `Micro` 环境，使用其中的PyTorch，**不重新下载或安装PyTorch，也不修改原Conda环境**。已验证Python 3.10.20、PyTorch 2.11.0+cu128与RTX 5070能够完成CUDA前向/反向计算，两篇论文短流程均已跑通。
+
+在PowerShell中指定自己的解释器，以下路径是本项目的实际环境示例：
+
+```powershell
+$env:MVC_PYTHON = 'D:\Anconda\envs\Micro\python.exe'
+python scripts/run_in_environment.py --show-runtime
+python scripts/run_in_environment.py -- -m unittest discover -s tests -v
+python scripts/run_in_environment.py experiments/04_hsacc_reproduction/run.py --smoke
+python scripts/run_in_environment.py experiments/05_dsvc_reproduction/run.py --smoke
+```
+
+启动器只借用所指定的解释器，将 `TEMP`、`TMP`、pip、PyTorch、CUDA和Matplotlib缓存等重定向到项目的 `.cache/`。本项目位于D盘，因此临时文件和缓存也位于D盘；不修改系统全局环境变量。可在本地忽略的 `.cache/runtime.json` 保存解释器路径，`MVC_PYTHON`或 `--python`可覆盖它。
+
+缺少的小型附加包可安装到项目目录，不改动Conda环境。例如本机仅缺少 `munkres`，已从本地wheel安装到 `.cache/python_deps/`，启动器会自动加入该目录。另一台机器缺少该包时可运行：
+
+```powershell
+python scripts/run_in_environment.py -- -m pip install --no-deps --target .cache/python_deps munkres==1.1.4
+```
+
+这条命令只补充 `munkres`，不安装PyTorch。**不要在已有环境中直接批量安装旧版依赖清单**，以免覆盖可用的PyTorch或其他依赖。
+
+## 原始CPU基线环境与快速开始
 
 已验证的基线环境为 Windows 11、Python 3.12.10，具体依赖固定在 [requirements.txt](requirements.txt)。以下是 PowerShell 命令；Linux/macOS 将 `.venv\Scripts\python.exe` 换成 `.venv/bin/python`。
 
@@ -26,10 +52,10 @@
 git clone https://github.com/Younglbos/The-machine-learning-group-reports.git
 cd The-machine-learning-group-reports
 python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe scripts/download_datasets.py
-.venv\Scripts\python.exe scripts/inspect_datasets.py
-.venv\Scripts\python.exe -m unittest discover -s tests -v
+python scripts/run_in_environment.py --python .venv/Scripts/python.exe -- -m pip install -r requirements.txt
+python scripts/run_in_environment.py --python .venv/Scripts/python.exe scripts/download_datasets.py
+python scripts/run_in_environment.py --python .venv/Scripts/python.exe scripts/inspect_datasets.py
+python scripts/run_in_environment.py --python .venv/Scripts/python.exe -- -m unittest discover -s tests -v
 ```
 
 按实验分别运行：
@@ -44,21 +70,19 @@ python -m venv .venv
 
 本仓库提供已运行的 CSV 和图表快照。原始运行配置保存在各结果目录的 `run_config.json`；实验根目录的 `config.json` 使用拆分后的输出位置。`provenance.json` 记录两者的关系，不会把新配置冒充为旧结果的运行配置。
 
-## 论文复现的额外环境
+## 论文资源与启动命令
 
-两篇论文均使用 PyTorch。先下载固定版本的作者源码，再安装相应依赖：
+两篇论文均使用已有环境中的PyTorch。下载固定版本的作者源码后，通过上面的启动器运行：
 
 ```powershell
-.venv\Scripts\python.exe scripts/download_references.py
-.venv\Scripts\python.exe -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128
-.venv\Scripts\python.exe -m pip install -r requirements-deep.txt
-.venv\Scripts\python.exe experiments/04_hsacc_reproduction/run.py --smoke
-.venv\Scripts\python.exe experiments/05_dsvc_reproduction/run.py --smoke
+python scripts/run_in_environment.py scripts/download_references.py
+python scripts/run_in_environment.py experiments/04_hsacc_reproduction/run.py --smoke
+python scripts/run_in_environment.py experiments/05_dsvc_reproduction/run.py --smoke
 ```
 
-上面的 CUDA 12.8 构建针对本项目检测到的 RTX 5070；其他硬件应按 [PyTorch官方安装说明](https://pytorch.org/get-started/locally/)选择构建。CUDA 版安装包较大。HSACC入口也允许CPU运行；DSVC作者实现直接调用 `.cuda()`，需要可用的CUDA设备。
+本机已有PyTorch构建支持CUDA 12.8和RTX 5070。HSACC入口也允许CPU运行；DSVC作者实现直接调用 `.cuda()`，需要可用的CUDA设备。
 
-`--smoke` 只检验短流程，不构成论文指标复现。完整命令、参数及协议差异见各论文实验目录 README。当前尚未形成经过完整训练验证的深度学习依赖锁定文件，不能把这些安装命令视为已验证环境结果。
+`--smoke` 只检验短流程，不构成论文指标复现。完整命令、参数及协议差异见各论文实验目录 README。原始CPU基线与现用Conda环境版本不同，各次运行的环境记录分别保存，不能把两者混写。
 
 ## 数据与协议
 
@@ -99,7 +123,7 @@ third_party/           运行下载脚本后生成，Git忽略
 - 基线计时不含指标、Silhouette和文件保存；流式时间包含当前批预处理和聚类更新。神经网络作者训练包含周期评估，另列时间字段，不与纯K-means计时直接等同。
 - `peak_rss_mb` 是20毫秒采样的整个进程工作集峰值，包含共享数据和库，未隔离成各算法独占内存。`model_state_mb` 单独统计流式聚类器保留的数组，不包含共享编码器、解释器等开销。
 - 真实类别只用于评估和明确标注的类别相关缺失模拟；不用于学习中心或选择课程主结果的最佳轮次。
-- 当前缺失实验、漂移基线与论文原协议分开记录。尚缺论文完整训练、改进方法公平对照、消融、表示质量图、最终报告与答辩材料，详见 [课程验收清单](requirements/course_checklist.json)。
+- 当前缺失实验、漂移基线与论文原协议分开记录。尚缺跨论文设置的复现实验、课程统一协议下的改进方法对照、消融、鲁棒性、隔离效率测量、最终报告与答辩材料，详见 [课程验收清单](requirements/course_checklist.json)。
 
 ## 第三方来源
 

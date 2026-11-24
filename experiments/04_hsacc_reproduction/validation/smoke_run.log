@@ -1,0 +1,4 @@
+2026-11-24 20:44:09,417 HSACC protocol=author seed=1 rate_parameter=0.50 epochs=5
+2026-11-24 20:44:09,417 Actual mask statistics: {'incomplete_sample_fraction': 0.250628667225482, 'missing_block_fraction': 0.125314333612741, 'fully_unobserved_samples': 0, 'observed_per_view': [2076, 2098]}
+2026-11-24 20:44:18,347 [2;29mEpoch : 5/5 ===> Total loss = -5.2399e+03[0m
+2026-11-24 20:44:19,476 Fixed final epoch: ACC=0.3483 NMI=0.4472 ARI=0.2439

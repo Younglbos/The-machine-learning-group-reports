@@ -1,0 +1,24 @@
+[
+  {
+    "view": 1,
+    "missing_samples": 310,
+    "k": 10,
+    "completion_overlap_all": 0.783151718357083,
+    "completion_overlap_missing": 0.06129032258064516,
+    "completion_overlap_observed": 0.8909441233140657,
+    "consensus_overlap_with_true_view": 0.2826068734283319,
+    "true_neighbor_label_purity": 0.7726739312657167,
+    "completed_neighbor_label_purity": 0.7671416596814753
+  },
+  {
+    "view": 2,
+    "missing_samples": 288,
+    "k": 10,
+    "completion_overlap_all": 0.7851634534786254,
+    "completion_overlap_missing": 0.05416666666666667,
+    "completion_overlap_observed": 0.8855100095328885,
+    "consensus_overlap_with_true_view": 0.3778290025146689,
+    "true_neighbor_label_purity": 0.7556999161777033,
+    "completed_neighbor_label_purity": 0.7517183570829841
+  }
+]
