@@ -1,0 +1,6 @@
+2026-11-24 21:43:24,137 random rate=0.40 seed=1 zero ACC=0.3039
+2026-11-24 21:43:26,789 random rate=0.40 seed=1 mean ACC=0.4359
+2026-11-24 21:43:29,396 random rate=0.40 seed=2 zero ACC=0.2967
+2026-11-24 21:43:31,974 random rate=0.40 seed=2 mean ACC=0.4489
+2026-11-24 21:43:34,332 random rate=0.40 seed=3 zero ACC=0.2678
+2026-11-24 21:43:37,064 random rate=0.40 seed=3 mean ACC=0.4589

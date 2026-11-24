@@ -45,33 +45,36 @@
     {
       "id": "A4",
       "requirement": "实现视图内编码/降维、共识融合和聚类；在至少2种缺失率下稳定改进，或给出失败分析。",
-      "status": "partial",
-      "note": "HSACC为论文方法候选；下载源码不代表已实现或已复现，采用前需核对论文与代码。",
+      "status": "complete",
+      "note": "作者代码试验与课程统一协议分开报告，固定最终轮，不以最佳标签指标选模型。",
       "evidence": [
-        "experiments/04_hsacc_reproduction/results/summary.csv",
-        "experiments/04_hsacc_reproduction/validation/full_run_check.json"
+        "reports/scenario_a_paired_gains.csv",
+        "reports/course_report.html"
       ],
-      "progress_note": "作者单配置500轮、3种子已完成；课程统一缺失率和基线下的改进/失败对照待完成。"
+      "progress_note": "统一协议三个随机缺失比例的三个种子均相对均值填充为正收益；固定500轮，不按标签挑选轮次。"
     },
     {
       "id": "A5",
       "requirement": "比较真实视图、补全视图、共识表示的邻域一致性；提供至少2张可视化图和定量分析。",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
-        "experiments/04_hsacc_reproduction/results/figures",
-        "experiments/04_hsacc_reproduction/results/neighborhood_summary.csv"
+        "reports/geometry_summary.csv",
+        "reports/figures/course_a_geometry_pca.png",
+        "reports/figures/course_a_geometry_neighbors.png"
       ],
-      "progress_note": "作者协议已有表示PCA、邻域图及定量分析；课程协议下还需验证。"
+      "progress_note": "真实原始特征、均值填充、解码补全与共识的10-NN误差分析及两张图已完成；隐藏真值仅离线诊断。"
     },
     {
       "id": "A_key_experiments",
       "requirement": "4.5节关键实验：缺失率、随机/单视图大面积/类别相关缺失、单视图加噪或删边、去一致性/去补全/去自适应权重消融。",
-      "status": "partial",
+      "status": "complete",
       "note": "将4.5节全部纳入执行范围。",
       "evidence": [
-        "experiments/02_incomplete_multiview/results/scenario_a_runs.csv"
+        "experiments/06_course_comparison/results_a/hsacc/runs.csv",
+        "reports/ablation_summary.csv",
+        "reports/robustness_summary.csv"
       ],
-      "progress_note": "缺失模式已运行；噪声、论文改进和消融尚未完成。"
+      "progress_note": "三模式、三比例、三个种子；去一致性/去补全/等权消融及单视图噪声完成；解释双视图等权退化。"
     },
     {
       "id": "B1",
@@ -79,10 +82,10 @@
       "status": "complete",
       "note": "DSVC原论文视图流与课程样本流不能混称；采用视图流时需满足批次数及历史访问约束。",
       "evidence": [
-        "experiments/03_streaming_baselines/config.json",
-        "train_or_update/run_baselines.py"
+        "experiments/06_course_comparison/config_b.json",
+        "models/view_stream.py"
       ],
-      "progress_note": "10批样本流、到达顺序及历史访问已明确并运行。"
+      "progress_note": "统一主实验为六视图流，明确对象顺序和历史摘要；原十批样本流另外保留，协议不混用。"
     },
     {
       "id": "B2",
@@ -90,63 +93,70 @@
       "status": "complete",
       "note": "全量重训练仅为任务书允许的比较参考，在线方法不得借此访问全部历史。",
       "evidence": [
-        "experiments/03_streaming_baselines/results/scenario_b_runs.csv"
+        "reports/scenario_b_summary.csv",
+        "reports/figures/course_b_time.png"
       ],
-      "progress_note": "三个指定基线，3个种子、3种漂移条件和10批结果均已保存。"
+      "progress_note": "统一六视图下warm-start、两批窗口和全量参考均完成3种子/2条件，报告单批及累计时间。"
     },
     {
       "id": "B3",
       "requirement": "视图权重、共识原型或共识图在线更新，每批不超过预先固定的时间预算。",
-      "status": "partial",
+      "status": "complete",
       "note": "运行前声明预算，超时照实记录，不在看到结果后修改阈值。",
       "evidence": [
-        "experiments/05_dsvc_reproduction/results/summary.csv",
-        "experiments/05_dsvc_reproduction/validation/full_run_check.json"
+        "experiments/06_course_comparison/config_b.json",
+        "experiments/06_course_comparison/results_b/verification.json"
       ],
-      "progress_note": "作者六视图、200轮/视图、3种子已完成；课程统一数据与预先固定时间预算的验证待完成。"
+      "progress_note": "DSVC课程适配仅跨批保留摘要/原型/中心；90秒预算运行前冻结，全部144条记录无超限。"
     },
     {
       "id": "B4",
       "requirement": "在第T/2批次改变类别比例、特征均值或视图噪声，对比无漂移与有漂移。",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
-        "experiments/03_streaming_baselines/results/scenario_b_runs.csv"
+        "reports/scenario_b_noise_effect.csv",
+        "reports/scenario_b_recovery.csv"
       ],
-      "progress_note": "基线已完成第5批均值/噪声变化与无漂移对照；在线改进方法待接入。"
+      "progress_note": "第3/6批视图加噪，对比完全相同种子的无漂移输入，保留配对噪声影响与未恢复情况。"
     },
     {
       "id": "B5",
       "requirement": "评价标签变化、遗忘与历史样本保留，给出性能—时间曲线和漂移前后对照。",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
-        "experiments/03_streaming_baselines/results/figures/history_retention.png",
-        "experiments/03_streaming_baselines/results/drift_recovery.csv"
+        "reports/figures/course_b_label_changes.png",
+        "reports/figures/course_b_retention.png",
+        "reports/scenario_b_recovery.csv"
       ],
-      "progress_note": "基线已有探针保留、标签变化、遗忘与恢复记录；改进方法及完整分析待完成。"
+      "progress_note": "匹配标签变化、固定旧表示探针、遗忘和恢复均已分析；报告查询空间差异的限制。"
     },
     {
       "id": "metrics",
       "requirement": "ACC进行最优标签匹配；报告ACC/NMI/ARI的重复实验均值与标准差、单批和总耗时、峰值内存、漂移恢复时间及下降幅度；辅助报告Silhouette与邻域保持率。",
-      "status": "partial",
-      "note": "计划固定3个种子1、2、3；任务书将至少3个种子表述为建议。恢复定义为达到漂移前性能90%的批次数，未恢复需明确标记。",
-      "progress_note": "基线主指标、时间、采样工作集和恢复量已记录；隔离内存测量、论文方法和完整表示分析待完成。"
+      "status": "complete",
+      "note": "A种子1/2/3，B种子11/21/22；均值±样本标准差；恢复为达到漂移前性能90%的批次数，未恢复单列。",
+      "progress_note": "ACC/NMI/ARI均值±样本SD，Silhouette、邻域，单批/总时长、原生峰值、GPU峰值和恢复均有证据。",
+      "evidence": [
+        "reports/scenario_a_summary.csv",
+        "reports/scenario_b_final.csv",
+        "reports/isolated_efficiency_summary.csv",
+        "reports/geometry_summary.csv"
+      ]
     },
     {
       "id": "figures",
       "requirement": "至少包含方法对比表、缺失率曲线、流式每批曲线、消融表、二维嵌入图、运行效率表；标注数据集、缺失率/批次、种子数和误差线。",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
-        "experiments/01_complete_baselines/results",
-        "experiments/02_incomplete_multiview/results",
-        "experiments/03_streaming_baselines/results"
+        "reports/figures",
+        "reports/course_report.html"
       ],
-      "progress_note": "基线对比、缺失率、流式性能、效率和保留图已生成；消融与二维嵌入待完成。"
+      "progress_note": "质量表、缺失曲线、逐批曲线、消融、二维PCA、效率与邻域图已生成并说明统计口径。"
     },
     {
       "id": "modules",
       "requirement": "代码包含data、models、train_or_update、evaluation、visualization五个模块。",
       "status": "complete",
-      "note": "目前只有下载、读取和检查工具，尚未完成实验系统模块。",
       "evidence": [
         "data",
         "models",
@@ -154,34 +164,40 @@
         "evaluation",
         "visualization"
       ],
-      "progress_note": "五个模块已建立并用于基线；论文入口尚未完成训练验证。"
+      "progress_note": "五个模块用于实际基线、作者试验和课程适配；12项协议测试通过。"
     },
     {
       "id": "reproducibility",
       "requirement": "固定随机种子，保存配置、日志、最终标签和结果CSV；列出软硬件、超参数和停止条件；报告均值及标准差。",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
-        "configs/baselines.json",
-        "experiments/01_complete_baselines/results",
-        "experiments/02_incomplete_multiview/results",
-        "experiments/03_streaming_baselines/results"
+        "reports/prediction_verification.json",
+        "reports/course_predictions.jsonl.gz",
+        "reports/course_report.html"
       ],
-      "progress_note": "基线及两个作者单配置运行已保存配置、环境、种子、日志、最终标签和CSV；完整课程扩展与最终报告待完成。"
+      "progress_note": "保存配置/环境/日志/标签/CSV；252条课程记录重算主指标；公开紧凑标签档案可无数据核验。"
     },
     {
       "id": "literature",
       "requirement": "文献真实可检索，说明研究缺口，区分正式发表与预印本/公开页面。",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
-        "THIRD_PARTY.md",
-        "references/download_sources.json"
+        "reports/literature_review.html",
+        "THIRD_PARTY.md"
       ],
-      "remaining": "完成精读、方法选择及可追溯文献综述；未核实条目不得作为已验证参考文献。"
+      "progress_note": "教师条目逐项核验，重点复现两篇；区分正式版本、预印本和摘要；第7条未核实，不冒充已确认文献。"
     },
     {
       "id": "delivery",
       "requirement": "提交最终报告、完整代码、演示/汇报材料。",
-      "status": "pending"
+      "status": "partial",
+      "evidence": [
+        "reports/course_report.html",
+        "scripts/demo_course.py",
+        "reports/README.md"
+      ],
+      "progress_note": "报告、代码与可运行演示已完成；PPT按用户要求最后制作，目前尚未交付PPT或完成现场答辩。"
     }
-  ]
+  ],
+  "ppt_status": "deferred_by_user"
 }

@@ -1,4 +1,8 @@
 {
-  "phase": "robustness_running",
-  "state": "running"
+  "phase": "experiments_complete",
+  "state": "complete",
+  "reporting_pending": false,
+  "report": "reports/course_report.html",
+  "prediction_records_verified": 252,
+  "ppt_status": "deferred_by_user"
 }

@@ -1,0 +1,10 @@
+﻿method,seed,dataset,rate,pattern,elapsed_s,process_peak_rss_mb,peak_gpu_mb,acc,timing_note
+zero,1,Caltech101-20 HOG/GIST,0.4,random,2.42886400000134,284.70703125,0.0,0.3097233864207879,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+mean,1,Caltech101-20 HOG/GIST,0.4,random,2.6211882999996305,284.6796875,0.0,0.3348700754400671,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+hsacc,1,Caltech101-20 HOG/GIST,0.4,random,42.19437039999866,1720.56640625,967.50830078125,0.7099748533109808,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+zero,2,Caltech101-20 HOG/GIST,0.4,random,2.5274753000012424,284.68359375,0.0,0.296311818943839,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+mean,2,Caltech101-20 HOG/GIST,0.4,random,2.4990527000009024,284.65234375,0.0,0.3520536462699078,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+hsacc,2,Caltech101-20 HOG/GIST,0.4,random,42.40246849999858,1721.375,967.50830078125,0.6982397317686505,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+zero,3,Caltech101-20 HOG/GIST,0.4,random,2.523746700000629,284.45703125,0.0,0.3432523051131601,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+mean,3,Caltech101-20 HOG/GIST,0.4,random,2.666996799998742,284.55859375,0.0,0.3495389773679799,HSACC includes periodic upstream evaluation; each case uses a fresh process.
+hsacc,3,Caltech101-20 HOG/GIST,0.4,random,41.9994714000004,1715.6796875,967.50830078125,0.7611064543168483,HSACC includes periodic upstream evaluation; each case uses a fresh process.

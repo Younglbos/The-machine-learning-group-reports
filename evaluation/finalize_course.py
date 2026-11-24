@@ -59,8 +59,15 @@ def main():
         check.update(status=status,evidence=evidence,progress_note=note)
         check.pop('remaining',None)
         if check['id']=='modules': check.pop('note',None)
+        if check['id']=='A4': check['note']='作者代码试验与课程统一协议分开报告，固定最终轮，不以最佳标签指标选模型。'
+        if check['id']=='metrics': check['note']='A种子1/2/3，B种子11/21/22；均值±样本标准差；恢复为达到漂移前性能90%的批次数，未恢复单列。'
     checklist['ppt_status']='deferred_by_user'
     file.write_text(json.dumps(checklist,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    private=ROOT/'requirements/acceptance.json'
+    if private.exists():
+        local=json.loads(private.read_text(encoding='utf-8'))
+        local.update(checks=checklist['checks'],ppt_status=checklist['ppt_status'])
+        private.write_text(json.dumps(local,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     saved.update(reporting_pending=False,report='reports/course_report.html',prediction_records_verified=252,ppt_status='deferred_by_user')
     progress.write_text(json.dumps(saved,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Experiment/report/code/demo checks complete. PPT remains deferred by the user.')

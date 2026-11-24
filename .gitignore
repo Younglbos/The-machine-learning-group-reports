@@ -23,4 +23,5 @@ experiments/**/results/labels/
 experiments/**/results/masks/
 experiments/**/results/streams/
 experiments/**/smoke_results/
+experiments/**/*.npz
 scripts/probe_torch_download.py

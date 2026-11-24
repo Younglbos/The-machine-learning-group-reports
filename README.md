@@ -2,7 +2,9 @@
 
 本仓库按课程任务书实现不完整多视图聚类与多视图流式聚类，并整理 HSACC、DSVC 的论文复现入口。
 
-**当前进度：课程A/B统一主实验已完成，消融正在运行，噪声与隔离效率随后执行。** A含3种缺失模式×3种比例×3种子，B含4种方法×2种漂移条件×3种子×6视图。每完成一个阶段同步GitHub；仍在运行的实验以目录内进度文件为准，不能视为最终结果。报告在实验核验后补齐，PPT按用户要求最后制作。
+**当前进度：课程A/B主实验、消融、单视图噪声、独立进程效率、误差分析和报告均已完成。** 252条课程预测记录已重新计算ACC/NMI/ARI，12项协议测试通过。PPT按用户要求最后制作，目前未制作PPT，也未完成现场答辩；不将作者单数据集试验说成整篇论文的全部复现。
+
+主文档：[实验报告（HTML）](reports/course_report.html)、[文献综述与教师条目核验](reports/literature_review.html)、[报告文件与演示说明](reports/README.md)。HTML报告下载后在浏览器打开，保留旁边的 `figures/` 文件夹。
 
 ## 实验目录
 
@@ -16,11 +18,23 @@
 | [04_hsacc_reproduction](experiments/04_hsacc_reproduction/) | HSACC，NeurIPS 2025，不完整视图 | 已完成单配置500轮、3个数据种子 | 3条最终指标、邻域分析和图表 |
 | [05_dsvc_reproduction](experiments/05_dsvc_reproduction/) | DSVC，ICML 2025，视图流 | 已完成单数据集6视图、200轮/视图、3种子 | 18条视图阶段指标与曲线 |
 | [06_course_comparison](experiments/06_course_comparison/) | 同一数据、掩码或视图流下的课程主比较 | A/B已完成 | A有81条缺失质量记录、9条完整参考；B有144条批次记录 |
-| [07_ablations_robustness](experiments/07_ablations_robustness/) | 去一致性、去补全、等权、单视图加噪与独立进程效率 | 配置冻结，排队执行 | 仅完成后计入结论 |
+| [07_ablations_robustness](experiments/07_ablations_robustness/) | 去一致性、去补全、等权、单视图加噪与独立进程效率 | 已完成，3种子 | 9条消融新增记录、9条加噪记录、9个独立效率病例 |
 
 基线合计396条评测记录，均来自实际运行。流式实验的一条记录表示一个种子、条件、方法下的一个批次，不应当作一次独立的完整流实验。
 
 另有21条完整预算作者代码记录：HSACC固定最后一轮ACC为71.88%±8.26个百分点；DSVC最终视图ACC为83.53%±11.06个百分点。两者使用不同数据和协议，不能互相比较高低，也不能直接与课程基线表作公平性能比较。短流程证据另存 `validation/`；最终指标已经逐条与本地预测文件核对。
+
+课程主结果另计：A为81条缺失质量记录及9条完整参考，B为144条逐批记录，新增消融与噪声各9条，共252条可核验预测。图表复用控制不增加独立种子数，效率重跑也不加入质量样本数。随机缺失下，HSACC相对均值填充在三个比例的三个种子均有正收益；B中DSVC课程适配最终ACC为无漂移77.97%±7.26、加噪60.13%±4.65，不能宣称消除了漂移。全部144条B记录均未超过预先固定的90秒单批预算。
+
+课程结果和报告可按顺序重建：
+
+```powershell
+python scripts/run_in_environment.py experiments/06_course_comparison/run.py --stage all
+python scripts/run_in_environment.py -- -m evaluation.finalize_course
+python scripts/run_in_environment.py -- -m evaluation.verify_course_outputs --public-only
+```
+
+最后一条只核对仓库中的紧凑标签档案，不需要原始数据或神经网络权重。现场基线演示与保存结果回放命令见报告目录README。
 
 ## 复用已有Conda环境
 
@@ -114,6 +128,7 @@ configs/               拆分前的统一基线配置，保留用于原始结果
 scripts/               数据与固定版本论文资源下载工具
 tests/                 协议测试，使用Python unittest
 references/            公开论文/源码下载清单，不提交PDF或源码压缩包
+reports/               HTML报告、文献综述、统计CSV、图表与公开预测标签档案
 requirements/          课程验收进度清单
 third_party/           运行下载脚本后生成，Git忽略
 ```
@@ -123,9 +138,9 @@ third_party/           运行下载脚本后生成，Git忽略
 - ACC用匈牙利匹配处理簇编号置换；NMI和ARI按原预测标签计算。
 - 基线使用种子1、2、3，K-means为10次初始化、最多300轮、`tol=1e-4`；统计标准差用 `ddof=1`。
 - 基线计时不含指标、Silhouette和文件保存；流式时间包含当前批预处理和聚类更新。神经网络作者训练包含周期评估，另列时间字段，不与纯K-means计时直接等同。
-- `peak_rss_mb` 是20毫秒采样的整个进程工作集峰值，包含共享数据和库，未隔离成各算法独占内存。`model_state_mb` 单独统计流式聚类器保留的数组，不包含共享编码器、解释器等开销。
+- 旧结果的 `peak_rss_mb` 是20毫秒采样的进程工作集；06B和07效率病例另外在新进程中记录Windows原生生命周期峰值。两者均包含库和装载数据。保留状态数组另计，GPU分配峰值另列，不能把摘要大小当成整个进程内存。
 - 真实类别只用于评估和明确标注的类别相关缺失模拟；不用于学习中心或选择课程主结果的最佳轮次。
-- 课程A/B统一对照已实际运行；消融、鲁棒性和隔离效率正在依次执行。阶段分析见 [reports](reports/)。最终报告和验收清单在结果核验后更新，PPT最后制作。作者协议只覆盖选定数据集与配置，不代表复现整篇论文的全部表格。
+- 课程对照、消融、鲁棒性、效率及报告均已核验，详见 [课程验收清单](requirements/course_checklist.json)。PPT仍按用户安排后续制作。双视图权重退化、原始邻域恢复有限、历史探针空间差异等限制均在报告中说明。
 
 ## 第三方来源
 

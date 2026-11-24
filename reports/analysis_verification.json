@@ -1,0 +1,11 @@
+{
+  "a_records": 81,
+  "a_masks_matched": true,
+  "random_rates_with_three_positive_acc_gains": 3,
+  "b_records": 144,
+  "b_inputs_matched": true,
+  "b_budget_exceedances": 0,
+  "ablation_records": 12,
+  "robustness_records": 18,
+  "isolated_a_cases": 9
+}

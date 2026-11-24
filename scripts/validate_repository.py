@@ -5,6 +5,7 @@ import csv
 import json
 from pathlib import Path
 import re
+from html.parser import HTMLParser
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -81,6 +82,24 @@ def main():
         if prediction['verified_records']!=252: raise ValueError('Prediction count mismatch')
         for artifact in ['course_report.html','literature_review.html','course_predictions.jsonl.gz']:
             if not (ROOT/'reports'/artifact).is_file(): raise FileNotFoundError(artifact)
+        class LocalHTML(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.links=[]
+                self.images=0
+            def handle_starttag(self,tag,attributes):
+                attrs=dict(attributes)
+                if tag=='img': self.images+=1
+                for key in ['href','src']:
+                    if key in attrs: self.links.append(attrs[key])
+        for filename in ['course_report.html','literature_review.html']:
+            page=ROOT/'reports'/filename
+            parsed=LocalHTML()
+            parsed.feed(page.read_text(encoding='utf-8'))
+            for link in parsed.links:
+                if '://' not in link and not link.startswith('#') and not (page.parent/link).is_file():
+                    raise FileNotFoundError(f'{filename}: {link}')
+            if filename=='course_report.html' and parsed.images!=10: raise ValueError('Report should embed 10 figures')
         print('Verified completed A/B course matrix, ablations, robustness, isolated efficiency and report artifacts.')
     print(f'Verified {len(experiments)} experiment directories, documentation links, 396 baseline records and {paper_records} requested paper-code records.')
 

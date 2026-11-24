@@ -47,6 +47,12 @@ def main():
     geometry=read('geometry_summary.csv')
     efficient=read('isolated_efficiency_summary.csv')
     recovery=read('scenario_b_recovery.csv')
+    silhouette_runs=pd.concat([
+        pd.read_csv(ROOT/'experiments/06_course_comparison/results_a/baselines/runs.csv'),
+        pd.read_csv(ROOT/'experiments/06_course_comparison/results_a/hsacc/runs.csv').assign(method='hsacc_course')],ignore_index=True)
+    silhouette_runs=silhouette_runs[(silhouette_runs.pattern=='random')&(silhouette_runs.rate_parameter==.4)]
+    silhouette_table=[[name(method),f'{group.silhouette.mean():.4f} ± {group.silhouette.std(ddof=1):.4f}']
+        for method,group in silhouette_runs.groupby('method')]
     environment=json.loads((ROOT/'experiments/06_course_comparison/results_a/hsacc/environment.json').read_text(encoding='utf-8'))
     sections=[]
     def section(title,body): sections.append(f'<section><h2>{escape(title)}</h2>{body}</section>')
@@ -99,6 +105,9 @@ def main():
         figure('course_a_geometry_pca.png','图2：固定种子1的真实特征、补全特征与共识表示PCA。全部2386个对象；各图独立PCA坐标，颜色仅作离线类别说明。')+
         figure('course_a_geometry_neighbors.png','图3：缺失行的真实原始视图10-NN保持率；3种子均值±标准差。')+
         p('二维投影仅供观察，不能比较不同图坐标距离或直接证明可分性。模型潜空间的真实编码/完成表示另见每次训练的neighborhood.json，本文图3特意使用更严格的原始特征几何作为参照。'))
+    section('6.1 辅助表示指标',table(['方法','Silhouette均值 ± 样本标准差'],silhouette_table,
+        '40%随机不完整样本；每种子抽样256个对象；3种子')+
+        p('轮廓系数在每种方法自身的聚类表示空间中计算；零/均值填充为拼接特征，HSACC为256维潜空间。不同距离空间的分数不能直接当作统一物理单位的提升，也不代替对真实类别的ACC/NMI/ARI。'))
     full_acc=float(ablation.loc[ablation.variant=='full','acc_mean'].iloc[0])
     deltas='；'.join(f"{name(row['variant'])}相对完整方法{(row['acc_mean']-full_acc)*100:+.2f}个百分点" for row in ablation.to_dict('records') if row['variant']!='full')
     section('7. 消融与单视图噪声',table(['变体','ACC %','NMI %','ARI %'],
@@ -110,6 +119,7 @@ def main():
             [[name(row['method']),row['condition'],ms(row,'acc'),ms(row,'nmi'),ms(row,'ari')] for row in robust.to_dict('records')],
             '第一个视图已观测行加噪；尺度只从观测行估计；无噪声控制复用06A')+
         p('同一方法、同一种子相减的噪声影响为：'+'；'.join(f"{name(method)} {group.noise_acc_effect.mean()*100:+.2f}±{group.noise_acc_effect.std(ddof=1)*100:.2f}个百分点" for method,group in noise.groupby('method'))+'。噪声强度仅检验一个固定档位，不能据此声称对任意噪声鲁棒。')+
+        p('本次均值填充在加噪后ACC上升而NMI下降，说明噪声不一定让每个指标单调恶化。加噪后的MinMax范围和距离关系也会改变，ACC与NMI侧重的簇结构不同。该现象只能视为当前配置的结果，不能解读成“加噪通常有益”。')+
         figure('course_a_robustness.png','图5：无噪声与单视图高斯噪声比较；3种子均值±样本标准差。'))
     section('8. 场景B：质量、漂移与历史保留',table(['条件','方法','最终ACC %','NMI %','ARI %','旧探针ACC %','遗忘量 pp'],
         [[name(row['condition']),name(row['method']),ms(row,'acc'),ms(row,'nmi'),ms(row,'ari'),ms(row,'probe_acc'),ms(row,'forgetting')] for row in b.to_dict('records')],
@@ -135,7 +145,8 @@ def main():
         figure('course_b_time.png','图9：累计更新时间，对数纵轴；同一输入、3种子误差线。')+
         figure('course_b_state.png','图10：跨视图保留数组状态；不含解释器、临时网络和共享数据。')+
         p('计时范围：A基线含预处理与聚类；HSACC含预处理、作者训练中的周期评估和最终聚类，不含后续误差分析。B含当前MinMax、表示学习和更新，不含离线质量指标与文件保存。数据装载和进程启动不计入更新时间，但包含在原生进程生命周期峰值内。A的深度方法用GPU，基线用CPU，比较反映当前部署成本，不能解释为相同硬件纯训练内核的加速比。')+
-        p('进程峰值来自Windows原生PeakWorkingSetSize，包括依赖、原始数据与初始化；GPU字段是torch分配峰值，不是显卡总显存占用。表中B的GPU值是末批重置计数的峰值，完整运行的最大GPU峰值可从逐批CSV取最大值。保留数组规模只计摘要、原型、中心等，不是整个进程内存。'))
+        p('进程峰值来自Windows原生PeakWorkingSetSize，包括依赖、原始数据与初始化；GPU字段是torch分配峰值，不是显卡总显存占用。表中B的GPU值是末批重置计数的峰值，完整运行的最大GPU峰值可从逐批CSV取最大值。保留数组规模只计摘要、原型、中心等，不是整个进程内存。')+
+        p('本实验以静态MAT文件模拟流：外层驱动器装载全部视图，学习器update接口只获得当前视图，未来特征不传入学习器。进程峰值因此包含驱动器装载开销，不能用它证明真实数据采集系统的端到端流式存储上界。独立进程也不等于整台机器完全空闲，耗时是本机运行记录，未作多硬件基准测试。'))
     params=[['A：编码器','1984/512 → 1024 → 1024 → 1024 → 128；ReLU/BatchNorm；末层Softmax'],
         ['A：推断器','128 → 256 → 128'],['A：训练','Adam lr=1e-4，batch=256，固定500轮；最终轮评价，不挑最好一轮'],
         ['K-means','K固定；n_init=10，max_iter=300，tol=1e-4；warm-start时以旧中心作唯一初始化'],

@@ -1,0 +1,1771 @@
+{
+  "verified_records": 252,
+  "tolerance": 1e-12,
+  "all_metrics_recomputed": true,
+  "checks": [
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.20_1_zero.npz",
+      "sha256": "6f61c7e43864073ec2e37bedd352cac9a61bd7bf00726bd1f849596aaceb5422",
+      "acc": 0.40150880134115674,
+      "nmi": 0.5652376384694574,
+      "ari": 0.28610292847409646
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.20_1_mean.npz",
+      "sha256": "81964876f17dc3ac8c1f3ac930497d9dd988af5e07672717c4e905a9225badac",
+      "acc": 0.42162615255658004,
+      "nmi": 0.5680989479405198,
+      "ari": 0.2903369216303408
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.20_2_zero.npz",
+      "sha256": "19da3e5ba5ad14c1b3da7c5b74828881a657f6991ca6d209181dcc088e240789",
+      "acc": 0.3922883487007544,
+      "nmi": 0.5552788118394361,
+      "ari": 0.26217503642195006
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.20_2_mean.npz",
+      "sha256": "dbd121c3120be847b107baa91ab4099cf38f49695c351e7749d677c92d2bdfb0",
+      "acc": 0.3948030176026823,
+      "nmi": 0.5686631861057531,
+      "ari": 0.28395430143473194
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.20_3_zero.npz",
+      "sha256": "00148264c4a59d8e4f783a026a7897cf607cc2218df62321a5b36b1e8b586c0c",
+      "acc": 0.38725901089689857,
+      "nmi": 0.5403143686229045,
+      "ari": 0.2665886085800925
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.20_3_mean.npz",
+      "sha256": "e43565251e065aa1888d945db30e6586e092a8402c9c3541d4804e10e84177f8",
+      "acc": 0.3977367979882649,
+      "nmi": 0.5625623269058436,
+      "ari": 0.24699571760554115
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.40_1_zero.npz",
+      "sha256": "ca2e3f716b66edc037de84c5215adc8e456b5646b7ca4fd69d62909b2fd23966",
+      "acc": 0.30972338642078795,
+      "nmi": 0.4799312885890589,
+      "ari": 0.19760375868015642
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.40_1_mean.npz",
+      "sha256": "af748857aa2b5f13569c9e3a0011591c3fdfb99644e515606345747474a9485b",
+      "acc": 0.3348700754400671,
+      "nmi": 0.4891695514701896,
+      "ari": 0.13842139306156417
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.40_2_zero.npz",
+      "sha256": "48b66c7bbb8e336d90448f759bdac3e0e7a289937c5e3a1155b0547fbf8181c9",
+      "acc": 0.29631181894383907,
+      "nmi": 0.45024208785912717,
+      "ari": 0.177617042463066
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.40_2_mean.npz",
+      "sha256": "ae09c81d987a74930902ca3884a722316d2a23e73705f13f926cc31dcdb74347",
+      "acc": 0.3520536462699078,
+      "nmi": 0.5047737113865164,
+      "ari": 0.17260261264147048
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.40_3_zero.npz",
+      "sha256": "12f8389d3853f465df223e5c6df63281fcfd25d4452763df589be8111478cb4c",
+      "acc": 0.3432523051131601,
+      "nmi": 0.47164848414924054,
+      "ari": 0.2084353141943248
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.40_3_mean.npz",
+      "sha256": "f960b8760b07216f031bca589f222f42f7b7beb63e433c9e672b03583b3309b4",
+      "acc": 0.3495389773679799,
+      "nmi": 0.5028354594432975,
+      "ari": 0.1850513645760221
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.60_1_zero.npz",
+      "sha256": "121ee08a53f198bb5d20285c21dec169d28ad961dd875dcdd395e1d4fb8ae7f7",
+      "acc": 0.2627829002514669,
+      "nmi": 0.40756686618758203,
+      "ari": 0.13806056653568602
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.60_1_mean.npz",
+      "sha256": "e53d763b60dec54926582ceb614ba36574a17ce0ca02948f745dd15028e1ff16",
+      "acc": 0.32858340318524726,
+      "nmi": 0.44035463309714457,
+      "ari": 0.13631504822037016
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.60_2_zero.npz",
+      "sha256": "c5ad7ca58ec329172792cf03d3451502de67e4681a80348df3dc94b3e7b2d828",
+      "acc": 0.27912824811399833,
+      "nmi": 0.4221972972894431,
+      "ari": 0.1707931373649527
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.60_2_mean.npz",
+      "sha256": "f9ae9f57eda95dc559ed9c29203377b9637d8273b7c0809a821b93d821fdb4fa",
+      "acc": 0.3143336127409891,
+      "nmi": 0.4529222216732542,
+      "ari": 0.110613540981499
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.60_3_zero.npz",
+      "sha256": "692309fd4151ce0c8d0c30a06f59b58c349a334680185f8b5e25d5d8e4e6d6c2",
+      "acc": 0.3055322715842414,
+      "nmi": 0.43301661765780103,
+      "ari": 0.13978724931607547
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\random_0.60_3_mean.npz",
+      "sha256": "fad02255d44e48558c8f1851b2ad05317020937f63437591b1a19fc10e551959",
+      "acc": 0.32606873428331934,
+      "nmi": 0.4427457255150606,
+      "ari": 0.1482578505021401
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.20_1_zero.npz",
+      "sha256": "458dac44a8633e344b5b34e85e5f46969e2195cdef1f753fb41529facb230fa3",
+      "acc": 0.35875943000838223,
+      "nmi": 0.5081097411035991,
+      "ari": 0.20020468841128314
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.20_1_mean.npz",
+      "sha256": "1cb70ef275a3c211acb2d8b3126798f72437cffe98f9a454c205d329141f57c0",
+      "acc": 0.3294216261525566,
+      "nmi": 0.4835782740929149,
+      "ari": 0.13792978573789186
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.20_2_zero.npz",
+      "sha256": "412be304487e4109f16e6dea6417cd59bb28ca340919944aaefc8d4d908e81ba",
+      "acc": 0.33654652137468566,
+      "nmi": 0.5260898290729856,
+      "ari": 0.19368304675889197
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.20_2_mean.npz",
+      "sha256": "862f3a643ad500bdaab2bc1c22652386ab551874d124a7f97e2a14da00f61dbe",
+      "acc": 0.3000838222967309,
+      "nmi": 0.4691724250435148,
+      "ari": 0.10291776571552477
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.20_3_zero.npz",
+      "sha256": "7472847f83ec10465fe47d2b6dcd82fd27e08d995f65b06c6c13a28cd25f4054",
+      "acc": 0.33067896060352053,
+      "nmi": 0.5036789459179365,
+      "ari": 0.1812597031642424
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.20_3_mean.npz",
+      "sha256": "55b829d1d31ca4213f598ba441926dfe70bfde97aefab6467adb6b9a0ea4836f",
+      "acc": 0.39354568315171834,
+      "nmi": 0.5142469885512362,
+      "ari": 0.20634529827666748
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.40_1_zero.npz",
+      "sha256": "aed1d2824acea26a6b97932889cdb46de0f59efeae1e665d3235802015f246fa",
+      "acc": 0.30259849119865884,
+      "nmi": 0.4022915169143135,
+      "ari": 0.1316351104809393
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.40_1_mean.npz",
+      "sha256": "965f977aa21a8099ee7d65ed6619cb0eb4fb08d62265e5f21ba953026d1aec22",
+      "acc": 0.3013411567476949,
+      "nmi": 0.3903101339849324,
+      "ari": 0.10391403805566461
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.40_2_zero.npz",
+      "sha256": "2fbee9bb0fdec8580317153adaa03435a658962dabea15da7a96424865c03df7",
+      "acc": 0.2845766974015088,
+      "nmi": 0.43623750798657684,
+      "ari": 0.17373486631984014
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.40_2_mean.npz",
+      "sha256": "3edcb234d8055a8733d3acdddf1ff7e46ee18ad6f59a05b4d0b74a952e30b6c2",
+      "acc": 0.29840737636211234,
+      "nmi": 0.40896746808581114,
+      "ari": 0.12090887745952866
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.40_3_zero.npz",
+      "sha256": "6ec5fa35228e10c0aea06e8db3d546da1aa046fb25d1cb0a3af7408d44caae16",
+      "acc": 0.28331936295054483,
+      "nmi": 0.40936804786861536,
+      "ari": 0.13849295235681475
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.40_3_mean.npz",
+      "sha256": "39873ce765349354fcec3a0223ccfbd9aecf1590c5d04df93639ef3e8545d0ac",
+      "acc": 0.30092204526404026,
+      "nmi": 0.3967406899828227,
+      "ari": 0.1010375269578015
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.60_1_zero.npz",
+      "sha256": "535bc8c625efb84338cabc629f98e4fa56a54fbfe15c186169c9b527256e513b",
+      "acc": 0.3512154233025985,
+      "nmi": 0.39198749437985214,
+      "ari": 0.191582989180367
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.60_1_mean.npz",
+      "sha256": "c70e407da5d1bdeadddbd92c2bce5ec90d221e607703b60894e98992fb5eadc8",
+      "acc": 0.28038558256496227,
+      "nmi": 0.38629177955136623,
+      "ari": 0.1376971993993621
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.60_2_zero.npz",
+      "sha256": "ce18af21a445a520cc3a3b1974d0fe3df2acea8dad75bcee0541b396d6773e98",
+      "acc": 0.30720871751886003,
+      "nmi": 0.3262604759049353,
+      "ari": 0.06546000930574125
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.60_2_mean.npz",
+      "sha256": "062da9b34b9ac568518ee9c35c5a4cc75c9d271fbe9386121a6fcfd21dd32177",
+      "acc": 0.32523051131601005,
+      "nmi": 0.3625686542178796,
+      "ari": 0.1426668608980558
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.60_3_zero.npz",
+      "sha256": "1d4d2723e8db899cd20e3a5ac3541203f811007d740f3c5b699bd1b05c20f67b",
+      "acc": 0.35414920368818104,
+      "nmi": 0.36736163765890073,
+      "ari": 0.1381870249376691
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\single_view_0.60_3_mean.npz",
+      "sha256": "ad0f13675b2cc2a8a51306f12d1be24bb236422e548c265251ff13a5ab1ff445",
+      "acc": 0.3625314333612741,
+      "nmi": 0.4140224406867787,
+      "ari": 0.21624670026157441
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.20_1_zero.npz",
+      "sha256": "db3aefc89ff7a0cea30177f63e2d3ad9a0ec8039916beb256dd24de2ce862e10",
+      "acc": 0.40234702430846603,
+      "nmi": 0.5678383139758688,
+      "ari": 0.2835407193358471
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.20_1_mean.npz",
+      "sha256": "7d59be8df9f46ae0e0edc701123d5a5a936ad851fcdf77ba42bfaa7f0c7547cb",
+      "acc": 0.41366303436714164,
+      "nmi": 0.5648578771676415,
+      "ari": 0.2295042658263619
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.20_2_zero.npz",
+      "sha256": "3d1125238400bfb2a81f513d420268bc02784e35a9637db56c38c68e642f6fa4",
+      "acc": 0.3868398994132439,
+      "nmi": 0.5656046945574938,
+      "ari": 0.2713695569156956
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.20_2_mean.npz",
+      "sha256": "fb521098cc4ad669cbe91213b4f76aeb77ac97ee9e8b7b5601ee8747af5ea9ed",
+      "acc": 0.37133277451802177,
+      "nmi": 0.5298795733460016,
+      "ari": 0.20292878384141758
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.20_3_zero.npz",
+      "sha256": "3b190a50a3cf0dec04dcbe4946b9e9c201d8e6f6e11527a072da2074c74d94af",
+      "acc": 0.4258172673931266,
+      "nmi": 0.5751089420774687,
+      "ari": 0.3011812471453948
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.20_3_mean.npz",
+      "sha256": "f12eea0b5061b39eec29fc6be71fc19ae6643abfcf799360e1f1e6acd241d06d",
+      "acc": 0.4396479463537301,
+      "nmi": 0.5649619235006005,
+      "ari": 0.2555705515391514
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.40_1_zero.npz",
+      "sha256": "ba1bf433c25a416354242da3249ada2593e2298c30dbc183708b0e270715c0c1",
+      "acc": 0.3549874266554904,
+      "nmi": 0.5301253018965786,
+      "ari": 0.21528206934308475
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.40_1_mean.npz",
+      "sha256": "42221a818bd66a83c49d96afda36d5d2cf1f49a4d2804b275d3bbcfcdbe27d97",
+      "acc": 0.3063704945515507,
+      "nmi": 0.4890616857797231,
+      "ari": 0.17374784640274582
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.40_2_zero.npz",
+      "sha256": "f35e217442703edbd1724440b6959883d178c2285ee1fa2c151770e479b30fba",
+      "acc": 0.3549874266554904,
+      "nmi": 0.5289609841689757,
+      "ari": 0.20169095880020496
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.40_2_mean.npz",
+      "sha256": "f865b0200ec2aacb2c0294356e4ed255d9760e857660bd9a34d176558dd322b6",
+      "acc": 0.3415758591785415,
+      "nmi": 0.4979136635779064,
+      "ari": 0.13714708513361193
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.40_3_zero.npz",
+      "sha256": "42fe7907ee2e058e534ad640807e5ecfb5d9d51f79dc71fefdf3a9a351cf285e",
+      "acc": 0.3608549874266555,
+      "nmi": 0.52975085620767,
+      "ari": 0.21066347281955397
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.40_3_mean.npz",
+      "sha256": "131fa3a943fb6700763b16a4fee4ee4853a761e2f8be988ab50b7c8940d58807",
+      "acc": 0.3704945515507125,
+      "nmi": 0.5015010436048554,
+      "ari": 0.1466763662433354
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.60_1_zero.npz",
+      "sha256": "44440660b29643291c29b5bd29daa0389b27eca65166aeba7f66dce695126b1e",
+      "acc": 0.36546521374685664,
+      "nmi": 0.5248662916594115,
+      "ari": 0.21421226370552407
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.60_1_mean.npz",
+      "sha256": "c24ccfc4e8e193ad3aea746bbe6b4a2165f3c5ef73d4b02d203a4e4b2cf400ab",
+      "acc": 0.3964794635373009,
+      "nmi": 0.49687029630178947,
+      "ari": 0.18285398850401705
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.60_2_zero.npz",
+      "sha256": "e2ad802b48726c3d3653e981001f2e1b61b3b561e955d8fd89c079de140207c7",
+      "acc": 0.36043587594300086,
+      "nmi": 0.5139512745258255,
+      "ari": 0.2152465461179949
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.60_2_mean.npz",
+      "sha256": "0443e098907fbf257175c318856522d0af552a9562abd751bfc4b450d48a743a",
+      "acc": 0.38558256496227994,
+      "nmi": 0.47027026447470244,
+      "ari": 0.17757110350278293
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.60_3_zero.npz",
+      "sha256": "f10f036bc201dae96cf1336cf6764900709e3d71d9cdadf649f5f952d2ec9cd6",
+      "acc": 0.42539815590947194,
+      "nmi": 0.5422175233551221,
+      "ari": 0.23580078723648581
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\class_related_0.60_3_mean.npz",
+      "sha256": "7664ddd00c411516491c686af04ba4ae863541853821edd088a1ba6fcf3162e3",
+      "acc": 0.37468566638725903,
+      "nmi": 0.4730477732364428,
+      "ari": 0.1759738073766547
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_concat_complete_1.npz",
+      "sha256": "21c1204531b8aa25fd69ba4bedc461655087b16921948ed6d2f6ddc51563e748",
+      "acc": 0.4920368818105616,
+      "nmi": 0.6487146126419435,
+      "ari": 0.393951631160167
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_concat_complete_2.npz",
+      "sha256": "33fc446ced45426e8e407b2a831ab741115f3caea111adec71c599b42f4a9a0f",
+      "acc": 0.4492875104777871,
+      "nmi": 0.6424922757069491,
+      "ari": 0.34937503901088235
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_concat_complete_3.npz",
+      "sha256": "e73d62a2f2b99bd7f2b4773d28a602d85c5d0e4920b77ba6ea32f2b46b4d0e4a",
+      "acc": 0.4237217099748533,
+      "nmi": 0.6289628074564155,
+      "ari": 0.35656306035750307
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_single_complete_v1_1.npz",
+      "sha256": "abdd500eaea01f5db2cc16b36e1e8b0212d4f31eee574c6b108dad1569e30932",
+      "acc": 0.4727577535624476,
+      "nmi": 0.6364040202845598,
+      "ari": 0.3528160804055214
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_single_complete_v1_2.npz",
+      "sha256": "89548205ea498762405609b72b36b0fadf0504b4a8835a9942842c6351aa68f8",
+      "acc": 0.44677284157585917,
+      "nmi": 0.6380412042513733,
+      "ari": 0.36262846851978003
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_single_complete_v1_3.npz",
+      "sha256": "84c2ccdd3352707986d37a572ac5de103e127225ecf8d3cb99910dfd3d2ee1db",
+      "acc": 0.4484492875104778,
+      "nmi": 0.6273120017698318,
+      "ari": 0.34617712338486295
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_single_complete_v2_1.npz",
+      "sha256": "57400596783da5217e0bfbdbce2d8861d7b02537c857b65997500fadbeefafba",
+      "acc": 0.4203688181056161,
+      "nmi": 0.5732981987055791,
+      "ari": 0.3587069776826059
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_single_complete_v2_2.npz",
+      "sha256": "6024e9758ecf1df9d26fa394e1311b5f48300111c6e77ec4248d31e721179754",
+      "acc": 0.3956412405699916,
+      "nmi": 0.5574046929856584,
+      "ari": 0.3385678940885656
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\baselines\\labels\\reference_single_complete_v2_3.npz",
+      "sha256": "8940a3cf9266ebffdda9a4c330237f837f37950152a407fd994a8fc7254036c8",
+      "acc": 0.4212070410729254,
+      "nmi": 0.5684963177057715,
+      "ari": 0.3237862469067789
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.20_1_full\\outputs.npz",
+      "sha256": "3c9a7348bfabe396ec8090161de7132f8fbd6fdd89d7654727537b0b668b5b08",
+      "acc": 0.6689019279128248,
+      "nmi": 0.6743930664573203,
+      "ari": 0.6995026839624169
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.20_2_full\\outputs.npz",
+      "sha256": "21941ca8fcddae68a3cd8a227faa95b21dfd490d2015bf9dd5738cbc110d738c",
+      "acc": 0.7259010896898574,
+      "nmi": 0.6977348444496683,
+      "ari": 0.7546415299380747
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.20_3_full\\outputs.npz",
+      "sha256": "a76f0232c3ae4c3de6533c4c761fd739e8bebc9ef74cfd937663c9828b3a3ce2",
+      "acc": 0.7766135792120704,
+      "nmi": 0.715419014685762,
+      "ari": 0.8878529675250902
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_1_full\\outputs.npz",
+      "sha256": "70d7d03e18d87c299a20fa1608d6dcdb04881dfe2eeca006b45c63524cbb528e",
+      "acc": 0.7099748533109808,
+      "nmi": 0.6834259540253654,
+      "ari": 0.7105120826786425
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_2_full\\outputs.npz",
+      "sha256": "d90a527374f528b495ffc36da42f7dbdbebdad9b42bad8fd99dd408424298b6e",
+      "acc": 0.6982397317686505,
+      "nmi": 0.6557220992479693,
+      "ari": 0.8252802654940854
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_3_full\\outputs.npz",
+      "sha256": "249bbdbf54c35db9902f321b27bfdaac8d9ed5211d857243e6f85dce81bcedd3",
+      "acc": 0.7611064543168483,
+      "nmi": 0.6913214606946174,
+      "ari": 0.8780940373808221
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.60_1_full\\outputs.npz",
+      "sha256": "36b624e53feb0216cf7c42923e2b7e5a2d8e1912c727bf86211e8bf0dd9b1558",
+      "acc": 0.6974015088013411,
+      "nmi": 0.6529763351137687,
+      "ari": 0.747035522447844
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.60_2_full\\outputs.npz",
+      "sha256": "0b13acbb07ead3e1502508e8e36ffab300efe2a2d37d34cd2bbb5008e3d8398e",
+      "acc": 0.5729253981559095,
+      "nmi": 0.6230653587792643,
+      "ari": 0.6580743066058383
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.60_3_full\\outputs.npz",
+      "sha256": "a6fc653bde001f79e70068307e15db5f4d132991d378ada1960e2d690fc72a98",
+      "acc": 0.7455993294216261,
+      "nmi": 0.7010718383754289,
+      "ari": 0.872587542345114
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.20_1_full\\outputs.npz",
+      "sha256": "a40e2d554eebbf9019e7601c20b0a28e0abbb6c7d2d2deb25d3c2622d21618df",
+      "acc": 0.7036881810561609,
+      "nmi": 0.6789682177748114,
+      "ari": 0.74549515738754
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.20_2_full\\outputs.npz",
+      "sha256": "2dee098c959caffacff3c2417f67d77467458867e29702b16a7604cb10b3a3d4",
+      "acc": 0.6286672254819782,
+      "nmi": 0.6740072334052377,
+      "ari": 0.6546274675579719
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.20_3_full\\outputs.npz",
+      "sha256": "1ae8e98ddab3be9c4c51cc9060c326998fe7a8cf0d8068562029e47d0e1a59cc",
+      "acc": 0.7594300083822296,
+      "nmi": 0.7122217374463421,
+      "ari": 0.857401824149212
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.40_1_full\\outputs.npz",
+      "sha256": "3e6ff0a0f4b5d945439776fe9469accfd873b87f0df83b0667feec1f75df6c07",
+      "acc": 0.7095557418273261,
+      "nmi": 0.6878891264018681,
+      "ari": 0.7281324080984704
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.40_2_full\\outputs.npz",
+      "sha256": "5a1527eee12db24ef4298406f4c4f140496fab61826b755556c46844db86be52",
+      "acc": 0.7225481978206203,
+      "nmi": 0.6820054267977403,
+      "ari": 0.8657239291781822
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.40_3_full\\outputs.npz",
+      "sha256": "2d0006180983c17474b96ac192ea352634c220e48ee0f2a5f3988b92ad16e484",
+      "acc": 0.7569153394803018,
+      "nmi": 0.6961019326414193,
+      "ari": 0.8741004242588207
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.60_1_full\\outputs.npz",
+      "sha256": "5c78622700f6cf6eeb7fa18b6de40dbfba00d99482f0b171ac53fbe7a1344fc8",
+      "acc": 0.6596814752724225,
+      "nmi": 0.6329534991472662,
+      "ari": 0.6690325318961731
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.60_2_full\\outputs.npz",
+      "sha256": "9a474b05d2baad0d802438342a533cd04586333ec3616812dd459686bb83de08",
+      "acc": 0.4786253143336127,
+      "nmi": 0.5958523632159624,
+      "ari": 0.46609869741684756
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\single_view_0.60_3_full\\outputs.npz",
+      "sha256": "ab3561b78199431e4f76cceb4101e46419f647207af7a489db32ab2ae86c69ee",
+      "acc": 0.7728415758591786,
+      "nmi": 0.7126425124868546,
+      "ari": 0.8504727148159331
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.20_1_full\\outputs.npz",
+      "sha256": "5cdcbac3b109ba796d17c530d43858f4e28fb2033ca8961edd8b002c198790b8",
+      "acc": 0.7007544006705784,
+      "nmi": 0.7054606710299482,
+      "ari": 0.7299841402897039
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.20_2_full\\outputs.npz",
+      "sha256": "c58a1fa28fe7735e908fbea0495a829cbb47484a31a24723d1199df2f1b90427",
+      "acc": 0.7032690695725062,
+      "nmi": 0.6992563107293817,
+      "ari": 0.7589070071290765
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.20_3_full\\outputs.npz",
+      "sha256": "bb6ee0d90bb1ee1cee769aed01601ad3c8a8cf9830994884d95581563e0d67e5",
+      "acc": 0.7502095557418273,
+      "nmi": 0.6956079168784254,
+      "ari": 0.8683161258158333
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.40_1_full\\outputs.npz",
+      "sha256": "ae1909af1f30fbf43eb22d59672e6dfc7354d6deaaaa32b56940f061804d872d",
+      "acc": 0.6554903604358759,
+      "nmi": 0.637318637553164,
+      "ari": 0.641204535527679
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.40_2_full\\outputs.npz",
+      "sha256": "bb77e2f9dc2985d7e8bded16111fc7474aaffc73c378d0b8535034f4491ffe33",
+      "acc": 0.691533948030176,
+      "nmi": 0.6861599963626203,
+      "ari": 0.7320415339647026
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.40_3_full\\outputs.npz",
+      "sha256": "c0652e046fd6967873ca73b8dc7180c92656ecc4b612ef2625c53e42ba3a12fc",
+      "acc": 0.7632020117351216,
+      "nmi": 0.7003964668865637,
+      "ari": 0.8769210608815426
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.60_1_full\\outputs.npz",
+      "sha256": "6e31788f9599f90df11b62c7a8e8f6b6f5b51e363cfd350eafd4d8fa32d06bb8",
+      "acc": 0.6751886001676446,
+      "nmi": 0.6721059821447365,
+      "ari": 0.6770971238206333
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.60_2_full\\outputs.npz",
+      "sha256": "38c83b7e72856b67c42f34ab4b8d26c5e778d834a1ecb4d1535e4228d8e95e2c",
+      "acc": 0.537300922045264,
+      "nmi": 0.6259771850245428,
+      "ari": 0.5388152051864196
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_a\\hsacc\\class_related_0.60_3_full\\outputs.npz",
+      "sha256": "d0e6536692a215b36c978c85146733aabd2000aaa135a80bddc39c60828a844d",
+      "acc": 0.767393126571668,
+      "nmi": 0.7087764765498717,
+      "ari": 0.8887180832091711
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_warm_start\\view_1.npz",
+      "sha256": "378868a98c4940fa699193f41f63af0476b3aa4b9221435f4f70ec09de8fa38e",
+      "acc": 0.86,
+      "nmi": 0.7776542892798546,
+      "ari": 0.7218919952872717
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_warm_start\\view_2.npz",
+      "sha256": "f3216bccaf7c242d9c4739aeac2db6d63dea6e958edb88a5ff191c0b491dc702",
+      "acc": 0.647,
+      "nmi": 0.5670439480109791,
+      "ari": 0.4601440501987435
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_warm_start\\view_3.npz",
+      "sha256": "de5edf69d1df097fcf048cbb83a85c979a8ffedb8c6e9e7bb11fe912611b2a3c",
+      "acc": 0.835,
+      "nmi": 0.7297484786438603,
+      "ari": 0.6701030082891409
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_warm_start\\view_4.npz",
+      "sha256": "71b16d30cc3fbaf94c82290fb7e31ea7c99b197e4a5f6a447cd0974929810bea",
+      "acc": 0.6485,
+      "nmi": 0.5592970643395502,
+      "ari": 0.46546132118501726
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_warm_start\\view_5.npz",
+      "sha256": "228c76754d12b4d65c6b1832cd7106cd4a1194d430e176b13ea20aba835a38b8",
+      "acc": 0.8025,
+      "nmi": 0.6909856209606771,
+      "ari": 0.6270848074900646
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_warm_start\\view_6.npz",
+      "sha256": "febb99790c648412e6a94d19f490888dbaa1ca96a6bf30d4607541f5b9646327",
+      "acc": 0.576,
+      "nmi": 0.6207300978911855,
+      "ari": 0.45518710581544986
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_sliding_window\\view_1.npz",
+      "sha256": "378868a98c4940fa699193f41f63af0476b3aa4b9221435f4f70ec09de8fa38e",
+      "acc": 0.86,
+      "nmi": 0.7776542892798546,
+      "ari": 0.7218919952872717
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_sliding_window\\view_2.npz",
+      "sha256": "dedf15c8d22d214cc206ebed75b24567fd9e0ccde8d8e5a5e38f5fdee815be7c",
+      "acc": 0.675,
+      "nmi": 0.5884671264517596,
+      "ari": 0.4926503794178976
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_sliding_window\\view_3.npz",
+      "sha256": "fe295e8993937c79f755c1f4d749347fdfe2e61ed50cd25f524b3328968bfbef",
+      "acc": 0.767,
+      "nmi": 0.710047627578804,
+      "ari": 0.6296726908942996
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_sliding_window\\view_4.npz",
+      "sha256": "017fb3600b97efc8cffaacc03ec563cbdf3b94b49d46fd9e976079428f2dc0b4",
+      "acc": 0.5895,
+      "nmi": 0.5648264576813976,
+      "ari": 0.4581573148208032
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_sliding_window\\view_5.npz",
+      "sha256": "56563878825cfbaec3ac678df8c6e29c21e96a4f7e08e6d3ae22c8c3f0d8524d",
+      "acc": 0.787,
+      "nmi": 0.6606310775206428,
+      "ari": 0.5956243948667665
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_sliding_window\\view_6.npz",
+      "sha256": "30623ff87c376e967babfb2e5fe4fde46d62d9b92be804c1a3a887c8a2c9d52c",
+      "acc": 0.4315,
+      "nmi": 0.5735675797570039,
+      "ari": 0.348720644296196
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_full_retrain\\view_1.npz",
+      "sha256": "a44cea600ca363fe4aa76ccf7378aa463afcae8cdc9788065ff50ee47da197b1",
+      "acc": 0.737,
+      "nmi": 0.7510329772445117,
+      "ari": 0.6557022703795135
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_full_retrain\\view_2.npz",
+      "sha256": "fc7d52f5a7846458ff6cab243e090912e9a8f316eed70115137de97de3ac0341",
+      "acc": 0.7545,
+      "nmi": 0.7709109870870399,
+      "ari": 0.6834537978522973
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_full_retrain\\view_3.npz",
+      "sha256": "d64f8d886ec833c9d15d6ad30e938bf290abca0482349b90bcfd2e35f38a4a41",
+      "acc": 0.7575,
+      "nmi": 0.7698433788054633,
+      "ari": 0.6826134393912213
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_full_retrain\\view_4.npz",
+      "sha256": "e0c86458f48007988f310394601e9fb9bb86d31729a73a97e17884daa76ffd05",
+      "acc": 0.7655,
+      "nmi": 0.7758848494650918,
+      "ari": 0.6944918662302287
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_full_retrain\\view_5.npz",
+      "sha256": "e37464d8f58ce35393bf5fe7b580b3b2d13b84d2765f4b276e0998996fff1a4e",
+      "acc": 0.775,
+      "nmi": 0.7798177524745322,
+      "ari": 0.6987010057653915
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_full_retrain\\view_6.npz",
+      "sha256": "dd533a6d606d63cfb00f2bfc3e0f47a386a8e7d8e45489942543f676354dc2c2",
+      "acc": 0.804,
+      "nmi": 0.7914394782667025,
+      "ari": 0.7279738339410325
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_dsvc_course\\view_1.npz",
+      "sha256": "5aa865abe70674fc48f2133b4bc7181530df0588c555db34ee457532132d987b",
+      "acc": 0.5675,
+      "nmi": 0.498739502802164,
+      "ari": 0.36044736354510815
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_dsvc_course\\view_2.npz",
+      "sha256": "b9a30c4ea93ee6e8efcbc058c3b94976fd86fcf525e1bcfef2015194767ab67d",
+      "acc": 0.6985,
+      "nmi": 0.5948543872232475,
+      "ari": 0.5087671244060659
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_dsvc_course\\view_3.npz",
+      "sha256": "3955641a6fc4b5b5111e4816584d48415760304ea538859513c07a445c8f6fda",
+      "acc": 0.718,
+      "nmi": 0.6145161460851862,
+      "ari": 0.5173545191904312
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_dsvc_course\\view_4.npz",
+      "sha256": "4c377f61746596fd46110f96caa584ccc7fdc5303ca2352f87a7b2014800fb66",
+      "acc": 0.688,
+      "nmi": 0.6308291094203573,
+      "ari": 0.540718019480276
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_dsvc_course\\view_5.npz",
+      "sha256": "2783bf60a98a21ee03db2fc1dba37c7177a819318e712c7026c0920997111e39",
+      "acc": 0.6845,
+      "nmi": 0.6012247311199339,
+      "ari": 0.4878642784655245
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_11_dsvc_course\\view_6.npz",
+      "sha256": "e0b92dfed419586e34ba4b3eb8f94e9976db49176491d4078d5ef0e7ed9812e7",
+      "acc": 0.837,
+      "nmi": 0.756292608097072,
+      "ari": 0.6893950058799069
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_warm_start\\view_1.npz",
+      "sha256": "aed0d3ba73e9ea8be78cf39ff9cb2e01dc192b709b8bc33e9f43b10c31947a9c",
+      "acc": 0.8585,
+      "nmi": 0.7762699724276717,
+      "ari": 0.7187340200988298
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_warm_start\\view_2.npz",
+      "sha256": "d4acfe03309574006bbda04a486d6d93a4d2150c0aaf8ef0ad17420748e083a7",
+      "acc": 0.597,
+      "nmi": 0.5661025930703418,
+      "ari": 0.43940332265096593
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_warm_start\\view_3.npz",
+      "sha256": "cd9ef222adc64a02f698e2185b698129c430b14365b21dbce61f8733f3296f7e",
+      "acc": 0.696,
+      "nmi": 0.6889237905446015,
+      "ari": 0.5827686249413262
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_warm_start\\view_4.npz",
+      "sha256": "8621b15e566e9dc98fda894eb1064fbde803cf8a8bb695cc04c1cc9219475168",
+      "acc": 0.6485,
+      "nmi": 0.5624557759744548,
+      "ari": 0.4674309119787411
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_warm_start\\view_5.npz",
+      "sha256": "ec2956b22433b25977bb2778e49ac21fc846f6b57a508dcc7470c8300ff8c49e",
+      "acc": 0.789,
+      "nmi": 0.6869937555650143,
+      "ari": 0.6115898399479253
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_warm_start\\view_6.npz",
+      "sha256": "f962263d9eed13f27a5a4477fd433a4561706147d4f093cb34ff3fdaf7db8d11",
+      "acc": 0.576,
+      "nmi": 0.6207300978911855,
+      "ari": 0.45518710581544986
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_sliding_window\\view_1.npz",
+      "sha256": "aed0d3ba73e9ea8be78cf39ff9cb2e01dc192b709b8bc33e9f43b10c31947a9c",
+      "acc": 0.8585,
+      "nmi": 0.7762699724276717,
+      "ari": 0.7187340200988298
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_sliding_window\\view_2.npz",
+      "sha256": "0cb476c31bc4daa6f788d359548e16490007c7136c01af765b2a06df42917bbf",
+      "acc": 0.6705,
+      "nmi": 0.584407637313183,
+      "ari": 0.48617158602205723
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_sliding_window\\view_3.npz",
+      "sha256": "e4edffd07915d36d2f0ca6d096ead6babdf50d49191e859325daa36acd2cfbaf",
+      "acc": 0.768,
+      "nmi": 0.7099292913666143,
+      "ari": 0.6295752359267428
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_sliding_window\\view_4.npz",
+      "sha256": "d8d8665d5f69db1dc2e7c8898acadee3aeb5f3f601fe0812148ac5ee9d3d9b2d",
+      "acc": 0.59,
+      "nmi": 0.5664839099873525,
+      "ari": 0.45988730861889554
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_sliding_window\\view_5.npz",
+      "sha256": "e019af87dc820971db1da5b3d7b9d0abb8e23a768ca814301d4ccb30687ddba9",
+      "acc": 0.715,
+      "nmi": 0.6274001346161049,
+      "ari": 0.5484375363603834
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_sliding_window\\view_6.npz",
+      "sha256": "744beac24466fc246528ce34448b3a35c13c504dfd64494fc69f220db112f876",
+      "acc": 0.4315,
+      "nmi": 0.5742251608549381,
+      "ari": 0.34892701512119995
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_full_retrain\\view_1.npz",
+      "sha256": "ac8d5b2df4996236a3344224fdc54657abf9ebe83abf0f335dd518a59f950249",
+      "acc": 0.738,
+      "nmi": 0.7473703511929087,
+      "ari": 0.6548391594238523
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_full_retrain\\view_2.npz",
+      "sha256": "bc08e12d5d82b4f065d9fd0c27c84e8a1cd2c163c0928cb26de59862f662795d",
+      "acc": 0.744,
+      "nmi": 0.7666751583367875,
+      "ari": 0.6691875511853197
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_full_retrain\\view_3.npz",
+      "sha256": "b0c825015a294a09a79828677d6b29cc6948f4f1fa4f3fcbc349f804a0ae2e14",
+      "acc": 0.75,
+      "nmi": 0.7685070131305428,
+      "ari": 0.6768997663866465
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_full_retrain\\view_4.npz",
+      "sha256": "9a99299ecee72c57dd71836b6e75a8cdbe7f1f39fa57e5fd5fdaa3e9c8dfd5e3",
+      "acc": 0.8895,
+      "nmi": 0.8079227879812335,
+      "ari": 0.7762180612662849
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_full_retrain\\view_5.npz",
+      "sha256": "b1ed9312351dd729a29501e479d8ec98d7f835b6cbac85b3012c090a1e8bdf28",
+      "acc": 0.826,
+      "nmi": 0.779648325078444,
+      "ari": 0.7077941940789269
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_full_retrain\\view_6.npz",
+      "sha256": "779f0798e465dd78527e7eef92d8c7c9f776d71d0dd30a04e49ca1da12965a70",
+      "acc": 0.7665,
+      "nmi": 0.7791649516627599,
+      "ari": 0.6982493596872738
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_dsvc_course\\view_1.npz",
+      "sha256": "c7ca40a592215192f6bfb65f284c11bf388d1d041d12847f9d22ea4fb6d5db7b",
+      "acc": 0.4975,
+      "nmi": 0.4836190377356196,
+      "ari": 0.31780016010222245
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_dsvc_course\\view_2.npz",
+      "sha256": "964fc6ccf313e21538195c7a1078492dfe3b339a0a66480776dd4ec06cd8b124",
+      "acc": 0.5995,
+      "nmi": 0.572301265884853,
+      "ari": 0.44443294021661617
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_dsvc_course\\view_3.npz",
+      "sha256": "d8e5b4d7e4f130e4fd33638144ceb18ee2b6ef48b40e2b3b5a1434f61585c977",
+      "acc": 0.61,
+      "nmi": 0.5838325569812447,
+      "ari": 0.4462591856703831
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_dsvc_course\\view_4.npz",
+      "sha256": "17f6c5dbb4a936b75a8c6688f024acad416bb02db6174a59f065e0ac83b3c787",
+      "acc": 0.621,
+      "nmi": 0.5626582278479403,
+      "ari": 0.45330774952170055
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_dsvc_course\\view_5.npz",
+      "sha256": "18b37cec72f084e5f844a3f5a196896f558fcdd81a344ff2c1140f5a15cfb438",
+      "acc": 0.5715,
+      "nmi": 0.5136978339437094,
+      "ari": 0.36893592853110174
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_21_dsvc_course\\view_6.npz",
+      "sha256": "ad49bb79ebf961d44aa51b10c44e0c08d863524b0da327d32d3a7814a73350e7",
+      "acc": 0.698,
+      "nmi": 0.7051527445804104,
+      "ari": 0.5925063398609492
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_warm_start\\view_1.npz",
+      "sha256": "7d0abe826fa93b2c8059a5c5a2f2e512da8f9af64542583b31b5d55fab69dc2b",
+      "acc": 0.742,
+      "nmi": 0.7272883135844311,
+      "ari": 0.6459887286991549
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_warm_start\\view_2.npz",
+      "sha256": "5ca1895f1d206b998e5d2f2dc479918aff3c67197fe231561c5a59b483568c01",
+      "acc": 0.5455,
+      "nmi": 0.5516185896901912,
+      "ari": 0.42491092799025054
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_warm_start\\view_3.npz",
+      "sha256": "ff3cfb96ade4ba2f66fa328d61d48c0f4560c3e1502ba3b230878489d93dba6e",
+      "acc": 0.836,
+      "nmi": 0.7311410602581294,
+      "ari": 0.6722548034564265
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_warm_start\\view_4.npz",
+      "sha256": "7766583ca2b78ffd2e3d3de324a641b0687ddc02c8eb77f0a0fa16e5b5ff8737",
+      "acc": 0.65,
+      "nmi": 0.561392365160178,
+      "ari": 0.46770685388452954
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_warm_start\\view_5.npz",
+      "sha256": "d515b1d0f825413b9c4550e3a2f4918e1b6aa856a7aef77e61959f5a2d6684c8",
+      "acc": 0.801,
+      "nmi": 0.6902238325590345,
+      "ari": 0.6251460933688038
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_warm_start\\view_6.npz",
+      "sha256": "0faf4e7a64f9ea0f058c3f93b9acd434f216bb206467f36b5e74be12265fe3ce",
+      "acc": 0.576,
+      "nmi": 0.6207300978911855,
+      "ari": 0.45518710581544986
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_sliding_window\\view_1.npz",
+      "sha256": "7d0abe826fa93b2c8059a5c5a2f2e512da8f9af64542583b31b5d55fab69dc2b",
+      "acc": 0.742,
+      "nmi": 0.7272883135844311,
+      "ari": 0.6459887286991549
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_sliding_window\\view_2.npz",
+      "sha256": "06737fea830e021ce9501306f1c0121279e1d96eff4e6ea18f87fb474afa6115",
+      "acc": 0.672,
+      "nmi": 0.5839877013845352,
+      "ari": 0.4873388244990591
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_sliding_window\\view_3.npz",
+      "sha256": "e6617edee1e7cc9ef88a21d24021ae70ec750a4bef4a2ddb664c671715c16ada",
+      "acc": 0.767,
+      "nmi": 0.7098861751385946,
+      "ari": 0.6296770628423249
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_sliding_window\\view_4.npz",
+      "sha256": "3c0c7776f0aa25c60e90941317b53f3881aa783bc9ff56371c1484c83fcddacc",
+      "acc": 0.588,
+      "nmi": 0.5647360743585498,
+      "ari": 0.4575305373675084
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_sliding_window\\view_5.npz",
+      "sha256": "8f6d0ae671fccd169e775555ca0549ea6a62338df1ea05d88bcea74ab6fdc279",
+      "acc": 0.789,
+      "nmi": 0.6628154753762984,
+      "ari": 0.597796710986771
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_sliding_window\\view_6.npz",
+      "sha256": "4556dd35c75cd9f32095b018facbbcbdaa6ee77e450506856b02dd724e363410",
+      "acc": 0.4315,
+      "nmi": 0.573567579757004,
+      "ari": 0.348720644296196
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_full_retrain\\view_1.npz",
+      "sha256": "719d0b883da308f6f6f5573cccdd3db3c46cbc7149680cc79fe39f4bad06d176",
+      "acc": 0.7435,
+      "nmi": 0.7390048376964389,
+      "ari": 0.6519795723030869
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_full_retrain\\view_2.npz",
+      "sha256": "00b9d4b7fc75690da410d0361ba61841a8f920b90e1470637b4ee541ba9c0206",
+      "acc": 0.7555,
+      "nmi": 0.7626121874607465,
+      "ari": 0.6784279374822572
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_full_retrain\\view_3.npz",
+      "sha256": "b9c0da7af69d9f3c1de58a893f1e8fcf6865c93c7ad8c609bb06e8938f8df0e4",
+      "acc": 0.9015,
+      "nmi": 0.8340392565269995,
+      "ari": 0.8034643914456572
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_full_retrain\\view_4.npz",
+      "sha256": "05ed9190837bfbd5a055441f09f136900b803bf6af32e2506fda6d5a046110fe",
+      "acc": 0.7635,
+      "nmi": 0.7751656878078099,
+      "ari": 0.690062576217498
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_full_retrain\\view_5.npz",
+      "sha256": "a405e04892fb96922cb193999d0acf2f2c84116260ef61516d36e5795c0e214f",
+      "acc": 0.7535,
+      "nmi": 0.7683882971126171,
+      "ari": 0.6786619214646123
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_full_retrain\\view_6.npz",
+      "sha256": "3d3325347652b4b2cf0ffbf454047d7c52c65f70a039a51aef590cbc3eb58d68",
+      "acc": 0.8025,
+      "nmi": 0.7898556512377981,
+      "ari": 0.7262759483639739
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_dsvc_course\\view_1.npz",
+      "sha256": "34366dce1bcb2760deb311255c30264b09529bc06539fce41eb325962ec54818",
+      "acc": 0.552,
+      "nmi": 0.515918680831569,
+      "ari": 0.3734518497562097
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_dsvc_course\\view_2.npz",
+      "sha256": "310ada77ac92ba2d870ac78b2ca2dc24e0179484f8941663ee95aa814d40f15e",
+      "acc": 0.712,
+      "nmi": 0.6275983038154759,
+      "ari": 0.5311683341626614
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_dsvc_course\\view_3.npz",
+      "sha256": "686f2b16887768cab3e5fb1e67e681f6f22cfb2190a365bf6f9a86bfc761464d",
+      "acc": 0.7215,
+      "nmi": 0.6442670524851505,
+      "ari": 0.5360935096467188
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_dsvc_course\\view_4.npz",
+      "sha256": "7253a8a21686f210aea7c1b1e2a105f4027fd9cf580ed330aa7617ad147f825f",
+      "acc": 0.772,
+      "nmi": 0.6689262836370995,
+      "ari": 0.585308209398497
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_dsvc_course\\view_5.npz",
+      "sha256": "60335d2906e7b9933f17fde72ae4c0772f0993a3bce44c297fc9470f370664e9",
+      "acc": 0.6995,
+      "nmi": 0.5708152065020773,
+      "ari": 0.4632122057266656
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\none_22_dsvc_course\\view_6.npz",
+      "sha256": "1ce00de2b09309eb81e9e641b764dec009922b01808606292fd17ffd4ec3d8df",
+      "acc": 0.804,
+      "nmi": 0.7417016635405782,
+      "ari": 0.6570003905800593
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_warm_start\\view_1.npz",
+      "sha256": "378868a98c4940fa699193f41f63af0476b3aa4b9221435f4f70ec09de8fa38e",
+      "acc": 0.86,
+      "nmi": 0.7776542892798546,
+      "ari": 0.7218919952872717
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_warm_start\\view_2.npz",
+      "sha256": "f3216bccaf7c242d9c4739aeac2db6d63dea6e958edb88a5ff191c0b491dc702",
+      "acc": 0.647,
+      "nmi": 0.5670439480109791,
+      "ari": 0.4601440501987435
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_warm_start\\view_3.npz",
+      "sha256": "63b52210dac0954acb1b91e19015e2de563a01164fd60d8aeea75fd41a15160f",
+      "acc": 0.8325,
+      "nmi": 0.7175114711169651,
+      "ari": 0.6649023325662107
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_warm_start\\view_4.npz",
+      "sha256": "6bb3f70d8b6e061f42fee5d383f7b492acf6e85574fb884f31614c01a12701a7",
+      "acc": 0.5365,
+      "nmi": 0.41305202023772636,
+      "ari": 0.31830118329403334
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_warm_start\\view_5.npz",
+      "sha256": "d90f10281053ff610d3d4876196a846e66d21bd2c473edb65e798320e3c61418",
+      "acc": 0.6725,
+      "nmi": 0.4981066385715072,
+      "ari": 0.42549105666603665
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_warm_start\\view_6.npz",
+      "sha256": "b9a705c6ca1de4c3985e4f3999ca635d9a71cf37880fd79ddae5ba533fe67a9b",
+      "acc": 0.3865,
+      "nmi": 0.29852769952197705,
+      "ari": 0.18658322599978866
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_sliding_window\\view_1.npz",
+      "sha256": "378868a98c4940fa699193f41f63af0476b3aa4b9221435f4f70ec09de8fa38e",
+      "acc": 0.86,
+      "nmi": 0.7776542892798546,
+      "ari": 0.7218919952872717
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_sliding_window\\view_2.npz",
+      "sha256": "dedf15c8d22d214cc206ebed75b24567fd9e0ccde8d8e5a5e38f5fdee815be7c",
+      "acc": 0.675,
+      "nmi": 0.5884671264517596,
+      "ari": 0.4926503794178976
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_sliding_window\\view_3.npz",
+      "sha256": "4daa4dba1dc74cccf443b640ac4b3995f3ceb28c6ffeb148e5ba15274b3dc721",
+      "acc": 0.766,
+      "nmi": 0.6969377105700333,
+      "ari": 0.6177879009402929
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_sliding_window\\view_4.npz",
+      "sha256": "9a88d0633a7ffd00229d00c45d750c5e71fcb98f4bc947f46a16f2019c12bceb",
+      "acc": 0.5705,
+      "nmi": 0.4179290163563415,
+      "ari": 0.3436111097961368
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_sliding_window\\view_5.npz",
+      "sha256": "a33089b2ad8383d976c43aa5e9a5b474714b87d66a15b0b9736e373257107266",
+      "acc": 0.6065,
+      "nmi": 0.4548241816994567,
+      "ari": 0.37493676960850536
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_sliding_window\\view_6.npz",
+      "sha256": "6c21c2846e5838d67bf90503eb0f05b0ea46ea3bd4fed7b334d73998adbaea00",
+      "acc": 0.3885,
+      "nmi": 0.3212959024762768,
+      "ari": 0.22632124010850851
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_full_retrain\\view_1.npz",
+      "sha256": "a44cea600ca363fe4aa76ccf7378aa463afcae8cdc9788065ff50ee47da197b1",
+      "acc": 0.737,
+      "nmi": 0.7510329772445117,
+      "ari": 0.6557022703795135
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_full_retrain\\view_2.npz",
+      "sha256": "fc7d52f5a7846458ff6cab243e090912e9a8f316eed70115137de97de3ac0341",
+      "acc": 0.7545,
+      "nmi": 0.7709109870870399,
+      "ari": 0.6834537978522973
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_full_retrain\\view_3.npz",
+      "sha256": "afffe9f3f88eabed5e0064529690f5c2bc24159838564874cc423bed42649af4",
+      "acc": 0.802,
+      "nmi": 0.7835531351443492,
+      "ari": 0.7227647625492541
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_full_retrain\\view_4.npz",
+      "sha256": "fa890ac8812d0b7aa43d314fb9ff431445ee9f8be5d13910637ff576c3086579",
+      "acc": 0.9035,
+      "nmi": 0.8356582077782114,
+      "ari": 0.8071516612128798
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_full_retrain\\view_5.npz",
+      "sha256": "0c0f471144a619004ce530fdfce4aedb37c73f7a1ce80a36d21f6bc6c7add099",
+      "acc": 0.754,
+      "nmi": 0.7656467692259948,
+      "ari": 0.6782435008637042
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_full_retrain\\view_6.npz",
+      "sha256": "24104ca1429d250100ad9957088dd799c80e8e68ba4757e2a4acfb2e34a6135e",
+      "acc": 0.799,
+      "nmi": 0.7819969482576435,
+      "ari": 0.7171968924640946
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_dsvc_course\\view_1.npz",
+      "sha256": "5aa865abe70674fc48f2133b4bc7181530df0588c555db34ee457532132d987b",
+      "acc": 0.5675,
+      "nmi": 0.498739502802164,
+      "ari": 0.36044736354510815
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_dsvc_course\\view_2.npz",
+      "sha256": "b9a30c4ea93ee6e8efcbc058c3b94976fd86fcf525e1bcfef2015194767ab67d",
+      "acc": 0.6985,
+      "nmi": 0.5948543872232475,
+      "ari": 0.5087671244060659
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_dsvc_course\\view_3.npz",
+      "sha256": "ca4621d35445252a5776f9c0830a4390cd984838790e36394666733dbee3b248",
+      "acc": 0.6915,
+      "nmi": 0.5883649165253301,
+      "ari": 0.4817637232217292
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_dsvc_course\\view_4.npz",
+      "sha256": "ffe41e73f8078da0481dce1e50cd871ea406264e4f4326bd11b21572992db63f",
+      "acc": 0.6475,
+      "nmi": 0.5400851703126708,
+      "ari": 0.43879460048230634
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_dsvc_course\\view_5.npz",
+      "sha256": "49bc5b43ffb06c352d081453eae1f5f037b939faf81d131b0b73a9f6e4dc2453",
+      "acc": 0.562,
+      "nmi": 0.46525288369294804,
+      "ari": 0.35504335058570563
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_11_dsvc_course\\view_6.npz",
+      "sha256": "9fce900c80e430de78a5bb0b6f191c897027aef1bdda242e85680ed8452ae154",
+      "acc": 0.5815,
+      "nmi": 0.4848490518413373,
+      "ari": 0.40092782828645307
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_warm_start\\view_1.npz",
+      "sha256": "aed0d3ba73e9ea8be78cf39ff9cb2e01dc192b709b8bc33e9f43b10c31947a9c",
+      "acc": 0.8585,
+      "nmi": 0.7762699724276717,
+      "ari": 0.7187340200988298
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_warm_start\\view_2.npz",
+      "sha256": "d4acfe03309574006bbda04a486d6d93a4d2150c0aaf8ef0ad17420748e083a7",
+      "acc": 0.597,
+      "nmi": 0.5661025930703418,
+      "ari": 0.43940332265096593
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_warm_start\\view_3.npz",
+      "sha256": "5983216f70f1a4f501499243f44612e4bd69d786e4fcfda1c256720abb6d1c2c",
+      "acc": 0.693,
+      "nmi": 0.6725980309068094,
+      "ari": 0.5744403869030523
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_warm_start\\view_4.npz",
+      "sha256": "09e5f564cb79d71bf3448df3a031ab8ce9a139c808ffcbdd09d88a5ef4f35b76",
+      "acc": 0.5325,
+      "nmi": 0.41903402866543416,
+      "ari": 0.3154093679786562
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_warm_start\\view_5.npz",
+      "sha256": "d301f581098bf58af95afa324d16251bf93c048ebaf529d2183bc1682ef68807",
+      "acc": 0.648,
+      "nmi": 0.48896067940444354,
+      "ari": 0.40156071455586284
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_warm_start\\view_6.npz",
+      "sha256": "c12061c927a6979529b54d0354e651774b45d4d27fc41bffd24c708d16878a94",
+      "acc": 0.383,
+      "nmi": 0.28824117758211654,
+      "ari": 0.18689402911130126
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_sliding_window\\view_1.npz",
+      "sha256": "aed0d3ba73e9ea8be78cf39ff9cb2e01dc192b709b8bc33e9f43b10c31947a9c",
+      "acc": 0.8585,
+      "nmi": 0.7762699724276717,
+      "ari": 0.7187340200988298
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_sliding_window\\view_2.npz",
+      "sha256": "0cb476c31bc4daa6f788d359548e16490007c7136c01af765b2a06df42917bbf",
+      "acc": 0.6705,
+      "nmi": 0.584407637313183,
+      "ari": 0.48617158602205723
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_sliding_window\\view_3.npz",
+      "sha256": "3dd761bb8290aa545c2afc146fca3151428b3db8b67a700479c77f62634cc71c",
+      "acc": 0.77,
+      "nmi": 0.7162519152671211,
+      "ari": 0.6389278294266697
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_sliding_window\\view_4.npz",
+      "sha256": "2c608de3fa710e5664b61e588bf6e7c3ea106de570588619ed9e47cf84be1601",
+      "acc": 0.5695,
+      "nmi": 0.4223168249180776,
+      "ari": 0.347789766963148
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_sliding_window\\view_5.npz",
+      "sha256": "740bd57aaf1fbb8b3dd0c8381078e6132868efbbe999045efd16ef70fdf408c0",
+      "acc": 0.5815,
+      "nmi": 0.43284903792166374,
+      "ari": 0.354422571356737
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_sliding_window\\view_6.npz",
+      "sha256": "38dd27e6b6f37316097cd93cc1b72a6f179aa20207ba2d33f46cd6c7ff706b8a",
+      "acc": 0.36,
+      "nmi": 0.29169807875991316,
+      "ari": 0.1986124304432714
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_full_retrain\\view_1.npz",
+      "sha256": "ac8d5b2df4996236a3344224fdc54657abf9ebe83abf0f335dd518a59f950249",
+      "acc": 0.738,
+      "nmi": 0.7473703511929087,
+      "ari": 0.6548391594238523
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_full_retrain\\view_2.npz",
+      "sha256": "bc08e12d5d82b4f065d9fd0c27c84e8a1cd2c163c0928cb26de59862f662795d",
+      "acc": 0.744,
+      "nmi": 0.7666751583367875,
+      "ari": 0.6691875511853197
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_full_retrain\\view_3.npz",
+      "sha256": "4f5b8b80645a9a7c91e7d0e63b1eafdfa6dcc6bffed425f702c23b546f2a6eb6",
+      "acc": 0.8045,
+      "nmi": 0.7875927480841098,
+      "ari": 0.7269533329659026
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_full_retrain\\view_4.npz",
+      "sha256": "f2438dc5ee8cfcb295ec1c9a14a2b1334967081a28440757b9b6ef1f8e236ad1",
+      "acc": 0.9085,
+      "nmi": 0.8326290671868783,
+      "ari": 0.8111757203180762
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_full_retrain\\view_5.npz",
+      "sha256": "0baa948f6b5115d1cd98996e7d12a3343f2d4f25d57a57abc16d28c2fc5104e0",
+      "acc": 0.752,
+      "nmi": 0.772734768616028,
+      "ari": 0.6817944994850236
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_full_retrain\\view_6.npz",
+      "sha256": "3f514532dbddbeec19161507c42bf6b3b2c7106d0ba89dca6330422736914fca",
+      "acc": 0.752,
+      "nmi": 0.7742671995244537,
+      "ari": 0.6829559078241985
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_dsvc_course\\view_1.npz",
+      "sha256": "c7ca40a592215192f6bfb65f284c11bf388d1d041d12847f9d22ea4fb6d5db7b",
+      "acc": 0.4975,
+      "nmi": 0.4836190377356196,
+      "ari": 0.31780016010222245
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_dsvc_course\\view_2.npz",
+      "sha256": "964fc6ccf313e21538195c7a1078492dfe3b339a0a66480776dd4ec06cd8b124",
+      "acc": 0.5995,
+      "nmi": 0.572301265884853,
+      "ari": 0.44443294021661617
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_dsvc_course\\view_3.npz",
+      "sha256": "2529cd6ad9209034cd32305763766a9196f449ad093e23b2e837fdd65d012b21",
+      "acc": 0.6635,
+      "nmi": 0.6212410860883814,
+      "ari": 0.5116674996971602
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_dsvc_course\\view_4.npz",
+      "sha256": "5be0795603b4d6c97e63b18f0f12754b2ad65d9929e41fea7592eb6f8b8ea5cc",
+      "acc": 0.656,
+      "nmi": 0.5680617892206723,
+      "ari": 0.46892205130750425
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_dsvc_course\\view_5.npz",
+      "sha256": "13f31ad8308affff92c0e5d248bb35762ec8ca7c683259942d7632d8715ce347",
+      "acc": 0.561,
+      "nmi": 0.48102224980450126,
+      "ari": 0.3545030087392452
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_21_dsvc_course\\view_6.npz",
+      "sha256": "a03fd00499641de3459e0e961df2b6db6fd91c5d69c0a92ef230283e1559e095",
+      "acc": 0.568,
+      "nmi": 0.4658065482626982,
+      "ari": 0.36856186177041794
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_warm_start\\view_1.npz",
+      "sha256": "7d0abe826fa93b2c8059a5c5a2f2e512da8f9af64542583b31b5d55fab69dc2b",
+      "acc": 0.742,
+      "nmi": 0.7272883135844311,
+      "ari": 0.6459887286991549
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_warm_start\\view_2.npz",
+      "sha256": "5ca1895f1d206b998e5d2f2dc479918aff3c67197fe231561c5a59b483568c01",
+      "acc": 0.5455,
+      "nmi": 0.5516185896901912,
+      "ari": 0.42491092799025054
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_warm_start\\view_3.npz",
+      "sha256": "661325f919ff78e9c15b218fb28485d892deaf8f348e8b6f65852b115f78feeb",
+      "acc": 0.8295,
+      "nmi": 0.7182310934126506,
+      "ari": 0.6613168223550253
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_warm_start\\view_4.npz",
+      "sha256": "165d83d3eaac09b932892fa16d5d28a88f214867b767a9e10878f8f1873de0bd",
+      "acc": 0.567,
+      "nmi": 0.43510258526826084,
+      "ari": 0.34560799824335275
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_warm_start\\view_5.npz",
+      "sha256": "a1633db27b3c3de91be0dd389eb0e7c85126b29f52be177d7a9f8d394ac24424",
+      "acc": 0.669,
+      "nmi": 0.5164339492485857,
+      "ari": 0.4303197081979671
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_warm_start\\view_6.npz",
+      "sha256": "d9d34f3f2428a8417cb2d8d7c87ad5ce6986bc4776502afabc3b63ae097bdcba",
+      "acc": 0.3715,
+      "nmi": 0.29005385984064574,
+      "ari": 0.18103183682414298
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_sliding_window\\view_1.npz",
+      "sha256": "7d0abe826fa93b2c8059a5c5a2f2e512da8f9af64542583b31b5d55fab69dc2b",
+      "acc": 0.742,
+      "nmi": 0.7272883135844311,
+      "ari": 0.6459887286991549
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_sliding_window\\view_2.npz",
+      "sha256": "06737fea830e021ce9501306f1c0121279e1d96eff4e6ea18f87fb474afa6115",
+      "acc": 0.672,
+      "nmi": 0.5839877013845352,
+      "ari": 0.4873388244990591
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_sliding_window\\view_3.npz",
+      "sha256": "680731dfe2b9bfb8faed5b49e22931759ea2910b1329666f3f81227e2b2ff53d",
+      "acc": 0.765,
+      "nmi": 0.7003565267882806,
+      "ari": 0.6208132467620548
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_sliding_window\\view_4.npz",
+      "sha256": "50f80003a82292b33e01b3fb0b2aad325a7bf46d7c45d8402c0df52cf81ea4fa",
+      "acc": 0.5455,
+      "nmi": 0.4045296615217984,
+      "ari": 0.323920362279914
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_sliding_window\\view_5.npz",
+      "sha256": "7676f7b6a62905f61f8ea6cae13dff4ba4274d4bbfdf4d89da2c676062c62abd",
+      "acc": 0.622,
+      "nmi": 0.48523648690156346,
+      "ari": 0.4122386193236137
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_sliding_window\\view_6.npz",
+      "sha256": "57a0322886e96d09e54508ce0e3a26f7206c98934f7eb62e9d9c9a642214de39",
+      "acc": 0.37,
+      "nmi": 0.29813396560354344,
+      "ari": 0.20864994521239955
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_full_retrain\\view_1.npz",
+      "sha256": "719d0b883da308f6f6f5573cccdd3db3c46cbc7149680cc79fe39f4bad06d176",
+      "acc": 0.7435,
+      "nmi": 0.7390048376964389,
+      "ari": 0.6519795723030869
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_full_retrain\\view_2.npz",
+      "sha256": "00b9d4b7fc75690da410d0361ba61841a8f920b90e1470637b4ee541ba9c0206",
+      "acc": 0.7555,
+      "nmi": 0.7626121874607465,
+      "ari": 0.6784279374822572
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_full_retrain\\view_3.npz",
+      "sha256": "b651d6115d02291092ff92b04c8da9333074e71e47f0b46616fd08f8e830685a",
+      "acc": 0.9015,
+      "nmi": 0.833427765418728,
+      "ari": 0.802973652802236
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_full_retrain\\view_4.npz",
+      "sha256": "f3d59eafba7dcd7efd8b1b2384b660f69c49d5af62b875b7b2c0385b91467774",
+      "acc": 0.884,
+      "nmi": 0.8029635182801745,
+      "ari": 0.7667252562750845
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_full_retrain\\view_5.npz",
+      "sha256": "d91237a95f7b2e07d702881b63fd90cad6cbf31b7a4d8b636f903e276a5e9b95",
+      "acc": 0.7545,
+      "nmi": 0.7635232962638115,
+      "ari": 0.6759538051548949
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_full_retrain\\view_6.npz",
+      "sha256": "283820f5cc9305804c48d22b0a277438e3585663bbc183679f1d91eaf92d96c5",
+      "acc": 0.801,
+      "nmi": 0.7871574517911539,
+      "ari": 0.7220645276056102
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_dsvc_course\\view_1.npz",
+      "sha256": "34366dce1bcb2760deb311255c30264b09529bc06539fce41eb325962ec54818",
+      "acc": 0.552,
+      "nmi": 0.515918680831569,
+      "ari": 0.3734518497562097
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_dsvc_course\\view_2.npz",
+      "sha256": "310ada77ac92ba2d870ac78b2ca2dc24e0179484f8941663ee95aa814d40f15e",
+      "acc": 0.712,
+      "nmi": 0.6275983038154759,
+      "ari": 0.5311683341626614
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_dsvc_course\\view_3.npz",
+      "sha256": "bc75ea2231b0f9567a59a2b21b4bbe078ee9003c366b7a1530435e0ec2e9309f",
+      "acc": 0.6855,
+      "nmi": 0.6160757878479319,
+      "ari": 0.49458034172890075
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_dsvc_course\\view_4.npz",
+      "sha256": "9252e5ed3176bd920d9f8d5106963a76fc9ec3161b00ba4ee955c3317c7956fc",
+      "acc": 0.6925,
+      "nmi": 0.5747082611079326,
+      "ari": 0.472286700061848
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_dsvc_course\\view_5.npz",
+      "sha256": "afd580553fcf37cb3c3d1490372211bc31771dd58346f434e462120459a59e33",
+      "acc": 0.6375,
+      "nmi": 0.5190249728506489,
+      "ari": 0.40694067425857616
+    },
+    {
+      "path": "experiments\\06_course_comparison\\results_b\\view_noise_22_dsvc_course\\view_6.npz",
+      "sha256": "d265f5db986b5b67fd98d3bccccc6c086f695d5dfd0fb66af9c7a0db0efe6ffc",
+      "acc": 0.6545,
+      "nmi": 0.5122186600179972,
+      "ari": 0.42247204533026106
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\no_consistency\\random_0.40_1_no_consistency\\outputs.npz",
+      "sha256": "7b49ad36826d5a90f645f56d47ae8c893afad8f71d953bc486e6e2d5bfe392f6",
+      "acc": 0.4840737636211232,
+      "nmi": 0.4854496689007424,
+      "ari": 0.36389587414033203
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\no_consistency\\random_0.40_2_no_consistency\\outputs.npz",
+      "sha256": "4b12521f846d7a702930c01a2a123700ea6cdb0afe3ad786e27d91cedf2cc570",
+      "acc": 0.42749371332774516,
+      "nmi": 0.4058860386249196,
+      "ari": 0.20389271459298922
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\no_consistency\\random_0.40_3_no_consistency\\outputs.npz",
+      "sha256": "8e4a4fc4ab9570a60e14e968989a340f4437c25fd49037a955ec70ff91078f9c",
+      "acc": 0.519279128248114,
+      "nmi": 0.3981383349592207,
+      "ari": 0.25110870544750863
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\no_completion\\random_0.40_1_no_completion\\outputs.npz",
+      "sha256": "ff50038edbe51e8715ae057159bdd27e71a2f71cb7bbd25e726284a392a00efb",
+      "acc": 0.6630343671416596,
+      "nmi": 0.6460820699819811,
+      "ari": 0.6462198181268946
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\no_completion\\random_0.40_2_no_completion\\outputs.npz",
+      "sha256": "8f3e0cdb9aeec93b222cd6c9ac36f95f82812db5c863057614008e14c4f34436",
+      "acc": 0.6177703269069572,
+      "nmi": 0.5951132615615794,
+      "ari": 0.671816762940721
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\no_completion\\random_0.40_3_no_completion\\outputs.npz",
+      "sha256": "6e9eac6f6d48a7ea56fda1a83ab0b7dc5740c0e0f0ad769bf860b15be244d330",
+      "acc": 0.6647108130762783,
+      "nmi": 0.6204824902652938,
+      "ari": 0.7156734040037245
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\equal_weights\\random_0.40_1_equal_weights\\outputs.npz",
+      "sha256": "547db1146fafec44b5192b9a7a46259e5a343285235474c4da36c5701ce42e97",
+      "acc": 0.7078792958927075,
+      "nmi": 0.6863304673272156,
+      "ari": 0.7070311812100752
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\equal_weights\\random_0.40_2_equal_weights\\outputs.npz",
+      "sha256": "d90a527374f528b495ffc36da42f7dbdbebdad9b42bad8fd99dd408424298b6e",
+      "acc": 0.6982397317686505,
+      "nmi": 0.6557220992479693,
+      "ari": 0.8252802654940854
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\equal_weights\\random_0.40_3_equal_weights\\outputs.npz",
+      "sha256": "249bbdbf54c35db9902f321b27bfdaac8d9ed5211d857243e6f85dce81bcedd3",
+      "acc": 0.7611064543168483,
+      "nmi": 0.6913214606946174,
+      "ari": 0.8780940373808221
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_hsacc\\random_0.40_1_full\\outputs.npz",
+      "sha256": "4a47ecf7ee8003b36a233848ec446fb583431dd041d2e28cc3378c49e61c1422",
+      "acc": 0.7305113160100587,
+      "nmi": 0.672152505671125,
+      "ari": 0.8503808334035768
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_hsacc\\random_0.40_2_full\\outputs.npz",
+      "sha256": "3005a2a417adeb2bb691790c1b342bc485bcc89ac1a0b7c59dfe96a0caf97893",
+      "acc": 0.6647108130762783,
+      "nmi": 0.6331380473807039,
+      "ari": 0.6779842572462014
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_hsacc\\random_0.40_3_full\\outputs.npz",
+      "sha256": "9b84dac34872e99638564adec876eea122877795ad260dde7e8236a4d8cfd35f",
+      "acc": 0.7305113160100587,
+      "nmi": 0.6651814205227959,
+      "ari": 0.81272744694662
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_baselines\\labels\\random_0.40_1_zero.npz",
+      "sha256": "616f75c097e282cc9b6d990e31564c6bf191285fa3f4e03fe8d52cc742031944",
+      "acc": 0.3038558256496228,
+      "nmi": 0.4288880989719004,
+      "ari": 0.2133201769378895
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_baselines\\labels\\random_0.40_1_mean.npz",
+      "sha256": "821e3b2faabc2094d0d3ac3e126d850144427463a0a6784485ce76e5719dbeba",
+      "acc": 0.4358759430008382,
+      "nmi": 0.44654612313766057,
+      "ari": 0.29521255247073486
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_baselines\\labels\\random_0.40_2_zero.npz",
+      "sha256": "bca82f849d7dbff2ff71e4bfc87e6f2fb1249e846e04faca1d937aebcf435789",
+      "acc": 0.2967309304274937,
+      "nmi": 0.42069426288689793,
+      "ari": 0.21116444405748153
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_baselines\\labels\\random_0.40_2_mean.npz",
+      "sha256": "ce4668274dcf51618518cfd6a3e2aa8c46d16fe40fab14b53bbf8082215650e4",
+      "acc": 0.44886839899413244,
+      "nmi": 0.4346072215965543,
+      "ari": 0.2845598722206066
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_baselines\\labels\\random_0.40_3_zero.npz",
+      "sha256": "71f3455df1dc44f740ff14dc8820809b7c376975d733a16e62f519ac9cacbdf0",
+      "acc": 0.2678122380553227,
+      "nmi": 0.41147124792486384,
+      "ari": 0.19777167674351753
+    },
+    {
+      "path": "experiments\\07_ablations_robustness\\results\\noise_baselines\\labels\\random_0.40_3_mean.npz",
+      "sha256": "65c339a09ba4e2ac03c0eb9feee91ee49c25759b43c6f4d91576ff91ff4dda14",
+      "acc": 0.45892707460184406,
+      "nmi": 0.45103351935226005,
+      "ari": 0.28529442304410024
+    }
+  ]
+}
