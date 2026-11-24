@@ -1,0 +1,12 @@
+{
+  "dataset": "Caltech101-20",
+  "view_indices": [3, 4],
+  "rate_definition": "fraction_of_samples_missing_exactly_one_view",
+  "rates": [0.2, 0.4, 0.6],
+  "patterns": ["random", "single_view", "class_related"],
+  "seeds": [1, 2, 3],
+  "epochs": 500,
+  "training_rule": "fixed_final_epoch_no_label_based_selection",
+  "noise_std": 0.0,
+  "result_dir": "experiments/06_course_comparison/results_a"
+}

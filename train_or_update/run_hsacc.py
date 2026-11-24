@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import random
+import time
 
 os.environ.setdefault('LOKY_MAX_CPU_COUNT','1')
 os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
@@ -22,6 +23,7 @@ import torch
 from data.load_dataset import load_dataset
 from data.preprocessing import dense_views, prepare_observed
 from data.missing import make_mask, mask_summary
+from data.course_protocols import mask_hash, noisy_observations
 from evaluation.metrics import scores, silhouette
 from evaluation.neighborhood import diagnose
 from evaluation.records import Measurement, aggregate, environment, file_hash, logger_at, write_csv, write_json
@@ -64,9 +66,22 @@ def one_run(args, seed, rate, pattern, out, author, config_fn, author_mask_fn):
     config['protocol']=args.protocol
     config['ablation']=args.variant
     config['data_seed']=seed
+    config['noise_std']=args.noise_std
+    tag=f'{pattern}_{rate:.2f}_{seed}_{args.variant}'
+    folder=out/tag
+    if args.resume and (folder/'metrics.json').exists() and (folder/'outputs.npz').exists() and (folder/'neighborhood.json').exists():
+        old_config=json.loads((folder/'config.json').read_text(encoding='utf-8'))
+        old_result=json.loads((folder/'metrics.json').read_text(encoding='utf-8'))
+        if old_config!=config and any(old_config.get(key)!=config.get(key) for key in ['protocol','ablation','data_seed','noise_std']):
+            raise ValueError(f'Resume configuration mismatch: {folder}')
+        if old_result['epochs']!=args.epochs:
+            raise ValueError('Resume epoch budget mismatch')
+        print(f'Resuming: verified completed trial {tag}',flush=True)
+        return old_result
     raw,truth=load_dataset('Caltech101-20')
     raw=dense_views(raw)
     raw=[raw[j] for j in [3,4]]
+    preprocess_started=time.perf_counter()
     np.random.seed(seed)
     if args.protocol=='author':
         if args.variant!='full' or pattern!='random':
@@ -79,10 +94,12 @@ def one_run(args, seed, rate, pattern, out, author, config_fn, author_mask_fn):
         config['missing_rate_definition']='upstream_get_mask_argument_not_actual_block_fraction'
     else:
         mask=make_mask(len(truth),2,rate,seed,pattern,truth)
-        normalized,scalers=prepare_observed(raw,mask,'zero')
+        corrupted=noisy_observations(raw,mask,seed,args.noise_std)
+        normalized,scalers=prepare_observed(corrupted,mask,'zero')
         scaled_truth=[scaler.transform(v) for scaler,v in zip(scalers,raw)]
         config['normalization']='featurewise_minmax_fit_observed_rows_only'
         config['missing_rate_definition']='fraction_of_samples_missing_exactly_one_view'
+    preprocess_seconds=time.perf_counter()-preprocess_started
     if args.variant=='no_consistency':
         config['training']['lambda3']=0.0
         config['training']['lambda4']=0.0
@@ -99,8 +116,6 @@ def one_run(args, seed, rate, pattern, out, author, config_fn, author_mask_fn):
     torch.set_num_threads(1)
     device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     config['device']=str(device)
-    tag=f'{pattern}_{rate:.2f}_{seed}_{args.variant}'
-    folder=out/tag
     folder.mkdir(parents=True,exist_ok=True)
     log=logger_at(folder)
     log.info('HSACC protocol=%s seed=%d rate_parameter=%.2f epochs=%d',args.protocol,seed,rate,args.epochs)
@@ -111,6 +126,7 @@ def one_run(args, seed, rate, pattern, out, author, config_fn, author_mask_fn):
     tensors=[torch.as_tensor(v*mask[:,j,None],device=device,dtype=torch.float32) for j,v in enumerate(normalized)]
     tensor_mask=torch.as_tensor(mask,device=device,dtype=torch.long)
     model=author_model.HSACC(config)
+    original_weight_fn=author_model.compute_view_value
     if args.variant=='equal_weights':
         author_model.compute_view_value=lambda rs,H,view:torch.full((view,),1/view,device=H.device,dtype=H.dtype)
     optimizer=torch.optim.Adam(itertools.chain(model.autoencoder1.parameters(),model.autoencoder2.parameters(),
@@ -124,13 +140,18 @@ def one_run(args, seed, rate, pattern, out, author, config_fn, author_mask_fn):
         if device.type=='cuda': torch.cuda.synchronize()
     completed,consensus=export_representations(model,tensors,mask,args.variant!='no_completion')
     options={'n_init':10,'max_iter':300,'tol':1e-4}
+    final_cluster_started=time.perf_counter()
     _,pred=fit_kmeans(consensus,len(np.unique(truth)),seed,options)
+    final_cluster_seconds=time.perf_counter()-final_cluster_started
     score=scores(truth,pred)
     result={'dataset':'Caltech101-20','views':'HOG+GIST','protocol':args.protocol,'variant':args.variant,
         'run_type':'full_length' if args.epochs==500 else 'smoke','seed':seed,'rate_parameter':rate,'pattern':pattern,
         'actual_block_rate':float((~mask).mean()),'actual_incomplete_rate':float((~mask.all(axis=1)).mean()),
         'epochs':args.epochs,**score,'silhouette':silhouette(consensus,pred,seed),
+        'noise_std':args.noise_std,'mask_sha256':mask_hash(mask),
+        'preprocess_s':preprocess_seconds,'final_clustering_s':final_cluster_seconds,
         'train_with_periodic_evaluation_s':measurement.seconds,'peak_rss_mb':measurement.peak_rss_mb,
+        'process_peak_rss_mb':measurement.process_lifetime_peak_mb,
         'peak_gpu_allocated_mb':torch.cuda.max_memory_allocated()/1024**2 if device.type=='cuda' else None,
         'upstream_best_acc':float(original_best[0]),'upstream_best_nmi':float(original_best[1]),'upstream_best_ari':float(original_best[2])}
     write_json(folder/'metrics.json',result)
@@ -144,6 +165,7 @@ def one_run(args, seed, rate, pattern, out, author, config_fn, author_mask_fn):
     write_json(folder/'neighborhood.json',diagnose(true_latents,completed,consensus,mask,truth))
     np.savez_compressed(folder/'true_latents_for_evaluation_only.npz',view1=true_latents[0],view2=true_latents[1])
     torch.save({k:v.detach().cpu() for k,v in model.state_dict().items()},folder/'final_state.pt')
+    author_model.compute_view_value=original_weight_fn
     log.info('Fixed final epoch: ACC=%.4f NMI=%.4f ARI=%.4f',score['acc'],score['nmi'],score['ari'])
     return result
 
@@ -157,6 +179,8 @@ def main():
     parser.add_argument('--epochs',type=int,default=500)
     parser.add_argument('--variant',choices=['full','no_consistency','no_completion','equal_weights'],default='full')
     parser.add_argument('--output',default='results/hsacc_author')
+    parser.add_argument('--noise-std',type=float,default=0.0)
+    parser.add_argument('--resume',action='store_true')
     args=parser.parse_args()
     author=author_path('HSACC')
     from configure.configure import get_default_config

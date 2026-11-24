@@ -70,7 +70,7 @@ def logger_at(folder):
     return logger
 
 
-def working_set_mb():
+def working_set_mb(peak=False):
     if os.name != "nt":
         return None
     from ctypes import wintypes
@@ -87,7 +87,7 @@ def working_set_mb():
     record.cb = ctypes.sizeof(record)
     if not memory(kernel.GetCurrentProcess(), ctypes.byref(record), record.cb):
         raise ctypes.WinError(ctypes.get_last_error())
-    return record.WorkingSetSize / 1024 ** 2
+    return (record.PeakWorkingSetSize if peak else record.WorkingSetSize) / 1024 ** 2
 
 
 class Measurement:
@@ -111,6 +111,7 @@ class Measurement:
         end = working_set_mb()
         if end is not None:
             self.peak_rss_mb = max(self.peak_rss_mb or 0, end)
+        self.process_lifetime_peak_mb=working_set_mb(peak=True)
 
 
 def aggregate(rows, groups, metrics):
@@ -123,7 +124,8 @@ def aggregate(rows, groups, metrics):
         item = dict(zip(groups, key))
         item["runs"] = len(values)
         for metric in metrics:
-            numbers = [float(row[metric]) for row in values if row.get(metric) is not None]
+            numbers = [float(row[metric]) for row in values
+                       if row.get(metric) is not None and np.isfinite(float(row[metric]))]
             item[metric + "_mean"] = float(np.mean(numbers)) if numbers else None
             item[metric + "_std"] = float(np.std(numbers, ddof=1)) if len(numbers) > 1 else None
         output.append(item)

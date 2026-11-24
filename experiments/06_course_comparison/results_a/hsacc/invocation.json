@@ -1,0 +1,11 @@
+{
+  "protocol": "course",
+  "seeds": "1,2,3",
+  "rates": "0.2,0.4,0.6",
+  "patterns": "random,single_view,class_related",
+  "epochs": 500,
+  "variant": "full",
+  "output": "experiments/06_course_comparison/results_a/hsacc",
+  "noise_std": 0.0,
+  "resume": true
+}

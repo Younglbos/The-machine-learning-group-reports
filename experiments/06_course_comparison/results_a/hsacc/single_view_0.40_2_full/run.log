@@ -1,0 +1,13 @@
+2026-11-24 21:14:00,441 HSACC protocol=course seed=2 rate_parameter=0.40 epochs=500
+2026-11-24 21:14:00,441 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1432, 2386]}
+2026-11-24 21:14:04,226 [2;29mEpoch : 50/500 ===> Total loss = -4.4545e+03[0m
+2026-11-24 21:14:08,223 [2;29mEpoch : 100/500 ===> Total loss = -4.4782e+03[0m
+2026-11-24 21:14:12,478 [2;29mEpoch : 150/500 ===> Total loss = -4.4819e+03[0m
+2026-11-24 21:14:16,672 [2;29mEpoch : 200/500 ===> Total loss = -4.4862e+03[0m
+2026-11-24 21:14:20,860 [2;29mEpoch : 250/500 ===> Total loss = -4.4836e+03[0m
+2026-11-24 21:14:25,041 [2;29mEpoch : 300/500 ===> Total loss = -4.4862e+03[0m
+2026-11-24 21:14:29,220 [2;29mEpoch : 350/500 ===> Total loss = -4.4822e+03[0m
+2026-11-24 21:14:33,389 [2;29mEpoch : 400/500 ===> Total loss = -4.4894e+03[0m
+2026-11-24 21:14:37,568 [2;29mEpoch : 450/500 ===> Total loss = -4.4819e+03[0m
+2026-11-24 21:14:41,738 [2;29mEpoch : 500/500 ===> Total loss = -4.4847e+03[0m
+2026-11-24 21:14:42,601 Fixed final epoch: ACC=0.7225 NMI=0.6820 ARI=0.8657

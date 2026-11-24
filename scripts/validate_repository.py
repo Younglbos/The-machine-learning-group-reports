@@ -14,8 +14,8 @@ def main():
     parser.add_argument('--include-paper-results',action='store_true')
     args=parser.parse_args()
     experiments=sorted((ROOT/'experiments').glob('[0-9][0-9]_*'))
-    if len(experiments)!=5:
-        raise ValueError('Expected five documented experiments')
+    if len(experiments)!=7:
+        raise ValueError('Expected seven documented experiments')
     for folder in experiments:
         for name in ['README.md','run.py','config.json']:
             if not (folder/name).is_file(): raise FileNotFoundError(folder/name)
@@ -56,7 +56,7 @@ def main():
                     if not -1<=float(row[metric])<=1:
                         raise ValueError(f'Invalid {metric}: {filename}')
             paper_records+=len(rows)
-    print(f'Verified 5 experiment directories, documentation links, 396 baseline records and {paper_records} requested paper-code records.')
+    print(f'Verified {len(experiments)} experiment directories, documentation links, 396 baseline records and {paper_records} requested paper-code records.')
 
 
 if __name__=='__main__': main()

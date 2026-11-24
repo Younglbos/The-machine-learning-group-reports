@@ -1,0 +1,6 @@
+2026-11-24 21:23:18,395 sliding_window none seed=11 view=1 ACC=0.8600 elapsed=0.05s
+2026-11-24 21:23:18,446 sliding_window none seed=11 view=2 ACC=0.6750 elapsed=0.05s
+2026-11-24 21:23:18,501 sliding_window none seed=11 view=3 ACC=0.7670 elapsed=0.05s
+2026-11-24 21:23:18,556 sliding_window none seed=11 view=4 ACC=0.5895 elapsed=0.05s
+2026-11-24 21:23:18,610 sliding_window none seed=11 view=5 ACC=0.7870 elapsed=0.05s
+2026-11-24 21:23:18,652 sliding_window none seed=11 view=6 ACC=0.4315 elapsed=0.04s

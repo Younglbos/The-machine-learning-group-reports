@@ -1,0 +1,6 @@
+{
+  "scenario_a": "config_a.json",
+  "scenario_b": "config_b.json",
+  "execution": "A baselines and matched HSACC, followed by isolated-process six-view comparisons",
+  "readme": "README.md"
+}
