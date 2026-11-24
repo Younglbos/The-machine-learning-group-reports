@@ -1,7 +1,9 @@
 """Offline feature-space diagnostics; never feeds hidden features back to learning."""
 
 import json
+import os
 from pathlib import Path
+os.environ.setdefault('LOKY_MAX_CPU_COUNT','1')
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -23,7 +25,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     author_path('HSACC')
-    from model import HSACC
+    from model import HSACC,compute_view_value
     torch.set_num_threads(1)
     raw,truth=load_dataset('Caltech101-20')
     raw=[dense_views(raw)[j] for j in [3,4]]
@@ -32,6 +34,7 @@ def main():
     figures.mkdir(parents=True,exist_ok=True)
     rows=[]
     hashes={}
+    weights=[]
     with threadpool_limits(limits=1):
         for seed in [1,2,3]:
             folder=ROOT/f'experiments/06_course_comparison/results_a/hsacc/random_0.40_{seed}_full'
@@ -48,6 +51,11 @@ def main():
                 latent=[outputs['completed_view1'].copy(),outputs['completed_view2'].copy()]
                 if not np.array_equal(truth,outputs['truth']): raise ValueError('Object order differs')
             mean,scalers=prepare_observed(raw,mask,'mean')
+            selected=np.flatnonzero(mask.all(axis=1))[:256]
+            pair=[torch.as_tensor(z[selected]) for z in latent]
+            with torch.no_grad(): value=compute_view_value(pair,(pair[0]+pair[1])/2,2).numpy()
+            weights.append({'seed':seed,'view1':float(value[0]),'view2':float(value[1]),
+                'max_difference_from_half':float(np.max(np.abs(value-.5)))})
             full=[scaler.transform(v).astype(np.float32) for scaler,v in zip(scalers,raw)]
             consensus_knn=neighbors(consensus)
             completed=[]
@@ -98,12 +106,13 @@ def main():
         consensus=current.drop_duplicates('seed').consensus_overlap_missing
         axis.bar([0,1,2],[*stats['mean'],consensus.mean()],yerr=[*stats['std'],consensus.std(ddof=1)],capsize=4)
         axis.set(xticks=[0,1,2],xticklabels=['Mean fill','Decoded','Consensus'],ylabel='Recall of true raw-view 10-NN',
-            title=f'View {view}: missing rows only',ylim=(0,1))
+            title=f'View {view}: missing rows only',ylim=(0,.15))
     fig.suptitle('Caltech HOG/GIST | 40% incomplete samples, random | 3 seeds (mean +/- sample SD)')
     fig.tight_layout(rect=(0,0,1,.92))
     fig.savefig(figures/'course_a_geometry_neighbors.png',dpi=150,bbox_inches='tight')
     plt.close(fig)
     write_json(out/'geometry_verification.json',{'runs':len(frame),'seeds':[1,2,3],'checkpoint_sha256':hashes,
+        'two_view_weight_check':weights,
         'evaluation_only':True,'geometry':'Euclidean 10-NN on observed-only MinMax features',
         'decode_note':'Decoder is an offline diagnostic; clustering uses completed latent representations.'})
     print(summary.to_string(index=False))

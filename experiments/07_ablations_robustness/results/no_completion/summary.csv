@@ -1,0 +1,2 @@
+﻿dataset,protocol,variant,pattern,rate_parameter,epochs,runs,acc_mean,acc_std,nmi_mean,nmi_std,ari_mean,ari_std,train_with_periodic_evaluation_s_mean,train_with_periodic_evaluation_s_std,peak_rss_mb_mean,peak_rss_mb_std,peak_gpu_allocated_mb_mean,peak_gpu_allocated_mb_std
+Caltech101-20,course,no_completion,random,0.4,500,3,0.6485051690416318,0.02663034938797176,0.6205592739362847,0.02548449096505563,0.6779033283571133,0.03512456201454425,42.0824405000003,1.063011395543336,1760.7252604166667,38.26174912528571,967.7273763020834,0.1897249663889737

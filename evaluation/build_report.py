@@ -55,6 +55,8 @@ def main():
     gain_text='、'.join(f"{int(row.rate_parameter*100)}%时提高{row.acc_gain_mean*100:.2f}±{row.acc_gain_std*100:.2f}个百分点" for row in random.itertuples())
     ds=b[(b.method=='dsvc_course')&(b.condition=='none')].iloc[0]
     dn=b[(b.method=='dsvc_course')&(b.condition=='view_noise')].iloc[0]
+    full_clean=b[(b.method=='full_retrain')&(b.condition=='none')].iloc[0]
+    full_noise=b[(b.method=='full_retrain')&(b.condition=='view_noise')].iloc[0]
     max_batch=stream[stream.method=='dsvc_course'].update_s.max()
     section('摘要',p(f'围绕整块视图缺失与视图逐批到达两个场景，建立共享数据处理、训练、评估和绘图模块。场景A采用Caltech101-20的HOG/GIST，三种缺失模式、三种不完整样本比例、三个随机种子，对比简单填充与HSACC表示学习；场景B采用HandWritten六视图流，在相同输入、历史约束和预先固定的90秒预算下，对比三个指定基线与DSVC课程适配。随机缺失下，相对均值填充的配对ACC收益为：{gain_text}。DSVC课程适配最终ACC在无漂移下为{ms(ds,"acc")}%，加噪下为{ms(dn,"acc")}%。同时报告补全误差、邻域保持、消融与隔离进程效率，区分作者代码试验和课程适配。结论仅适用于选定数据与配置，三个种子的结果为描述统计。')+p('<b>关键词：</b>不完整多视图聚类；视图流；协作补全；原型摘要；概念漂移；可复现比较。'))
     section('1. 问题定义与文献依据',p('场景A给定样本对齐的多视图特征与观测掩码M，目标是在不读取隐藏视图的条件下输出K个簇。场景B固定对象集合，第t批只开放新视图X(t)，在线学习器只能使用当前特征和有限历史摘要；全量重训练作为任务书允许的额外信息参考。')+
@@ -113,6 +115,7 @@ def main():
         [[name(row['condition']),name(row['method']),ms(row,'acc'),ms(row,'nmi'),ms(row,'ari'),ms(row,'probe_acc'),ms(row,'forgetting')] for row in b.to_dict('records')],
         'HandWritten第6视图；3种子；遗忘负值表示旧查询改善')+
         figure('course_b_quality.png','图6：六批视图流ACC/NMI/ARI；虚线为第3批噪声开始；3种子误差线。')+
+        p(f'末批DSVC课程适配相对全量重训练参考，在无漂移下差{(ds.acc_mean-full_clean.acc_mean)*100:+.2f}个百分点，加噪下差{(dn.acc_mean-full_noise.acc_mean)*100:+.2f}个百分点；自身加噪相对无漂移下降{(ds.acc_mean-dn.acc_mean)*100:.2f}个百分点。它在末批优于本次低维warm-start和滑动窗口，但并未达到全量参考，也没有证明消除了漂移影响。可能原因包括有限原型和固定遗忘丢失判别信息、噪声进入无监督知识指导、后续视图的信息量差异；这些是与结构一致的解释，尚无额外消融把它们逐一确认为原因。')+
         p('不同到达视图的判别力和维度不同，所以无漂移曲线也可能下降。比较不能只看末批或某个有利视图。噪声的配对影响表scenario_b_noise_effect.csv用相同种子、方法、批次相减；这有助于将视图顺序影响与人为噪声影响区分，但不提供真实环境漂移的外推保证。')+
         figure('course_b_retention.png','图7：固定首视图探针的历史查询ACC；不同方法的旧表示查询语义见协议限制。')+
         figure('course_b_label_changes.png','图8：匹配簇编号后的对象标签变化率；第一批无前序值，留空。')+

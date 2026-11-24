@@ -10,6 +10,26 @@
     "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_2_full\\final_state.pt": "5116a4250b4cd41892b68645354d4465be7be3eb392fa9772af52eb305a95756",
     "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_3_full\\final_state.pt": "7ec43d95875a1c203e447011ddaeb2ca5baf5056d70ed264c658b1793ddb43bf"
   },
+  "two_view_weight_check": [
+    {
+      "seed": 1,
+      "view1": 0.5,
+      "view2": 0.5,
+      "max_difference_from_half": 0.0
+    },
+    {
+      "seed": 2,
+      "view1": 0.5,
+      "view2": 0.5,
+      "max_difference_from_half": 0.0
+    },
+    {
+      "seed": 3,
+      "view1": 0.5,
+      "view2": 0.5,
+      "max_difference_from_half": 0.0
+    }
+  ],
   "evaluation_only": true,
   "geometry": "Euclidean 10-NN on observed-only MinMax features",
   "decode_note": "Decoder is an offline diagnostic; clustering uses completed latent representations."

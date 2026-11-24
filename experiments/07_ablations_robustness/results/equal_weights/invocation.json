@@ -1,0 +1,11 @@
+{
+  "protocol": "course",
+  "seeds": "1,2,3",
+  "rates": "0.4",
+  "patterns": "random",
+  "epochs": 500,
+  "variant": "equal_weights",
+  "output": "experiments/07_ablations_robustness/results/equal_weights",
+  "noise_std": 0.0,
+  "resume": true
+}

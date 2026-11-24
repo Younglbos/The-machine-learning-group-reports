@@ -2,3 +2,6 @@
 2026-11-24 21:23:14,773 PHASE matched_B_running
 2026-11-24 21:34:17,827 PHASE ablations_running
 2026-11-24 21:34:17,827 Ablation no_consistency
+2026-11-24 21:36:41,103 Ablation no_completion
+2026-11-24 21:38:55,137 Ablation equal_weights
+2026-11-24 21:41:04,946 PHASE robustness_running

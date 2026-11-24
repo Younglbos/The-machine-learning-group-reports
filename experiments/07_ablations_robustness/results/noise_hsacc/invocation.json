@@ -1,0 +1,11 @@
+{
+  "protocol": "course",
+  "seeds": "1,2,3",
+  "rates": "0.4",
+  "patterns": "random",
+  "epochs": 500,
+  "variant": "full",
+  "output": "experiments/07_ablations_robustness/results/noise_hsacc",
+  "noise_std": 1.0,
+  "resume": true
+}
