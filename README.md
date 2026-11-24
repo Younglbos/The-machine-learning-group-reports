@@ -1,0 +1,106 @@
+# 多视图聚类课程设计
+
+本仓库按课程任务书实现不完整多视图聚类与多视图流式聚类，并整理 HSACC、DSVC 的论文复现入口。
+
+**当前进度：传统基线已运行并保存真实结果；两篇论文的复现入口已编写，尚未完成训练验证。** 本仓库目前是阶段性实验代码，不代表课程设计或论文复现已经全部完成。
+
+## 实验目录
+
+每个实验都有独立的 `README.md`、`run.py`、`config.json`。公共的数据、模型、训练、评估与绘图代码放在根目录对应模块中，避免各实验复制出不同的评测实现。
+
+| 目录 | 实验内容 | 状态 | 结果 |
+| --- | --- | --- | --- |
+| [01_complete_baselines](experiments/01_complete_baselines/) | 4个数据集的完整特征拼接和各单视图 K-means | 已运行，3个种子 | 63条评测记录 |
+| [02_incomplete_multiview](experiments/02_incomplete_multiview/) | 随机、单视图集中、类别相关缺失；零/均值填充；完整数据参考 | 基线已运行，3个种子 | 54条缺失实验与9条匹配视图参考 |
+| [03_streaming_baselines](experiments/03_streaming_baselines/) | warm-start、滑动窗口、全量重训练；无漂移、均值漂移、视图噪声 | 基线已运行，3个种子 | 270条批次评测记录 |
+| [04_hsacc_reproduction](experiments/04_hsacc_reproduction/) | HSACC，NeurIPS 2025，不完整视图 | 入口已实现，待训练验证 | 暂无论文复现指标 |
+| [05_dsvc_reproduction](experiments/05_dsvc_reproduction/) | DSVC，ICML 2025，视图流 | 入口已实现，待训练验证 | 暂无论文复现指标 |
+
+基线合计396条评测记录，均来自实际运行。流式实验的一条记录表示一个种子、条件、方法下的一个批次，不应当作一次独立的完整流实验。
+
+## 环境与快速开始
+
+已验证的基线环境为 Windows 11、Python 3.12.10，具体依赖固定在 [requirements.txt](requirements.txt)。以下是 PowerShell 命令；Linux/macOS 将 `.venv\Scripts\python.exe` 换成 `.venv/bin/python`。
+
+```powershell
+git clone https://github.com/Younglbos/The-machine-learning-group-reports.git
+cd The-machine-learning-group-reports
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe scripts/download_datasets.py
+.venv\Scripts\python.exe scripts/inspect_datasets.py
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+按实验分别运行：
+
+```powershell
+.venv\Scripts\python.exe experiments/01_complete_baselines/run.py
+.venv\Scripts\python.exe experiments/02_incomplete_multiview/run.py
+.venv\Scripts\python.exe experiments/03_streaming_baselines/run.py
+```
+
+每个入口从自己的 `config.json` 读取设置，将 CSV、图表、日志、最终标签等保存到本实验的 `results/`。重复运行会更新对应结果文件；日志会追加。若要保留多次完整运行，请修改配置中的 `result_dir`。
+
+本仓库提供已运行的 CSV 和图表快照。原始运行配置保存在各结果目录的 `run_config.json`；实验根目录的 `config.json` 使用拆分后的输出位置。`provenance.json` 记录两者的关系，不会把新配置冒充为旧结果的运行配置。
+
+## 论文复现的额外环境
+
+两篇论文均使用 PyTorch。先下载固定版本的作者源码，再安装相应依赖：
+
+```powershell
+.venv\Scripts\python.exe scripts/download_references.py
+.venv\Scripts\python.exe -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+.venv\Scripts\python.exe -m pip install -r requirements-deep.txt
+.venv\Scripts\python.exe experiments/04_hsacc_reproduction/run.py --smoke
+.venv\Scripts\python.exe experiments/05_dsvc_reproduction/run.py --smoke
+```
+
+上面的 CUDA 12.8 构建针对本项目检测到的 RTX 5070；其他硬件应按 [PyTorch官方安装说明](https://pytorch.org/get-started/locally/)选择构建。CUDA 版安装包较大。HSACC入口也允许CPU运行；DSVC作者实现直接调用 `.cuda()`，需要可用的CUDA设备。
+
+`--smoke` 只检验短流程，不构成论文指标复现。完整命令、参数及协议差异见各论文实验目录 README。当前尚未形成经过完整训练验证的深度学习依赖锁定文件，不能把这些安装命令视为已验证环境结果。
+
+## 数据与协议
+
+| 数据集 | 样本数 | 视图数 | 类别数 | 各视图维度 |
+| --- | ---: | ---: | ---: | --- |
+| BBCSport | 544 | 2 | 5 | 3183 / 3203 |
+| BBC4view | 685 | 4 | 5 | 4659 / 4633 / 4665 / 4684 |
+| Caltech101-20 | 2386 | 6 | 20 | 48 / 40 / 254 / 1984 / 512 / 928 |
+| NUS-WIDE子集 | 2400 | 5 | 12 | 64 / 144 / 73 / 128 / 225 |
+
+下载的是公开多视图特征与标签，原文件不随仓库上传。逐文件来源、大小与Git blob校验值见 [data/dataset_sources.json](data/dataset_sources.json)，读取注意事项见 [data/README.txt](data/README.txt)。程序保留来源文件中的样本顺序；当前验证了各视图行数与标签长度，原文件未提供独立对象ID，因此没有额外证明语义对应关系。
+
+场景A课程实验使用 Caltech101-20 的 HOG/GIST 双视图（Python索引3、4）。**课程缺失率定义为“不完整样本比例”：选取 `floor(N*r)` 个样本，每个删除一个完整视图，始终保留另一个视图。** 对双视图，缺失块比例约为 `r/2`。所有方法共享同一掩码，标准化参数只从已观测行估计。该定义与HSACC作者生成器参数分别记录，不能直接比较同名 `missing_rate`。
+
+场景B基线使用 NUS-WIDE 的10个样本批次，预处理只在首批拟合并冻结；漂移从第5批开始。warm-start只保留中心，滑动窗口保留最近2批，全量重训练保留已到达特征，作为任务书允许的参考。DSVC研究新视图到达，其结果不能直接当作这一样本流实验的结果。
+
+## 文件用途
+
+```text
+experiments/           每个实验的入口、配置、README和已验证结果
+data/                  数据来源、下载后检查、缺失生成、预处理和读取
+models/                K-means、流式基线及作者代码导入辅助
+train_or_update/       基线与论文的训练/更新逻辑
+evaluation/            匹配后的ACC、NMI、ARI、邻域、计时与内存记录
+visualization/         从CSV生成带随机种子标准差的图表
+configs/               拆分前的统一基线配置，保留用于原始结果溯源
+scripts/               数据与固定版本论文资源下载工具
+tests/                 协议测试，使用Python unittest
+references/            公开论文/源码下载清单，不提交PDF或源码压缩包
+requirements/          课程验收进度清单
+third_party/           运行下载脚本后生成，Git忽略
+```
+
+## 评价与复现边界
+
+- ACC用匈牙利匹配处理簇编号置换；NMI和ARI按原预测标签计算。
+- 基线使用种子1、2、3，K-means为10次初始化、最多300轮、`tol=1e-4`；统计标准差用 `ddof=1`。
+- 基线计时不含指标、Silhouette和文件保存；流式时间包含当前批预处理和聚类更新。神经网络作者训练包含周期评估，另列时间字段，不与纯K-means计时直接等同。
+- `peak_rss_mb` 是20毫秒采样的整个进程工作集峰值，包含共享数据和库，未隔离成各算法独占内存。`model_state_mb` 单独统计流式聚类器保留的数组，不包含共享编码器、解释器等开销。
+- 真实类别只用于评估和明确标注的类别相关缺失模拟；不用于学习中心或选择课程主结果的最佳轮次。
+- 当前缺失实验、漂移基线与论文原协议分开记录。尚缺论文完整训练、改进方法公平对照、消融、表示质量图、最终报告与答辩材料，详见 [课程验收清单](requirements/course_checklist.json)。
+
+## 第三方来源
+
+作者源码、数据与论文通过原地址获取，来源及固定提交见 [THIRD_PARTY.md](THIRD_PARTY.md)。不将本项目的适配入口说成作者原始实现，也不把原论文表格数字写成本地实验结果。
