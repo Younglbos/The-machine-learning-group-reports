@@ -1,0 +1,16 @@
+{
+  "runs": 12,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "checkpoint_sha256": {
+    "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_1_full\\final_state.pt": "647c3e59784f3c9153ddeae59b558bbe6b4cd50a3c0dec7a1a7f2bae5924f377",
+    "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_2_full\\final_state.pt": "5116a4250b4cd41892b68645354d4465be7be3eb392fa9772af52eb305a95756",
+    "experiments\\06_course_comparison\\results_a\\hsacc\\random_0.40_3_full\\final_state.pt": "7ec43d95875a1c203e447011ddaeb2ca5baf5056d70ed264c658b1793ddb43bf"
+  },
+  "evaluation_only": true,
+  "geometry": "Euclidean 10-NN on observed-only MinMax features",
+  "decode_note": "Decoder is an offline diagnostic; clustering uses completed latent representations."
+}

@@ -1,5 +1,6 @@
 """Validate paired course records and create analysis tables and publication figures."""
 
+import argparse
 import json
 from pathlib import Path
 import matplotlib
@@ -173,14 +174,23 @@ def extras(a_runs):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--stage',choices=['a','b','all'],default='all')
+    args=parser.parse_args()
     OUT.mkdir(exist_ok=True)
     FIG.mkdir(exist_ok=True)
     plt.rcParams.update({'font.size':9,'figure.dpi':140,'axes.spines.top':False,'axes.spines.right':False})
     with threadpool_limits(limits=1):
-        a,validation=scenario_a()
-        validation.update(scenario_b())
-        validation.update(extras(a))
-    write_json(OUT/'analysis_verification.json',validation)
+        if args.stage=='a':
+            _,validation=scenario_a()
+        elif args.stage=='b':
+            validation=scenario_b()
+        else:
+            a,validation=scenario_a()
+            validation.update(scenario_b())
+            validation.update(extras(a))
+    suffix='' if args.stage=='all' else '_'+args.stage
+    write_json(OUT/f'analysis{suffix}_verification.json',validation)
     print(json.dumps(validation,indent=2))
 
 

@@ -1,0 +1,46 @@
+{
+  "dataset": "HandWritten",
+  "protocol": "fixed_objects_six_arriving_views",
+  "seeds": [
+    11,
+    21,
+    22
+  ],
+  "conditions": [
+    "none",
+    "view_noise"
+  ],
+  "methods": [
+    "warm_start",
+    "sliding_window",
+    "full_retrain",
+    "dsvc_course"
+  ],
+  "drift_view": 3,
+  "noise_std": 1.0,
+  "time_budget_s": 90.0,
+  "budget_basis": "frozen before course runs; pilot author-code first-view time about 50 seconds",
+  "probe_samples": 96,
+  "components": 16,
+  "window": 2,
+  "clusters": 10,
+  "feature_dim": 256,
+  "prototype_count": 70,
+  "epochs": 200,
+  "batch_size": 256,
+  "learning_rate": 0.0001,
+  "beta1": 1.0,
+  "beta2": 0.1,
+  "forgetting": 0.5,
+  "kmeans": {
+    "n_init": 10,
+    "max_iter": 300,
+    "tol": 0.0001
+  },
+  "result_dir": "experiments/06_course_comparison/results_b",
+  "config": "experiments/06_course_comparison/config_b.json",
+  "method": "dsvc_course",
+  "seed": 22,
+  "condition": "view_noise",
+  "smoke": false
+}

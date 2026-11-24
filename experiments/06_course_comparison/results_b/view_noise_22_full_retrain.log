@@ -1,0 +1,6 @@
+2026-11-24 21:32:33,707 full_retrain view_noise seed=22 view=1 ACC=0.7435 elapsed=0.17s
+2026-11-24 21:32:33,889 full_retrain view_noise seed=22 view=2 ACC=0.7555 elapsed=0.17s
+2026-11-24 21:32:34,171 full_retrain view_noise seed=22 view=3 ACC=0.9015 elapsed=0.27s
+2026-11-24 21:32:34,466 full_retrain view_noise seed=22 view=4 ACC=0.8840 elapsed=0.29s
+2026-11-24 21:32:34,796 full_retrain view_noise seed=22 view=5 ACC=0.7545 elapsed=0.32s
+2026-11-24 21:32:35,149 full_retrain view_noise seed=22 view=6 ACC=0.8010 elapsed=0.35s
