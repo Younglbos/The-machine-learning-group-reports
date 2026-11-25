@@ -8,7 +8,7 @@
 - [文献综述 Word](reports/多视图聚类课程设计_文献综述.docx)：3页，含论文来源及复现选择。
 - [结果表](reports/tables/) · [分析图](reports/figures/) · [核验证据](reports/verification/) · [课程验收清单](requirements/course_checklist.json)。
 
-课程实验、消融、单视图噪声、独立进程效率与报告已完成；252条课程预测已重算ACC/NMI/ARI。PPT与现场答辩仍待完成。
+课程实验、消融、单视图噪声、独立进程效率与报告已完成；252条课程预测已重算ACC/NMI/ARI。
 
 ## 实验入口
 
