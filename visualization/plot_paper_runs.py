@@ -24,10 +24,18 @@ def hsacc():
     dest.mkdir(exist_ok=True)
     traces=[]
     neighborhoods=[]
+    metadata=root/'reproduction_details.json'
+    consolidated={entry['case']:entry for entry in json.loads(metadata.read_text(encoding='utf-8'))['trials']} if metadata.exists() else {}
     for row in frame.itertuples():
         folder=root/f'{row.pattern}_{row.rate_parameter:.2f}_{row.seed}_{row.variant}'
-        traces.append(json.loads((folder/'upstream_evaluation_trace.json').read_text(encoding='utf-8')))
-        neighborhoods.extend({'seed':row.seed,**entry} for entry in json.loads((folder/'neighborhood.json').read_text(encoding='utf-8')))
+        if (folder/'upstream_evaluation_trace.json').is_file() and (folder/'neighborhood.json').is_file():
+            trace=json.loads((folder/'upstream_evaluation_trace.json').read_text(encoding='utf-8'))
+            neighborhood=json.loads((folder/'neighborhood.json').read_text(encoding='utf-8'))
+        else:
+            saved=consolidated[folder.name]
+            trace,neighborhood=saved['periodic_evaluation'],saved['neighborhood']
+        traces.append(trace)
+        neighborhoods.extend({'seed':row.seed,**entry} for entry in neighborhood)
     fig,axes=plt.subplots(1,3,figsize=(12,3.8))
     for axis,key,label in zip(axes,['acc','nmi','ARI'],['ACC','NMI','ARI']):
         values=np.asarray([trace[key] for trace in traces])*100
@@ -55,6 +63,9 @@ def hsacc():
     fig.savefig(dest/'neighborhood_overlap.png',bbox_inches='tight')
     plt.close(fig)
     folder=root/'random_0.50_1_full'
+    if not (folder/'outputs.npz').is_file() or not (folder/'true_latents_for_evaluation_only.npz').is_file():
+        print('Retained saved PCA figure; generating a new embedding requires local training outputs.')
+        return
     with np.load(folder/'outputs.npz') as output,np.load(folder/'true_latents_for_evaluation_only.npz') as reference:
         representations=[reference['view1'],output['completed_view1'],reference['view2'],output['consensus']]
         titles=['True HOG encoding (offline)','Completed HOG encoding','True GIST encoding (offline)','Concatenated consensus']

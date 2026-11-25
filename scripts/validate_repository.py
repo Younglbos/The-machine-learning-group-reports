@@ -12,10 +12,13 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def main():
+    global ROOT
     parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root',type=Path,default=ROOT,help='Validate a prepared repository snapshot')
     parser.add_argument('--include-paper-results',action='store_true')
     parser.add_argument('--include-course-results',action='store_true')
     args=parser.parse_args()
+    ROOT=args.root.resolve()
     experiments=sorted((ROOT/'experiments').glob('[0-9][0-9]_*'))
     if len(experiments)!=7:
         raise ValueError('Expected seven documented experiments')
@@ -28,6 +31,10 @@ def main():
             if '://' in link or link.startswith('#'): continue
             target=(doc.parent/link.split('#')[0]).resolve()
             if not target.exists(): raise FileNotFoundError(f'{doc.relative_to(ROOT)} -> {link}')
+    checklist=json.loads((ROOT/'requirements/course_checklist.json').read_text(encoding='utf-8'))
+    for check in checklist['checks']:
+        for evidence in check.get('evidence',[]):
+            if not (ROOT/evidence).exists(): raise FileNotFoundError(f"{check['id']} evidence: {evidence}")
     expected={
         '01_complete_baselines/results/complete_runs.csv':63,
         '02_incomplete_multiview/results/scenario_a_runs.csv':54,
@@ -76,12 +83,12 @@ def main():
             with (ROOT/'experiments'/filename).open(encoding='utf-8-sig',newline='') as source:
                 rows=list(csv.DictReader(source))
             if len(rows)!=count: raise ValueError(f'Incomplete course results: {filename}')
-        analysis=json.loads((ROOT/'reports/analysis_verification.json').read_text(encoding='utf-8'))
-        prediction=json.loads((ROOT/'reports/prediction_verification.json').read_text(encoding='utf-8'))
+        analysis=json.loads((ROOT/'reports/verification/analysis_verification.json').read_text(encoding='utf-8'))
+        prediction=json.loads((ROOT/'reports/verification/prediction_verification.json').read_text(encoding='utf-8'))
         if not (analysis['a_masks_matched'] and analysis['b_inputs_matched'] and prediction['all_metrics_recomputed']):
             raise ValueError('Course provenance verification failed')
         if prediction['verified_records']!=252: raise ValueError('Prediction count mismatch')
-        for artifact in ['多视图聚类课程设计_实验报告.docx','多视图聚类课程设计_文献综述.docx','course_predictions.jsonl.gz']:
+        for artifact in ['多视图聚类课程设计_实验报告.docx','多视图聚类课程设计_文献综述.docx','verification/course_predictions.jsonl.gz']:
             if not (ROOT/'reports'/artifact).is_file(): raise FileNotFoundError(artifact)
         for filename,images,tables in [('多视图聚类课程设计_实验报告.docx',27,14),('多视图聚类课程设计_文献综述.docx',0,1)]:
             with ZipFile(ROOT/'reports'/filename) as archive:

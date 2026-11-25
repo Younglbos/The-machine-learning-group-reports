@@ -1,7 +1,0 @@
-{
-  "third_party\\HSACC\\model.py": "57ab13db9a1f5e65b10ba858b04fba9eff041b906da483aa08542671cec58ef9",
-  "third_party\\HSACC\\loss.py": "921186af8ec071a7e7f3153b43b22dd0baa1f44a0f0b49a941d1dc7b38fd1031",
-  "third_party\\HSACC\\utils\\get_mask.py": "d31815492a00da6f9cecf7665a2e82a0ff5a46a57f4e92084b2de4b085e28953",
-  "third_party\\HSACC\\utils\\next_batch.py": "1efbd621256df73ff0dc7d76d0560b855ef3d61a637e06800c6771c1596c3ad5",
-  "third_party\\HSACC\\configure\\configure.py": "f460a093b92b81951e5964d4c18230cc85e820890ea048cc5314b8f0ca635f6c"
-}

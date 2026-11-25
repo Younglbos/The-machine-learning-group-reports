@@ -14,7 +14,8 @@
 | `results_a/baselines/` | 同一Conda环境重新运行的零/均值填充和完整参考 |
 | `results_a/hsacc/` | 已观测数据标准化、固定500轮的HSACC课程结果 |
 | `results_b/` | 每个方法、种子、漂移条件分别启动进程后的结果 |
-| `progress.json` | 当前实验阶段，不用于替代最终验收 |
+| `results_a/hsacc/reproduction_details.json` | 27个HSACC试验的合并配置、源码校验和诊断 |
+| `results_b/reproduction_details.json` | 24个完整视图流病例的配置、环境和损失轨迹 |
 
 ```powershell
 python scripts/run_in_environment.py experiments/06_course_comparison/run.py --stage a
@@ -22,6 +23,8 @@ python scripts/run_in_environment.py experiments/06_course_comparison/run.py --s
 ```
 
 `--stage all` 会继续调用实验07的冻结消融、鲁棒性和独立效率测量。长实验可重启；HSACC只有在配置与输出完整时才复用结果，B按完整方法/种子/条件复用已完成病例。
+
+仓库只保留正式聚合结果与合并日志；逐次病例目录和完成标记由重新训练在本地生成。报告表格位于 `reports/tables/`，预测核验证据位于 `reports/verification/`。
 
 ## 场景A
 

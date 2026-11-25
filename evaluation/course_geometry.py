@@ -32,6 +32,8 @@ def main():
     out=ROOT/'reports'
     figures=out/'figures'
     figures.mkdir(parents=True,exist_ok=True)
+    (out/'tables').mkdir(exist_ok=True)
+    (out/'verification').mkdir(exist_ok=True)
     rows=[]
     hashes={}
     weights=[]
@@ -94,11 +96,11 @@ def main():
                 plt.close(fig)
             hashes[str((folder/'final_state.pt').relative_to(ROOT))]=file_hash(folder/'final_state.pt')
     frame=pd.DataFrame(rows)
-    frame.to_csv(out/'geometry_runs.csv',index=False,encoding='utf-8-sig')
+    frame.to_csv(out/'tables/geometry_runs.csv',index=False,encoding='utf-8-sig')
     summary=frame.groupby(['view','representation'])[['neighbor_overlap_missing','neighbor_overlap_all',
         'missing_mse','consensus_overlap_with_true_view','consensus_overlap_missing']].agg(['mean','std']).reset_index()
     summary.columns=['_'.join(x).rstrip('_') for x in summary.columns]
-    summary.to_csv(out/'geometry_summary.csv',index=False,encoding='utf-8-sig')
+    summary.to_csv(out/'tables/geometry_summary.csv',index=False,encoding='utf-8-sig')
     fig,axes=plt.subplots(1,2,figsize=(11,4))
     for axis,view in zip(axes,[1,2]):
         current=frame[frame.view==view]
@@ -111,7 +113,7 @@ def main():
     fig.tight_layout(rect=(0,0,1,.92))
     fig.savefig(figures/'course_a_geometry_neighbors.png',dpi=150,bbox_inches='tight')
     plt.close(fig)
-    write_json(out/'geometry_verification.json',{'runs':len(frame),'seeds':[1,2,3],'checkpoint_sha256':hashes,
+    write_json(out/'verification/geometry_verification.json',{'runs':len(frame),'seeds':[1,2,3],'checkpoint_sha256':hashes,
         'two_view_weight_check':weights,
         'evaluation_only':True,'geometry':'Euclidean 10-NN on observed-only MinMax features',
         'decode_note':'Decoder is an offline diagnostic; clustering uses completed latent representations.'})

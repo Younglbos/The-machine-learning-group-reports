@@ -1,0 +1,328 @@
+{
+  "format_version": 2,
+  "trial_count": 3,
+  "source_versions": {
+    "39d429721e62c66cd358f91631a7827b34f342657da10a87ba15f695b0edcb75": {
+      "third_party\\HSACC\\model.py": "57ab13db9a1f5e65b10ba858b04fba9eff041b906da483aa08542671cec58ef9",
+      "third_party\\HSACC\\loss.py": "921186af8ec071a7e7f3153b43b22dd0baa1f44a0f0b49a941d1dc7b38fd1031",
+      "third_party\\HSACC\\utils\\get_mask.py": "d31815492a00da6f9cecf7665a2e82a0ff5a46a57f4e92084b2de4b085e28953",
+      "third_party\\HSACC\\utils\\next_batch.py": "1efbd621256df73ff0dc7d76d0560b855ef3d61a637e06800c6771c1596c3ad5",
+      "third_party\\HSACC\\configure\\configure.py": "f460a093b92b81951e5964d4c18230cc85e820890ea048cc5314b8f0ca635f6c"
+    }
+  },
+  "trials": [
+    {
+      "case": "random_0.40_1_equal_weights",
+      "source_version": "39d429721e62c66cd358f91631a7827b34f342657da10a87ba15f695b0edcb75",
+      "neighborhood": [
+        {
+          "view": 1,
+          "missing_samples": 496,
+          "k": 10,
+          "completion_overlap_all": 0.6756496227996647,
+          "completion_overlap_missing": 0.07500000000000001,
+          "completion_overlap_observed": 0.8332804232804233,
+          "consensus_overlap_with_true_view": 0.27204526404023466,
+          "true_neighbor_label_purity": 0.7598072087175188,
+          "completed_neighbor_label_purity": 0.7517602682313496
+        },
+        {
+          "view": 2,
+          "missing_samples": 458,
+          "k": 10,
+          "completion_overlap_all": 0.6766554903604359,
+          "completion_overlap_missing": 0.0799126637554585,
+          "completion_overlap_observed": 0.8184128630705395,
+          "consensus_overlap_with_true_view": 0.33256496227996646,
+          "true_neighbor_label_purity": 0.7489941324392289,
+          "completed_neighbor_label_purity": 0.7451802179379715
+        }
+      ],
+      "periodic_evaluation": {
+        "acc": [
+          0.6701592623637888,
+          0.6387259010896899,
+          0.624056999161777,
+          0.7074601844090528,
+          0.7095557418273261,
+          0.7112321877619446,
+          0.7145850796311819,
+          0.7133277451802179,
+          0.7124895222129086,
+          0.7078792958927075
+        ],
+        "nmi": [
+          0.631241880355114,
+          0.6270103844199743,
+          0.6436952109593164,
+          0.6835215353258396,
+          0.6866335457767146,
+          0.6880271178458528,
+          0.6870078395908754,
+          0.6839179569290432,
+          0.6862012818628518,
+          0.6863304673272154
+        ],
+        "ARI": [
+          0.7579642525496235,
+          0.5873671008237394,
+          0.5502721691570306,
+          0.706429686799971,
+          0.7062901844927182,
+          0.7054314869261428,
+          0.7089301097907424,
+          0.7073751041152395,
+          0.7066297149617514,
+          0.7070311812100752
+        ]
+      },
+      "original_artifact_sha256": {
+        "config.json": "f854f9d5ce0eb6c27fdda329734c2e1c64d9c434dc0816186661b725a2361404",
+        "metrics.json": "a71a25f4e7aeaf15eb7891f436d7a225ea1afd71f3d4709c732e9ef341cc9ced",
+        "neighborhood.json": "69aef056c8d866434edf8b87c7705275bbd7b37e0a17665c2c6f99acd1e98bc3",
+        "source_hashes.json": "cebdf15d19bee3b5ee054accfbd176991a9fa020d05caa672f683926175842ff",
+        "upstream_evaluation_trace.json": "84ece2bdc03d8b5b1bfcca0d756851807adc96acde0a94ad17fab1588973491d",
+        "run.log": "f450753351844cdcfe81c28c26e3a15ca6950cdf8e6c7793b20a001805ffc071"
+      },
+      "configuration_overrides": {}
+    },
+    {
+      "case": "random_0.40_2_equal_weights",
+      "source_version": "39d429721e62c66cd358f91631a7827b34f342657da10a87ba15f695b0edcb75",
+      "neighborhood": [
+        {
+          "view": 1,
+          "missing_samples": 470,
+          "k": 10,
+          "completion_overlap_all": 0.6860435875943002,
+          "completion_overlap_missing": 0.0674468085106383,
+          "completion_overlap_observed": 0.8377870563674323,
+          "consensus_overlap_with_true_view": 0.2930846605196982,
+          "true_neighbor_label_purity": 0.7152556580050293,
+          "completed_neighbor_label_purity": 0.7111483654652138
+        },
+        {
+          "view": 2,
+          "missing_samples": 484,
+          "k": 10,
+          "completion_overlap_all": 0.6713327745180218,
+          "completion_overlap_missing": 0.07272727272727274,
+          "completion_overlap_observed": 0.823659305993691,
+          "consensus_overlap_with_true_view": 0.3300083822296731,
+          "true_neighbor_label_purity": 0.7146689019279128,
+          "completed_neighbor_label_purity": 0.7141240569991618
+        }
+      ],
+      "periodic_evaluation": {
+        "acc": [
+          0.5687342833193629,
+          0.5515507124895223,
+          0.6077116512992456,
+          0.7062028499580888,
+          0.6969823973176865,
+          0.7078792958927075,
+          0.71081307627829,
+          0.7078792958927075,
+          0.7053646269907795,
+          0.6982397317686505
+        ],
+        "nmi": [
+          0.5788006940317183,
+          0.5517912647915372,
+          0.6356479088747679,
+          0.6693743157366975,
+          0.6653216791328346,
+          0.669461399870534,
+          0.6710942287334594,
+          0.6686740794162844,
+          0.663911753152361,
+          0.6549359844668284
+        ],
+        "ARI": [
+          0.621677457483877,
+          0.5298204781666316,
+          0.6637792322783381,
+          0.8485779946022645,
+          0.8435597943921551,
+          0.8519366369825551,
+          0.8507059362634529,
+          0.8476551765424251,
+          0.8308529521048506,
+          0.8243646062571435
+        ]
+      },
+      "original_artifact_sha256": {
+        "config.json": "33759649ca271822eda0a4c6ad21fe770e8de287cd95572ba1695f225960f58a",
+        "metrics.json": "168820912a2a444d123e17d98ab81f21d1190fda5129908469e8c6e04e34973a",
+        "neighborhood.json": "d30a2577eec2458cea8e582f134c5b6789a5990ffeba45d06521352f7395e54c",
+        "source_hashes.json": "cebdf15d19bee3b5ee054accfbd176991a9fa020d05caa672f683926175842ff",
+        "upstream_evaluation_trace.json": "d335957b8f4c2f037e07781c40a4de2720aec0df484191a49705ebb18583dcfe",
+        "run.log": "0fa4eaea656159afb54fc1a96ae8f86552eb5b616d41f238f3d278008f62d35b"
+      },
+      "configuration_overrides": {
+        "data_seed": 2,
+        "mask_statistics": {
+          "observed_per_view": [
+            1916,
+            1902
+          ]
+        }
+      }
+    },
+    {
+      "case": "random_0.40_3_equal_weights",
+      "source_version": "39d429721e62c66cd358f91631a7827b34f342657da10a87ba15f695b0edcb75",
+      "neighborhood": [
+        {
+          "view": 1,
+          "missing_samples": 454,
+          "k": 10,
+          "completion_overlap_all": 0.6867979882648785,
+          "completion_overlap_missing": 0.06872246696035243,
+          "completion_overlap_observed": 0.8320393374741202,
+          "consensus_overlap_with_true_view": 0.2685666387259011,
+          "true_neighbor_label_purity": 0.7425817267393127,
+          "completed_neighbor_label_purity": 0.7344928751047779
+        },
+        {
+          "view": 2,
+          "missing_samples": 500,
+          "k": 10,
+          "completion_overlap_all": 0.6533948030176027,
+          "completion_overlap_missing": 0.0634,
+          "completion_overlap_observed": 0.8098091198303289,
+          "consensus_overlap_with_true_view": 0.33520536462699074,
+          "true_neighbor_label_purity": 0.736127409891031,
+          "completed_neighbor_label_purity": 0.7350796311818943
+        }
+      ],
+      "periodic_evaluation": {
+        "acc": [
+          0.6005867560771165,
+          0.6521374685666387,
+          0.6953059513830679,
+          0.759010896898575,
+          0.7598491198658843,
+          0.7619446772841575,
+          0.7623637887678122,
+          0.7619446772841575,
+          0.7619446772841575,
+          0.7598491198658843
+        ],
+        "nmi": [
+          0.6026567322760581,
+          0.6197917254499337,
+          0.6651997265564622,
+          0.688557045237947,
+          0.6926184978201686,
+          0.6930972796799176,
+          0.6929009136802253,
+          0.6944851403693487,
+          0.6943560925220007,
+          0.6817818712289019
+        ],
+        "ARI": [
+          0.6513630797053215,
+          0.7107120730736999,
+          0.7402203623967525,
+          0.8771041682529215,
+          0.8768911396382517,
+          0.8762696654021815,
+          0.8773061632680207,
+          0.8760412462872117,
+          0.8765615042929324,
+          0.8570665603662555
+        ]
+      },
+      "original_artifact_sha256": {
+        "config.json": "d25b4fb419ab51a7b9ccc7966fd2e0cb51dd5d79bd58ab1e0d18a9af82452be6",
+        "metrics.json": "43238ba4b9e0ff0c08c7c0ffc676419994cf48ef003359a3ab4e3295f53f0951",
+        "neighborhood.json": "23427782ac21fdccbbdcd777885982fdf8c97f75cfcc9153bb3f82248168bf36",
+        "source_hashes.json": "cebdf15d19bee3b5ee054accfbd176991a9fa020d05caa672f683926175842ff",
+        "upstream_evaluation_trace.json": "2eb46977547bcd00f40a271fc217d558a229a246676f978144332943e3a20a81",
+        "run.log": "9d5ee11c50c1428eb3f70c73f8a6ec972f01c00f0401a997710a47942e682f6f"
+      },
+      "configuration_overrides": {
+        "data_seed": 3,
+        "mask_statistics": {
+          "observed_per_view": [
+            1932,
+            1886
+          ]
+        }
+      }
+    }
+  ],
+  "note": "Per-trial metadata consolidated without modifying final quality CSVs; original arrays/checkpoints remain local.",
+  "common_configuration": {
+    "seed": 4,
+    "view": 2,
+    "training": {
+      "start_inference": 100,
+      "batch_size": 256,
+      "epoch": 500,
+      "alpha": 10,
+      "beta": 10,
+      "gamma": 5,
+      "lambda2": 0.1,
+      "lambda1": 0.1,
+      "lambda3": 10,
+      "lambda4": 1,
+      "lr": 0.0001,
+      "class_num": 20,
+      "kernel_mul": 2,
+      "kernel_num": 4
+    },
+    "Autoencoder": {
+      "arch1": [
+        1984,
+        1024,
+        1024,
+        1024,
+        128
+      ],
+      "arch2": [
+        512,
+        1024,
+        1024,
+        1024,
+        128
+      ],
+      "activations1": "relu",
+      "activations2": "relu",
+      "batchnorm": true
+    },
+    "Inference": {
+      "arch1": [
+        128,
+        256,
+        128
+      ],
+      "arch2": [
+        128,
+        256,
+        128
+      ]
+    },
+    "print_num": 50,
+    "dataset": "Caltech101-20",
+    "missing_rate": 0.4,
+    "protocol": "course",
+    "ablation": "equal_weights",
+    "data_seed": 1,
+    "noise_std": 0.0,
+    "normalization": "featurewise_minmax_fit_observed_rows_only",
+    "missing_rate_definition": "fraction_of_samples_missing_exactly_one_view",
+    "mask_statistics": {
+      "incomplete_sample_fraction": 0.39983235540653816,
+      "missing_block_fraction": 0.19991617770326908,
+      "fully_unobserved_samples": 0,
+      "observed_per_view": [
+        1890,
+        1928
+      ]
+    },
+    "device": "cuda"
+  },
+  "configuration_encoding": "Recursively overwrite common_configuration with each case configuration_overrides."
+}

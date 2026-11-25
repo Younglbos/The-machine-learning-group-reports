@@ -1,6 +1,0 @@
-2026-11-24 21:25:05,452 warm_start none seed=21 view=1 ACC=0.8585 elapsed=0.05s
-2026-11-24 21:25:05,463 warm_start none seed=21 view=2 ACC=0.5970 elapsed=0.01s
-2026-11-24 21:25:05,479 warm_start none seed=21 view=3 ACC=0.6960 elapsed=0.01s
-2026-11-24 21:25:05,489 warm_start none seed=21 view=4 ACC=0.6485 elapsed=0.00s
-2026-11-24 21:25:05,499 warm_start none seed=21 view=5 ACC=0.7890 elapsed=0.00s
-2026-11-24 21:25:05,508 warm_start none seed=21 view=6 ACC=0.5760 elapsed=0.00s

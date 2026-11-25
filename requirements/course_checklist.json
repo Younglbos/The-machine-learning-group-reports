@@ -48,7 +48,7 @@
       "status": "complete",
       "note": "作者代码试验与课程统一协议分开报告，固定最终轮，不以最佳标签指标选模型。",
       "evidence": [
-        "reports/scenario_a_paired_gains.csv",
+        "reports/tables/scenario_a_paired_gains.csv",
         "reports/多视图聚类课程设计_实验报告.docx"
       ],
       "progress_note": "统一协议三个随机缺失比例的三个种子均相对均值填充为正收益；固定500轮，不按标签挑选轮次。"
@@ -58,7 +58,7 @@
       "requirement": "比较真实视图、补全视图、共识表示的邻域一致性；提供至少2张可视化图和定量分析。",
       "status": "complete",
       "evidence": [
-        "reports/geometry_summary.csv",
+        "reports/tables/geometry_summary.csv",
         "reports/figures/course_a_geometry_pca.png",
         "reports/figures/course_a_geometry_neighbors.png"
       ],
@@ -71,8 +71,8 @@
       "note": "将4.5节全部纳入执行范围。",
       "evidence": [
         "experiments/06_course_comparison/results_a/hsacc/runs.csv",
-        "reports/ablation_summary.csv",
-        "reports/robustness_summary.csv"
+        "reports/tables/ablation_summary.csv",
+        "reports/tables/robustness_summary.csv"
       ],
       "progress_note": "三模式、三比例、三个种子；去一致性/去补全/等权消融及单视图噪声完成；解释双视图等权退化。"
     },
@@ -93,7 +93,7 @@
       "status": "complete",
       "note": "全量重训练仅为任务书允许的比较参考，在线方法不得借此访问全部历史。",
       "evidence": [
-        "reports/scenario_b_summary.csv",
+        "reports/tables/scenario_b_summary.csv",
         "reports/figures/course_b_time.png"
       ],
       "progress_note": "统一六视图下warm-start、两批窗口和全量参考均完成3种子/2条件，报告单批及累计时间。"
@@ -114,8 +114,8 @@
       "requirement": "在第T/2批次改变类别比例、特征均值或视图噪声，对比无漂移与有漂移。",
       "status": "complete",
       "evidence": [
-        "reports/scenario_b_noise_effect.csv",
-        "reports/scenario_b_recovery.csv"
+        "reports/tables/scenario_b_noise_effect.csv",
+        "reports/tables/scenario_b_recovery.csv"
       ],
       "progress_note": "第3/6批视图加噪，对比完全相同种子的无漂移输入，保留配对噪声影响与未恢复情况。"
     },
@@ -126,7 +126,7 @@
       "evidence": [
         "reports/figures/course_b_label_changes.png",
         "reports/figures/course_b_retention.png",
-        "reports/scenario_b_recovery.csv"
+        "reports/tables/scenario_b_recovery.csv"
       ],
       "progress_note": "匹配标签变化、固定旧表示探针、遗忘和恢复均已分析；报告查询空间差异的限制。"
     },
@@ -137,10 +137,10 @@
       "note": "A种子1/2/3，B种子11/21/22；均值±样本标准差；恢复为达到漂移前性能90%的批次数，未恢复单列。",
       "progress_note": "ACC/NMI/ARI均值±样本SD，Silhouette、邻域，单批/总时长、原生峰值、GPU峰值和恢复均有证据。",
       "evidence": [
-        "reports/scenario_a_summary.csv",
-        "reports/scenario_b_final.csv",
-        "reports/isolated_efficiency_summary.csv",
-        "reports/geometry_summary.csv"
+        "reports/tables/scenario_a_summary.csv",
+        "reports/tables/scenario_b_final.csv",
+        "reports/tables/isolated_efficiency_summary.csv",
+        "reports/tables/geometry_summary.csv"
       ]
     },
     {
@@ -171,8 +171,8 @@
       "requirement": "固定随机种子，保存配置、日志、最终标签和结果CSV；列出软硬件、超参数和停止条件；报告均值及标准差。",
       "status": "complete",
       "evidence": [
-        "reports/prediction_verification.json",
-        "reports/course_predictions.jsonl.gz",
+        "reports/verification/prediction_verification.json",
+        "reports/verification/course_predictions.jsonl.gz",
         "reports/多视图聚类课程设计_实验报告.docx"
       ],
       "progress_note": "保存配置/环境/日志/标签/CSV；252条课程记录重算主指标；公开紧凑标签档案可无数据核验。"

@@ -25,11 +25,11 @@ def main():
     if args.mode=='replay':
         print('SAVED RESULT REPLAY: no neural training is performed by this command.')
         if args.scenario=='a':
-            path=ROOT/'reports/scenario_a_summary.csv'
+            path=ROOT/'reports/tables/scenario_a_summary.csv'
             frame=pd.read_csv(path)
             print(frame[frame.pattern=='random'][['rate_parameter','method','acc_mean','acc_std','nmi_mean','ari_mean']].to_string(index=False))
         else:
-            frame=pd.read_csv(ROOT/'reports/scenario_b_summary.csv')
+            frame=pd.read_csv(ROOT/'reports/tables/scenario_b_summary.csv')
             print(frame[frame.method=='dsvc_course'][['condition','view','acc_mean','acc_std','cumulative_s_mean','retained_state_mb_mean']].to_string(index=False))
         print('All means use three seeds; SD uses ddof=1. See reports/多视图聚类课程设计_实验报告.docx for limitations.')
         return

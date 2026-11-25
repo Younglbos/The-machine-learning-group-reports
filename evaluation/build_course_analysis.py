@@ -20,7 +20,7 @@ NAMES={'hsacc_course':'HSACC course','mean_fill_kmeans':'Mean fill','zero_fill_k
        'warm_start':'Warm start','sliding_window':'Window K-means','full_retrain':'Full retrain','dsvc_course':'DSVC course'}
 
 
-def save_csv(name,frame): frame.to_csv(OUT/name,index=False,encoding='utf-8-sig')
+def save_csv(name,frame): frame.to_csv(OUT/'tables'/name,index=False,encoding='utf-8-sig')
 
 
 def grouped(frame,keys,metrics):
@@ -178,6 +178,8 @@ def main():
     parser.add_argument('--stage',choices=['a','b','all'],default='all')
     args=parser.parse_args()
     OUT.mkdir(exist_ok=True)
+    (OUT/'tables').mkdir(exist_ok=True)
+    (OUT/'verification').mkdir(exist_ok=True)
     FIG.mkdir(exist_ok=True)
     plt.rcParams.update({'font.size':9,'figure.dpi':140,'axes.spines.top':False,'axes.spines.right':False})
     with threadpool_limits(limits=1):
@@ -190,7 +192,7 @@ def main():
             validation.update(scenario_b())
             validation.update(extras(a))
     suffix='' if args.stage=='all' else '_'+args.stage
-    write_json(OUT/f'analysis{suffix}_verification.json',validation)
+    write_json(OUT/'verification'/f'analysis{suffix}_verification.json',validation)
     print(json.dumps(validation,indent=2))
 
 

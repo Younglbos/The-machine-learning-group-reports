@@ -17,9 +17,10 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--public-only',action='store_true',help='Verify compact labels without raw datasets or local outputs')
     args=parser.parse_args()
+    (ROOT/'reports/verification').mkdir(parents=True,exist_ok=True)
     if args.public_only:
-        manifest=json.loads((ROOT/'reports/prediction_verification.json').read_text(encoding='utf-8'))
-        with gzip.open(ROOT/'reports/course_predictions.jsonl.gz','rt',encoding='utf-8') as source:
+        manifest=json.loads((ROOT/'reports/verification/prediction_verification.json').read_text(encoding='utf-8'))
+        with gzip.open(ROOT/'reports/verification/course_predictions.jsonl.gz','rt',encoding='utf-8') as source:
             rows=[json.loads(line) for line in source]
         if len(rows)!=manifest['verified_records']: raise ValueError('Public archive record count mismatch')
         for row,expected in zip(rows,manifest['checks']):
@@ -66,10 +67,10 @@ def main():
     for variant in ['no_consistency','no_completion','equal_weights','noise_hsacc']: learned(extra/variant)
     baselines(extra/'noise_baselines')
     if len(verified)!=252: raise ValueError(f'Expected 252 matched course prediction records, found {len(verified)}')
-    write_json(ROOT/'reports/prediction_verification.json',{'verified_records':len(verified),'tolerance':1e-12,
+    write_json(ROOT/'reports/verification/prediction_verification.json',{'verified_records':len(verified),'tolerance':1e-12,
         'all_metrics_recomputed':True,'checks':verified})
     # A single compressed label archive permits third parties to recompute published quality values.
-    with (ROOT/'reports/course_predictions.jsonl.gz').open('wb') as raw:
+    with (ROOT/'reports/verification/course_predictions.jsonl.gz').open('wb') as raw:
         with gzip.GzipFile(filename='',mode='wb',fileobj=raw,mtime=0) as archive:
             for record in predictions:
                 archive.write((json.dumps(record,separators=(',',':'),ensure_ascii=False)+'\n').encode('utf-8'))

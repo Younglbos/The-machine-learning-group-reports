@@ -1,147 +1,76 @@
 # 多视图聚类课程设计
 
-本仓库按课程任务书实现不完整多视图聚类与多视图流式聚类，并整理 HSACC、DSVC 的论文复现入口。
+实现不完整多视图聚类和多视图流式聚类，包含传统基线、HSACC与DSVC选定配置的复现、课程统一对照及消融分析。
 
-**当前进度：课程A/B主实验、消融、单视图噪声、独立进程效率、误差分析和报告均已完成。** 252条课程预测记录已重新计算ACC/NMI/ARI，12项协议测试通过。PPT按用户要求最后制作，目前未制作PPT，也未完成现场答辩；不将作者单数据集试验说成整篇论文的全部复现。
+## 报告与结果
 
-主文档：[实验报告（Word）](reports/多视图聚类课程设计_实验报告.docx)、[文献综述与教师条目核验（Word）](reports/多视图聚类课程设计_文献综述.docx)、[报告文件与演示说明](reports/README.md)。两个Word文件均可编辑，图表已嵌入文档，可单独下载打开。
+- [实验报告 Word](reports/多视图聚类课程设计_实验报告.docx)：25页，含方法、实验、误差与效率分析。
+- [文献综述 Word](reports/多视图聚类课程设计_文献综述.docx)：3页，含论文来源及复现选择。
+- [结果表](reports/tables/) · [分析图](reports/figures/) · [核验证据](reports/verification/) · [课程验收清单](requirements/course_checklist.json)。
 
-## 实验目录
+课程实验、消融、单视图噪声、独立进程效率与报告已完成；252条课程预测已重算ACC/NMI/ARI。PPT与现场答辩仍待完成。
 
-每个实验都有独立的 `README.md`、`run.py`、`config.json`。公共的数据、模型、训练、评估与绘图代码放在根目录对应模块中，避免各实验复制出不同的评测实现。
+## 实验入口
 
-| 目录 | 实验内容 | 状态 | 结果 |
-| --- | --- | --- | --- |
-| [01_complete_baselines](experiments/01_complete_baselines/) | 4个数据集的完整特征拼接和各单视图 K-means | 已运行，3个种子 | 63条评测记录 |
-| [02_incomplete_multiview](experiments/02_incomplete_multiview/) | 随机、单视图集中、类别相关缺失；零/均值填充；完整数据参考 | 基线已运行，3个种子 | 54条缺失实验与9条匹配视图参考 |
-| [03_streaming_baselines](experiments/03_streaming_baselines/) | warm-start、滑动窗口、全量重训练；无漂移、均值漂移、视图噪声 | 基线已运行，3个种子 | 270条批次评测记录 |
-| [04_hsacc_reproduction](experiments/04_hsacc_reproduction/) | HSACC，NeurIPS 2025，不完整视图 | 已完成单配置500轮、3个数据种子 | 3条最终指标、邻域分析和图表 |
-| [05_dsvc_reproduction](experiments/05_dsvc_reproduction/) | DSVC，ICML 2025，视图流 | 已完成单数据集6视图、200轮/视图、3种子 | 18条视图阶段指标与曲线 |
-| [06_course_comparison](experiments/06_course_comparison/) | 同一数据、掩码或视图流下的课程主比较 | A/B已完成 | A有81条缺失质量记录、9条完整参考；B有144条批次记录 |
-| [07_ablations_robustness](experiments/07_ablations_robustness/) | 去一致性、去补全、等权、单视图加噪与独立进程效率 | 已完成，3种子 | 9条消融新增记录、9条加噪记录、9个独立效率病例 |
+各实验分别保存 `README.md`、`config.json`、`run.py` 和正式结果，详细参数与命令见对应目录。
 
-基线合计396条评测记录，均来自实际运行。流式实验的一条记录表示一个种子、条件、方法下的一个批次，不应当作一次独立的完整流实验。
+| 目录 | 内容 | 已保存结果 |
+| --- | --- | --- |
+| [01_complete_baselines](experiments/01_complete_baselines/) | 四个数据集的完整拼接与单视图K-means | 63条记录 |
+| [02_incomplete_multiview](experiments/02_incomplete_multiview/) | 三种缺失模式下的零/均值填充 | 54条记录及9条完整参考 |
+| [03_streaming_baselines](experiments/03_streaming_baselines/) | 十批样本流及漂移基线 | 270条批次记录 |
+| [04_hsacc_reproduction](experiments/04_hsacc_reproduction/) | HSACC作者协议，Caltech HOG/GIST | 500轮、3种子 |
+| [05_dsvc_reproduction](experiments/05_dsvc_reproduction/) | DSVC作者协议，HandWritten六视图 | 200轮/视图、3种子 |
+| [06_course_comparison](experiments/06_course_comparison/) | 同一观测条件下的课程A/B主比较 | A 81条缺失记录及9条参考；B 144条批次记录 |
+| [07_ablations_robustness](experiments/07_ablations_robustness/) | 去一致性、去补全、等权、加噪与隔离效率 | 各条件3种子 |
 
-另有21条完整预算作者代码记录：HSACC固定最后一轮ACC为71.88%±8.26个百分点；DSVC最终视图ACC为83.53%±11.06个百分点。两者使用不同数据和协议，不能互相比较高低，也不能直接与课程基线表作公平性能比较。短流程证据另存 `validation/`；最终指标已经逐条与本地预测文件核对。
+## 使用已有环境运行
 
-课程主结果另计：A为81条缺失质量记录及9条完整参考，B为144条逐批记录，新增消融与噪声各9条，共252条可核验预测。图表复用控制不增加独立种子数，效率重跑也不加入质量样本数。随机缺失下，HSACC相对均值填充在三个比例的三个种子均有正收益；B中DSVC课程适配最终ACC为无漂移77.97%±7.26、加噪60.13%±4.65，不能宣称消除了漂移。全部144条B记录均未超过预先固定的90秒单批预算。
-
-课程结果和报告可按顺序重建：
-
-```powershell
-python scripts/run_in_environment.py experiments/06_course_comparison/run.py --stage all
-python scripts/run_in_environment.py -- -m evaluation.finalize_course
-python scripts/run_in_environment.py -- -m evaluation.verify_course_outputs --public-only
-```
-
-最后一条只核对仓库中的紧凑标签档案，不需要原始数据或神经网络权重。现场基线演示与保存结果回放命令见报告目录README。
-
-## 复用已有Conda环境
-
-本项目已切换到已有的 `Micro` 环境，使用其中的PyTorch，**不重新下载或安装PyTorch，也不修改原Conda环境**。已验证Python 3.10.20、PyTorch 2.11.0+cu128与RTX 5070能够完成CUDA前向/反向计算，两篇论文短流程均已跑通。
-
-在PowerShell中指定自己的解释器，以下路径是本项目的实际环境示例：
+以下为PowerShell示例。将解释器路径替换为已有环境；启动器将临时文件和缓存放入项目 `.cache/`，不自动安装PyTorch。项目放在D盘时，这些文件也位于D盘。
 
 ```powershell
 $env:MVC_PYTHON = 'D:\Anconda\envs\Micro\python.exe'
 python scripts/run_in_environment.py --show-runtime
-python scripts/run_in_environment.py -- -m unittest discover -s tests -v
-python scripts/run_in_environment.py experiments/04_hsacc_reproduction/run.py --smoke
-python scripts/run_in_environment.py experiments/05_dsvc_reproduction/run.py --smoke
-```
-
-启动器只借用所指定的解释器，将 `TEMP`、`TMP`、pip、PyTorch、CUDA和Matplotlib缓存等重定向到项目的 `.cache/`。本项目位于D盘，因此临时文件和缓存也位于D盘；不修改系统全局环境变量。可在本地忽略的 `.cache/runtime.json` 保存解释器路径，`MVC_PYTHON`或 `--python`可覆盖它。
-
-缺少的小型附加包可安装到项目目录，不改动Conda环境。例如本机仅缺少 `munkres`，已从本地wheel安装到 `.cache/python_deps/`，启动器会自动加入该目录。另一台机器缺少该包时可运行：
-
-```powershell
-python scripts/run_in_environment.py -- -m pip install --no-deps --target .cache/python_deps munkres==1.1.4
-```
-
-这条命令只补充 `munkres`，不安装PyTorch。**不要在已有环境中直接批量安装旧版依赖清单**，以免覆盖可用的PyTorch或其他依赖。
-
-## 原始CPU基线环境与快速开始
-
-已验证的基线环境为 Windows 11、Python 3.12.10，具体依赖固定在 [requirements.txt](requirements.txt)。以下是 PowerShell 命令；Linux/macOS 将 `.venv\Scripts\python.exe` 换成 `.venv/bin/python`。
-
-```powershell
-git clone https://github.com/Younglbos/The-machine-learning-group-reports.git
-cd The-machine-learning-group-reports
-python -m venv .venv
-python scripts/run_in_environment.py --python .venv/Scripts/python.exe -- -m pip install -r requirements.txt
-python scripts/run_in_environment.py --python .venv/Scripts/python.exe scripts/download_datasets.py
-python scripts/run_in_environment.py --python .venv/Scripts/python.exe scripts/inspect_datasets.py
-python scripts/run_in_environment.py --python .venv/Scripts/python.exe -- -m unittest discover -s tests -v
-```
-
-按实验分别运行：
-
-```powershell
-.venv\Scripts\python.exe experiments/01_complete_baselines/run.py
-.venv\Scripts\python.exe experiments/02_incomplete_multiview/run.py
-.venv\Scripts\python.exe experiments/03_streaming_baselines/run.py
-```
-
-每个入口从自己的 `config.json` 读取设置，将 CSV、图表、日志、最终标签等保存到本实验的 `results/`。重复运行会更新对应结果文件；日志会追加。若要保留多次完整运行，请修改配置中的 `result_dir`。
-
-本仓库提供已运行的 CSV 和图表快照。原始运行配置保存在各结果目录的 `run_config.json`；实验根目录的 `config.json` 使用拆分后的输出位置。`provenance.json` 记录两者的关系，不会把新配置冒充为旧结果的运行配置。
-
-## 论文资源与启动命令
-
-两篇论文均使用已有环境中的PyTorch。下载固定版本的作者源码后，通过上面的启动器运行：
-
-```powershell
+python scripts/run_in_environment.py scripts/download_datasets.py
 python scripts/run_in_environment.py scripts/download_references.py
-python scripts/run_in_environment.py experiments/04_hsacc_reproduction/run.py --smoke
-python scripts/run_in_environment.py experiments/05_dsvc_reproduction/run.py --smoke
+python scripts/run_in_environment.py experiments/06_course_comparison/run.py --stage all
 ```
 
-本机已有PyTorch构建支持CUDA 12.8和RTX 5070。HSACC入口也允许CPU运行；DSVC作者实现直接调用 `.cuda()`，需要可用的CUDA设备。
+已验证的课程环境为Python 3.10.20、PyTorch 2.11.0+cu128、RTX 5070。DSVC需要CUDA GPU。CPU基线依赖见 [requirements.txt](requirements.txt)，GPU运行记录中的附加依赖见 [requirements-deep.txt](requirements-deep.txt)；使用现有环境时只补缺少的包，避免覆盖可用依赖。
 
-`--smoke` 只检验短流程，不构成论文指标复现。完整命令、参数及协议差异见各论文实验目录 README。原始CPU基线与现用Conda环境版本不同，各次运行的环境记录分别保存，不能把两者混写。
+无需重新训练即可核对仓库快照：
 
-## 数据与协议
+```powershell
+python scripts/run_in_environment.py -- -m evaluation.verify_course_outputs --public-only
+python scripts/run_in_environment.py scripts/validate_repository.py --include-paper-results --include-course-results
+python scripts/run_in_environment.py -- -m unittest discover -s tests -v
+```
 
-| 数据集 | 样本数 | 视图数 | 类别数 | 各视图维度 |
-| --- | ---: | ---: | ---: | --- |
-| BBCSport | 544 | 2 | 5 | 3183 / 3203 |
-| BBC4view | 685 | 4 | 5 | 4659 / 4633 / 4665 / 4684 |
-| Caltech101-20 | 2386 | 6 | 20 | 48 / 40 / 254 / 1984 / 512 / 928 |
-| NUS-WIDE子集 | 2400 | 5 | 12 | 64 / 144 / 73 / 128 / 225 |
+演示与Word重建见 [报告目录说明](reports/README.md)。
 
-下载的是公开多视图特征与标签，原文件不随仓库上传。逐文件来源、大小与Git blob校验值见 [data/dataset_sources.json](data/dataset_sources.json)，读取注意事项见 [data/README.txt](data/README.txt)。程序保留来源文件中的样本顺序；当前验证了各视图行数与标签长度，原文件未提供独立对象ID，因此没有额外证明语义对应关系。
+## 数据与实验边界
 
-场景A课程实验使用 Caltech101-20 的 HOG/GIST 双视图（Python索引3、4）。**课程缺失率定义为“不完整样本比例”：选取 `floor(N*r)` 个样本，每个删除一个完整视图，始终保留另一个视图。** 对双视图，缺失块比例约为 `r/2`。所有方法共享同一掩码，标准化参数只从已观测行估计。该定义与HSACC作者生成器参数分别记录，不能直接比较同名 `missing_rate`。
+公开数据为BBCSport、BBC4view、Caltech101-20、NUS-WIDE子集；HandWritten来自固定版本DSVC作者仓库。样本数、视图维度、下载地址和校验值见 [数据说明](data/README.txt) 与 [来源清单](data/dataset_sources.json)。原始数据、论文PDF、作者源码包和训练权重不进入仓库，通过脚本获取或重新运行生成。
 
-实验03的场景B基线使用 NUS-WIDE 的10个样本批次，预处理只在首批拟合并冻结；漂移从第5批开始。实验06B另外将所有方法统一到HandWritten六视图流，并冻结90秒单批预算，详细历史约束和DSVC课程适配见该目录README。不同流式协议分开分析。
+课程A的不完整率为“缺少一个视图的样本比例”；双视图的缺失块比例约为其一半。课程B主比较为六视图流，与实验03的十批样本流分开分析。作者协议与课程适配分别报告；两篇论文只覆盖选定数据集/配置，未复现原文全部表格。ACC经匈牙利匹配，统计使用3种子的均值与样本标准差，不挑选最好一次。
 
-## 文件用途
+## 仓库结构与结果保留
 
 ```text
-experiments/           每个实验的入口、配置、README和已验证结果
-data/                  数据来源、下载后检查、缺失生成、预处理和读取
-models/                K-means、流式基线及作者代码导入辅助
-train_or_update/       基线与论文的训练/更新逻辑
-evaluation/            匹配后的ACC、NMI、ARI、邻域、计时与内存记录
-visualization/         从CSV生成带随机种子标准差的图表
-configs/               拆分前的统一基线配置，保留用于原始结果溯源
-scripts/               数据与固定版本论文资源下载工具
-tests/                 协议测试，使用Python unittest
-references/            公开论文/源码下载清单，不提交PDF或源码压缩包
-reports/               Word报告、Word文献综述、统计CSV、图表与公开预测标签档案
-requirements/          课程验收进度清单
-third_party/           运行下载脚本后生成，Git忽略
+data/             数据来源、读取、预处理、缺失与漂移生成
+models/           聚类基线、历史摘要与课程模型
+train_or_update/  训练和流式更新
+evaluation/       指标、误差、核验与分析
+visualization/    论文及基线绘图
+experiments/      七个独立实验的入口、配置、正式CSV、日志和环境
+reports/          两份Word文档；tables/、figures/、verification/、sources/
+scripts/          下载、环境启动、演示、Word导出与仓库检查
+tests/            12项协议测试
+configs/          默认基线配置
+requirements/     教师任务验收清单
+references/       固定论文与作者源码下载清单
 ```
 
-## 评价与复现边界
+每个方法保留逐次CSV、汇总、运行环境及必要日志。重复的种子配置、源码校验与训练轨迹合并到 `reproduction_details.json`；将各条 `configuration_overrides` 递归覆盖到 `common_configuration`，可还原每次配置。短流程产物、每个病例的重复文件和过程进度不再发布；重新训练仍会在本地生成它们，供断点续跑和诊断。
 
-- ACC用匈牙利匹配处理簇编号置换；NMI和ARI按原预测标签计算。
-- 基线使用种子1、2、3，K-means为10次初始化、最多300轮、`tol=1e-4`；统计标准差用 `ddof=1`。
-- 基线计时不含指标、Silhouette和文件保存；流式时间包含当前批预处理和聚类更新。神经网络作者训练包含周期评估，另列时间字段，不与纯K-means计时直接等同。
-- 旧结果的 `peak_rss_mb` 是20毫秒采样的进程工作集；06B和07效率病例另外在新进程中记录Windows原生生命周期峰值。两者均包含库和装载数据。保留状态数组另计，GPU分配峰值另列，不能把摘要大小当成整个进程内存。
-- 真实类别只用于评估和明确标注的类别相关缺失模拟；不用于学习中心或选择课程主结果的最佳轮次。
-- 课程对照、消融、鲁棒性、效率及报告均已核验，详见 [课程验收清单](requirements/course_checklist.json)。PPT仍按用户安排后续制作。双视图权重退化、原始邻域恢复有限、历史探针空间差异等限制均在报告中说明。
-
-## 第三方来源
-
-作者源码、数据与论文通过原地址获取，来源及固定提交见 [THIRD_PARTY.md](THIRD_PARTY.md)。不将本项目的适配入口说成作者原始实现，也不把原论文表格数字写成本地实验结果。
+第三方来源和固定提交见 [THIRD_PARTY.md](THIRD_PARTY.md)。

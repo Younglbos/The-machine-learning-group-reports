@@ -25,3 +25,17 @@ experiments/**/results/streams/
 experiments/**/smoke_results/
 experiments/**/*.npz
 scripts/probe_torch_download.py
+experiments/**/validation/
+experiments/**/random_*/
+experiments/**/single_view_*/
+experiments/**/class_related_*/
+experiments/06_course_comparison/results_b/none_*/
+experiments/06_course_comparison/results_b/view_noise_*/
+experiments/06_course_comparison/results_b/*.log
+!experiments/06_course_comparison/results_b/run.log
+experiments/06_course_comparison/progress.json
+experiments/06_course_comparison/run.log
+experiments/01_complete_baselines/results/config.json
+experiments/03_streaming_baselines/results/config.json
+reports/verification/analysis_a_verification.json
+reports/verification/analysis_b_verification.json

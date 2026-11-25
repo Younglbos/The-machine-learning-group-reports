@@ -1,6 +1,0 @@
-2026-11-24 21:26:01,312 dsvc_course none seed=21 view=1 ACC=0.4975 elapsed=47.42s
-2026-11-24 21:26:13,899 dsvc_course none seed=21 view=2 ACC=0.5995 elapsed=12.58s
-2026-11-24 21:26:24,979 dsvc_course none seed=21 view=3 ACC=0.6100 elapsed=11.07s
-2026-11-24 21:26:36,078 dsvc_course none seed=21 view=4 ACC=0.6210 elapsed=11.09s
-2026-11-24 21:26:47,127 dsvc_course none seed=21 view=5 ACC=0.5715 elapsed=11.04s
-2026-11-24 21:26:58,116 dsvc_course none seed=21 view=6 ACC=0.6980 elapsed=10.98s

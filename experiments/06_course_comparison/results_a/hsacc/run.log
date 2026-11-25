@@ -1,0 +1,404 @@
+===== Saved trial class_related_0.20_1_full =====
+2026-11-24 21:16:45,059 HSACC protocol=course seed=1 rate_parameter=0.20 epochs=500
+2026-11-24 21:16:45,059 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [2071, 2224]}
+2026-11-24 21:16:50,213 [2;29mEpoch : 50/500 ===> Total loss = -6.2534e+03[0m
+2026-11-24 21:16:55,592 [2;29mEpoch : 100/500 ===> Total loss = -6.2865e+03[0m
+2026-11-24 21:17:01,329 [2;29mEpoch : 150/500 ===> Total loss = -6.2862e+03[0m
+2026-11-24 21:17:07,322 [2;29mEpoch : 200/500 ===> Total loss = -6.2862e+03[0m
+2026-11-24 21:17:13,069 [2;29mEpoch : 250/500 ===> Total loss = -6.2885e+03[0m
+2026-11-24 21:17:18,815 [2;29mEpoch : 300/500 ===> Total loss = -6.2874e+03[0m
+2026-11-24 21:17:24,572 [2;29mEpoch : 350/500 ===> Total loss = -6.2914e+03[0m
+2026-11-24 21:17:30,321 [2;29mEpoch : 400/500 ===> Total loss = -6.2890e+03[0m
+2026-11-24 21:17:36,067 [2;29mEpoch : 450/500 ===> Total loss = -6.2894e+03[0m
+2026-11-24 21:17:41,808 [2;29mEpoch : 500/500 ===> Total loss = -6.2829e+03[0m
+2026-11-24 21:17:42,657 Fixed final epoch: ACC=0.7008 NMI=0.7055 ARI=0.7300
+
+===== Saved trial class_related_0.20_2_full =====
+2026-11-24 21:17:42,861 HSACC protocol=course seed=2 rate_parameter=0.20 epochs=500
+2026-11-24 21:17:42,861 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [2068, 2227]}
+2026-11-24 21:17:48,005 [2;29mEpoch : 50/500 ===> Total loss = -6.2594e+03[0m
+2026-11-24 21:17:53,390 [2;29mEpoch : 100/500 ===> Total loss = -6.2783e+03[0m
+2026-11-24 21:17:59,129 [2;29mEpoch : 150/500 ===> Total loss = -6.2781e+03[0m
+2026-11-24 21:18:04,900 [2;29mEpoch : 200/500 ===> Total loss = -6.2810e+03[0m
+2026-11-24 21:18:10,671 [2;29mEpoch : 250/500 ===> Total loss = -6.2847e+03[0m
+2026-11-24 21:18:16,411 [2;29mEpoch : 300/500 ===> Total loss = -6.2871e+03[0m
+2026-11-24 21:18:22,179 [2;29mEpoch : 350/500 ===> Total loss = -6.2771e+03[0m
+2026-11-24 21:18:27,947 [2;29mEpoch : 400/500 ===> Total loss = -6.2832e+03[0m
+2026-11-24 21:18:33,707 [2;29mEpoch : 450/500 ===> Total loss = -6.2841e+03[0m
+2026-11-24 21:18:39,479 [2;29mEpoch : 500/500 ===> Total loss = -6.2847e+03[0m
+2026-11-24 21:18:40,332 Fixed final epoch: ACC=0.7033 NMI=0.6993 ARI=0.7589
+
+===== Saved trial class_related_0.20_3_full =====
+2026-11-24 21:18:40,534 HSACC protocol=course seed=3 rate_parameter=0.20 epochs=500
+2026-11-24 21:18:40,534 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [2062, 2233]}
+2026-11-24 21:18:45,673 [2;29mEpoch : 50/500 ===> Total loss = -6.2585e+03[0m
+2026-11-24 21:18:51,028 [2;29mEpoch : 100/500 ===> Total loss = -6.2673e+03[0m
+2026-11-24 21:18:56,816 [2;29mEpoch : 150/500 ===> Total loss = -6.2725e+03[0m
+2026-11-24 21:19:02,566 [2;29mEpoch : 200/500 ===> Total loss = -6.2699e+03[0m
+2026-11-24 21:19:08,307 [2;29mEpoch : 250/500 ===> Total loss = -6.2712e+03[0m
+2026-11-24 21:19:14,062 [2;29mEpoch : 300/500 ===> Total loss = -6.2765e+03[0m
+2026-11-24 21:19:19,809 [2;29mEpoch : 350/500 ===> Total loss = -6.2803e+03[0m
+2026-11-24 21:19:25,548 [2;29mEpoch : 400/500 ===> Total loss = -6.2819e+03[0m
+2026-11-24 21:19:31,342 [2;29mEpoch : 450/500 ===> Total loss = -6.2795e+03[0m
+2026-11-24 21:19:37,091 [2;29mEpoch : 500/500 ===> Total loss = -6.2797e+03[0m
+2026-11-24 21:19:37,966 Fixed final epoch: ACC=0.7502 NMI=0.6956 ARI=0.8683
+
+===== Saved trial class_related_0.40_1_full =====
+2026-11-24 21:19:38,167 HSACC protocol=course seed=1 rate_parameter=0.40 epochs=500
+2026-11-24 21:19:38,167 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1738, 2080]}
+2026-11-24 21:19:41,857 [2;29mEpoch : 50/500 ===> Total loss = -4.4630e+03[0m
+2026-11-24 21:19:45,752 [2;29mEpoch : 100/500 ===> Total loss = -4.4748e+03[0m
+2026-11-24 21:19:49,944 [2;29mEpoch : 150/500 ===> Total loss = -4.4788e+03[0m
+2026-11-24 21:19:54,129 [2;29mEpoch : 200/500 ===> Total loss = -4.4768e+03[0m
+2026-11-24 21:19:58,310 [2;29mEpoch : 250/500 ===> Total loss = -4.4771e+03[0m
+2026-11-24 21:20:02,493 [2;29mEpoch : 300/500 ===> Total loss = -4.4791e+03[0m
+2026-11-24 21:20:06,674 [2;29mEpoch : 350/500 ===> Total loss = -4.4771e+03[0m
+2026-11-24 21:20:10,844 [2;29mEpoch : 400/500 ===> Total loss = -4.4852e+03[0m
+2026-11-24 21:20:15,033 [2;29mEpoch : 450/500 ===> Total loss = -4.4777e+03[0m
+2026-11-24 21:20:19,203 [2;29mEpoch : 500/500 ===> Total loss = -4.4831e+03[0m
+2026-11-24 21:20:20,067 Fixed final epoch: ACC=0.6555 NMI=0.6373 ARI=0.6412
+
+===== Saved trial class_related_0.40_2_full =====
+2026-11-24 21:20:20,268 HSACC protocol=course seed=2 rate_parameter=0.40 epochs=500
+2026-11-24 21:20:20,268 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1740, 2078]}
+2026-11-24 21:20:23,957 [2;29mEpoch : 50/500 ===> Total loss = -4.4557e+03[0m
+2026-11-24 21:20:27,881 [2;29mEpoch : 100/500 ===> Total loss = -4.4724e+03[0m
+2026-11-24 21:20:32,065 [2;29mEpoch : 150/500 ===> Total loss = -4.4799e+03[0m
+2026-11-24 21:20:36,247 [2;29mEpoch : 200/500 ===> Total loss = -4.4831e+03[0m
+2026-11-24 21:20:40,426 [2;29mEpoch : 250/500 ===> Total loss = -4.4868e+03[0m
+2026-11-24 21:20:44,714 [2;29mEpoch : 300/500 ===> Total loss = -4.4845e+03[0m
+2026-11-24 21:20:49,030 [2;29mEpoch : 350/500 ===> Total loss = -4.4798e+03[0m
+2026-11-24 21:20:53,324 [2;29mEpoch : 400/500 ===> Total loss = -4.4877e+03[0m
+2026-11-24 21:20:57,669 [2;29mEpoch : 450/500 ===> Total loss = -4.4875e+03[0m
+2026-11-24 21:21:01,984 [2;29mEpoch : 500/500 ===> Total loss = -4.4924e+03[0m
+2026-11-24 21:21:02,879 Fixed final epoch: ACC=0.6915 NMI=0.6862 ARI=0.7320
+
+===== Saved trial class_related_0.40_3_full =====
+2026-11-24 21:21:03,082 HSACC protocol=course seed=3 rate_parameter=0.40 epochs=500
+2026-11-24 21:21:03,082 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1732, 2086]}
+2026-11-24 21:21:06,868 [2;29mEpoch : 50/500 ===> Total loss = -4.4593e+03[0m
+2026-11-24 21:21:10,912 [2;29mEpoch : 100/500 ===> Total loss = -4.4750e+03[0m
+2026-11-24 21:21:15,253 [2;29mEpoch : 150/500 ===> Total loss = -4.4756e+03[0m
+2026-11-24 21:21:19,578 [2;29mEpoch : 200/500 ===> Total loss = -4.4737e+03[0m
+2026-11-24 21:21:24,144 [2;29mEpoch : 250/500 ===> Total loss = -4.4795e+03[0m
+2026-11-24 21:21:28,515 [2;29mEpoch : 300/500 ===> Total loss = -4.4736e+03[0m
+2026-11-24 21:21:32,855 [2;29mEpoch : 350/500 ===> Total loss = -4.4807e+03[0m
+2026-11-24 21:21:37,160 [2;29mEpoch : 400/500 ===> Total loss = -4.4776e+03[0m
+2026-11-24 21:21:41,580 [2;29mEpoch : 450/500 ===> Total loss = -4.4777e+03[0m
+2026-11-24 21:21:45,991 [2;29mEpoch : 500/500 ===> Total loss = -4.4763e+03[0m
+2026-11-24 21:21:46,929 Fixed final epoch: ACC=0.7632 NMI=0.7004 ARI=0.8769
+
+===== Saved trial class_related_0.60_1_full =====
+2026-11-24 21:21:47,144 HSACC protocol=course seed=1 rate_parameter=0.60 epochs=500
+2026-11-24 21:21:47,144 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [1381, 1960]}
+2026-11-24 21:21:49,512 [2;29mEpoch : 50/500 ===> Total loss = -2.6428e+03[0m
+2026-11-24 21:21:52,144 [2;29mEpoch : 100/500 ===> Total loss = -2.6822e+03[0m
+2026-11-24 21:21:54,902 [2;29mEpoch : 150/500 ===> Total loss = -2.6911e+03[0m
+2026-11-24 21:21:57,669 [2;29mEpoch : 200/500 ===> Total loss = -2.6896e+03[0m
+2026-11-24 21:22:00,506 [2;29mEpoch : 250/500 ===> Total loss = -2.6918e+03[0m
+2026-11-24 21:22:03,232 [2;29mEpoch : 300/500 ===> Total loss = -2.6878e+03[0m
+2026-11-24 21:22:05,907 [2;29mEpoch : 350/500 ===> Total loss = -2.6891e+03[0m
+2026-11-24 21:22:08,604 [2;29mEpoch : 400/500 ===> Total loss = -2.6926e+03[0m
+2026-11-24 21:22:11,311 [2;29mEpoch : 450/500 ===> Total loss = -2.6925e+03[0m
+2026-11-24 21:22:13,995 [2;29mEpoch : 500/500 ===> Total loss = -2.6875e+03[0m
+2026-11-24 21:22:14,939 Fixed final epoch: ACC=0.6752 NMI=0.6721 ARI=0.6771
+
+===== Saved trial class_related_0.60_2_full =====
+2026-11-24 21:22:15,138 HSACC protocol=course seed=2 rate_parameter=0.60 epochs=500
+2026-11-24 21:22:15,138 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [1399, 1942]}
+2026-11-24 21:22:17,407 [2;29mEpoch : 50/500 ===> Total loss = -2.6321e+03[0m
+2026-11-24 21:22:20,083 [2;29mEpoch : 100/500 ===> Total loss = -2.6841e+03[0m
+2026-11-24 21:22:22,914 [2;29mEpoch : 150/500 ===> Total loss = -2.6876e+03[0m
+2026-11-24 21:22:25,771 [2;29mEpoch : 200/500 ===> Total loss = -2.6914e+03[0m
+2026-11-24 21:22:28,580 [2;29mEpoch : 250/500 ===> Total loss = -2.6948e+03[0m
+2026-11-24 21:22:31,403 [2;29mEpoch : 300/500 ===> Total loss = -2.6953e+03[0m
+2026-11-24 21:22:34,184 [2;29mEpoch : 350/500 ===> Total loss = -2.6959e+03[0m
+2026-11-24 21:22:36,960 [2;29mEpoch : 400/500 ===> Total loss = -2.6854e+03[0m
+2026-11-24 21:22:39,794 [2;29mEpoch : 450/500 ===> Total loss = -2.6933e+03[0m
+2026-11-24 21:22:42,595 [2;29mEpoch : 500/500 ===> Total loss = -2.6954e+03[0m
+2026-11-24 21:22:43,596 Fixed final epoch: ACC=0.5373 NMI=0.6260 ARI=0.5388
+
+===== Saved trial class_related_0.60_3_full =====
+2026-11-24 21:22:43,805 HSACC protocol=course seed=3 rate_parameter=0.60 epochs=500
+2026-11-24 21:22:43,805 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [1379, 1962]}
+2026-11-24 21:22:46,136 [2;29mEpoch : 50/500 ===> Total loss = -2.6513e+03[0m
+2026-11-24 21:22:48,797 [2;29mEpoch : 100/500 ===> Total loss = -2.6803e+03[0m
+2026-11-24 21:22:51,647 [2;29mEpoch : 150/500 ===> Total loss = -2.6862e+03[0m
+2026-11-24 21:22:54,456 [2;29mEpoch : 200/500 ===> Total loss = -2.6865e+03[0m
+2026-11-24 21:22:57,241 [2;29mEpoch : 250/500 ===> Total loss = -2.6868e+03[0m
+2026-11-24 21:23:00,015 [2;29mEpoch : 300/500 ===> Total loss = -2.6864e+03[0m
+2026-11-24 21:23:02,787 [2;29mEpoch : 350/500 ===> Total loss = -2.6874e+03[0m
+2026-11-24 21:23:05,579 [2;29mEpoch : 400/500 ===> Total loss = -2.6901e+03[0m
+2026-11-24 21:23:08,376 [2;29mEpoch : 450/500 ===> Total loss = -2.6888e+03[0m
+2026-11-24 21:23:11,168 [2;29mEpoch : 500/500 ===> Total loss = -2.6854e+03[0m
+2026-11-24 21:23:12,090 Fixed final epoch: ACC=0.7674 NMI=0.7088 ARI=0.8887
+
+===== Saved trial random_0.20_1_full =====
+2026-11-24 21:03:41,573 HSACC protocol=course seed=1 rate_parameter=0.20 epochs=500
+2026-11-24 21:03:41,573 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [2142, 2153]}
+2026-11-24 21:03:48,500 [2;29mEpoch : 50/500 ===> Total loss = -6.2516e+03[0m
+2026-11-24 21:03:53,951 [2;29mEpoch : 100/500 ===> Total loss = -6.2813e+03[0m
+2026-11-24 21:03:59,773 [2;29mEpoch : 150/500 ===> Total loss = -6.2830e+03[0m
+2026-11-24 21:04:05,604 [2;29mEpoch : 200/500 ===> Total loss = -6.2854e+03[0m
+2026-11-24 21:04:11,415 [2;29mEpoch : 250/500 ===> Total loss = -6.2872e+03[0m
+2026-11-24 21:04:17,231 [2;29mEpoch : 300/500 ===> Total loss = -6.2724e+03[0m
+2026-11-24 21:04:23,031 [2;29mEpoch : 350/500 ===> Total loss = -6.2875e+03[0m
+2026-11-24 21:04:28,834 [2;29mEpoch : 400/500 ===> Total loss = -6.2904e+03[0m
+2026-11-24 21:04:34,637 [2;29mEpoch : 450/500 ===> Total loss = -6.2923e+03[0m
+2026-11-24 21:04:40,441 [2;29mEpoch : 500/500 ===> Total loss = -6.2796e+03[0m
+2026-11-24 21:04:41,290 Fixed final epoch: ACC=0.6689 NMI=0.6744 ARI=0.6995
+
+===== Saved trial random_0.20_2_full =====
+2026-11-24 21:04:41,494 HSACC protocol=course seed=2 rate_parameter=0.20 epochs=500
+2026-11-24 21:04:41,494 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [2150, 2145]}
+2026-11-24 21:04:46,694 [2;29mEpoch : 50/500 ===> Total loss = -6.2517e+03[0m
+2026-11-24 21:04:52,105 [2;29mEpoch : 100/500 ===> Total loss = -6.2761e+03[0m
+2026-11-24 21:04:58,012 [2;29mEpoch : 150/500 ===> Total loss = -6.2801e+03[0m
+2026-11-24 21:05:03,853 [2;29mEpoch : 200/500 ===> Total loss = -6.2801e+03[0m
+2026-11-24 21:05:09,662 [2;29mEpoch : 250/500 ===> Total loss = -6.2761e+03[0m
+2026-11-24 21:05:15,480 [2;29mEpoch : 300/500 ===> Total loss = -6.2855e+03[0m
+2026-11-24 21:05:21,306 [2;29mEpoch : 350/500 ===> Total loss = -6.2825e+03[0m
+2026-11-24 21:05:27,127 [2;29mEpoch : 400/500 ===> Total loss = -6.2906e+03[0m
+2026-11-24 21:05:32,938 [2;29mEpoch : 450/500 ===> Total loss = -6.2825e+03[0m
+2026-11-24 21:05:38,752 [2;29mEpoch : 500/500 ===> Total loss = -6.2880e+03[0m
+2026-11-24 21:05:39,592 Fixed final epoch: ACC=0.7259 NMI=0.6977 ARI=0.7546
+
+===== Saved trial random_0.20_3_full =====
+2026-11-24 21:05:39,796 HSACC protocol=course seed=3 rate_parameter=0.20 epochs=500
+2026-11-24 21:05:39,796 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [2168, 2127]}
+2026-11-24 21:05:44,996 [2;29mEpoch : 50/500 ===> Total loss = -6.2586e+03[0m
+2026-11-24 21:05:50,421 [2;29mEpoch : 100/500 ===> Total loss = -6.2673e+03[0m
+2026-11-24 21:05:56,268 [2;29mEpoch : 150/500 ===> Total loss = -6.2776e+03[0m
+2026-11-24 21:06:02,313 [2;29mEpoch : 200/500 ===> Total loss = -6.2783e+03[0m
+2026-11-24 21:06:08,731 [2;29mEpoch : 250/500 ===> Total loss = -6.2740e+03[0m
+2026-11-24 21:06:14,969 [2;29mEpoch : 300/500 ===> Total loss = -6.2772e+03[0m
+2026-11-24 21:06:21,059 [2;29mEpoch : 350/500 ===> Total loss = -6.2886e+03[0m
+2026-11-24 21:06:27,302 [2;29mEpoch : 400/500 ===> Total loss = -6.2741e+03[0m
+2026-11-24 21:06:33,886 [2;29mEpoch : 450/500 ===> Total loss = -6.2851e+03[0m
+2026-11-24 21:06:40,091 [2;29mEpoch : 500/500 ===> Total loss = -6.2808e+03[0m
+2026-11-24 21:06:40,992 Fixed final epoch: ACC=0.7766 NMI=0.7154 ARI=0.8879
+
+===== Saved trial random_0.40_1_full =====
+2026-11-24 21:06:41,199 HSACC protocol=course seed=1 rate_parameter=0.40 epochs=500
+2026-11-24 21:06:41,200 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1890, 1928]}
+2026-11-24 21:06:45,018 [2;29mEpoch : 50/500 ===> Total loss = -4.4540e+03[0m
+2026-11-24 21:06:49,103 [2;29mEpoch : 100/500 ===> Total loss = -4.4808e+03[0m
+2026-11-24 21:06:53,451 [2;29mEpoch : 150/500 ===> Total loss = -4.4861e+03[0m
+2026-11-24 21:06:57,811 [2;29mEpoch : 200/500 ===> Total loss = -4.4895e+03[0m
+2026-11-24 21:07:02,131 [2;29mEpoch : 250/500 ===> Total loss = -4.4871e+03[0m
+2026-11-24 21:07:06,489 [2;29mEpoch : 300/500 ===> Total loss = -4.4811e+03[0m
+2026-11-24 21:07:11,165 [2;29mEpoch : 350/500 ===> Total loss = -4.4929e+03[0m
+2026-11-24 21:07:16,635 [2;29mEpoch : 400/500 ===> Total loss = -4.4941e+03[0m
+2026-11-24 21:07:20,957 [2;29mEpoch : 450/500 ===> Total loss = -4.4913e+03[0m
+2026-11-24 21:07:25,306 [2;29mEpoch : 500/500 ===> Total loss = -4.4986e+03[0m
+2026-11-24 21:07:26,207 Fixed final epoch: ACC=0.7100 NMI=0.6834 ARI=0.7105
+
+===== Saved trial random_0.40_2_full =====
+2026-11-24 21:07:26,423 HSACC protocol=course seed=2 rate_parameter=0.40 epochs=500
+2026-11-24 21:07:26,423 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1916, 1902]}
+2026-11-24 21:07:30,343 [2;29mEpoch : 50/500 ===> Total loss = -4.4546e+03[0m
+2026-11-24 21:07:34,470 [2;29mEpoch : 100/500 ===> Total loss = -4.4818e+03[0m
+2026-11-24 21:07:38,918 [2;29mEpoch : 150/500 ===> Total loss = -4.4842e+03[0m
+2026-11-24 21:07:43,333 [2;29mEpoch : 200/500 ===> Total loss = -4.4860e+03[0m
+2026-11-24 21:07:47,726 [2;29mEpoch : 250/500 ===> Total loss = -4.4894e+03[0m
+2026-11-24 21:07:52,136 [2;29mEpoch : 300/500 ===> Total loss = -4.4906e+03[0m
+2026-11-24 21:07:56,547 [2;29mEpoch : 350/500 ===> Total loss = -4.4835e+03[0m
+2026-11-24 21:08:00,954 [2;29mEpoch : 400/500 ===> Total loss = -4.4900e+03[0m
+2026-11-24 21:08:05,359 [2;29mEpoch : 450/500 ===> Total loss = -4.4821e+03[0m
+2026-11-24 21:08:09,910 [2;29mEpoch : 500/500 ===> Total loss = -4.4862e+03[0m
+2026-11-24 21:08:10,854 Fixed final epoch: ACC=0.6982 NMI=0.6557 ARI=0.8253
+
+===== Saved trial random_0.40_3_full =====
+2026-11-24 21:08:11,068 HSACC protocol=course seed=3 rate_parameter=0.40 epochs=500
+2026-11-24 21:08:11,068 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1932, 1886]}
+2026-11-24 21:08:15,378 [2;29mEpoch : 50/500 ===> Total loss = -4.4567e+03[0m
+2026-11-24 21:08:19,460 [2;29mEpoch : 100/500 ===> Total loss = -4.4778e+03[0m
+2026-11-24 21:08:23,979 [2;29mEpoch : 150/500 ===> Total loss = -4.4656e+03[0m
+2026-11-24 21:08:28,371 [2;29mEpoch : 200/500 ===> Total loss = -4.4798e+03[0m
+2026-11-24 21:08:32,723 [2;29mEpoch : 250/500 ===> Total loss = -4.4833e+03[0m
+2026-11-24 21:08:37,070 [2;29mEpoch : 300/500 ===> Total loss = -4.4837e+03[0m
+2026-11-24 21:08:41,453 [2;29mEpoch : 350/500 ===> Total loss = -4.4824e+03[0m
+2026-11-24 21:08:45,796 [2;29mEpoch : 400/500 ===> Total loss = -4.4807e+03[0m
+2026-11-24 21:08:50,164 [2;29mEpoch : 450/500 ===> Total loss = -4.4805e+03[0m
+2026-11-24 21:08:54,517 [2;29mEpoch : 500/500 ===> Total loss = -4.4837e+03[0m
+2026-11-24 21:08:55,408 Fixed final epoch: ACC=0.7611 NMI=0.6913 ARI=0.8781
+
+===== Saved trial random_0.60_1_full =====
+2026-11-24 21:08:55,614 HSACC protocol=course seed=1 rate_parameter=0.60 epochs=500
+2026-11-24 21:08:55,614 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [1647, 1694]}
+2026-11-24 21:08:57,961 [2;29mEpoch : 50/500 ===> Total loss = -2.6332e+03[0m
+2026-11-24 21:09:00,500 [2;29mEpoch : 100/500 ===> Total loss = -2.6844e+03[0m
+2026-11-24 21:09:03,247 [2;29mEpoch : 150/500 ===> Total loss = -2.6902e+03[0m
+2026-11-24 21:09:05,996 [2;29mEpoch : 200/500 ===> Total loss = -2.6893e+03[0m
+2026-11-24 21:09:08,738 [2;29mEpoch : 250/500 ===> Total loss = -2.6970e+03[0m
+2026-11-24 21:09:11,455 [2;29mEpoch : 300/500 ===> Total loss = -2.6901e+03[0m
+2026-11-24 21:09:14,213 [2;29mEpoch : 350/500 ===> Total loss = -2.6915e+03[0m
+2026-11-24 21:09:16,927 [2;29mEpoch : 400/500 ===> Total loss = -2.6900e+03[0m
+2026-11-24 21:09:19,646 [2;29mEpoch : 450/500 ===> Total loss = -2.6953e+03[0m
+2026-11-24 21:09:22,366 [2;29mEpoch : 500/500 ===> Total loss = -2.6925e+03[0m
+2026-11-24 21:09:23,257 Fixed final epoch: ACC=0.6974 NMI=0.6530 ARI=0.7470
+
+===== Saved trial random_0.60_2_full =====
+2026-11-24 21:09:23,462 HSACC protocol=course seed=2 rate_parameter=0.60 epochs=500
+2026-11-24 21:09:23,462 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [1673, 1668]}
+2026-11-24 21:09:25,800 [2;29mEpoch : 50/500 ===> Total loss = -2.6322e+03[0m
+2026-11-24 21:09:28,377 [2;29mEpoch : 100/500 ===> Total loss = -2.6830e+03[0m
+2026-11-24 21:09:31,158 [2;29mEpoch : 150/500 ===> Total loss = -2.6868e+03[0m
+2026-11-24 21:09:33,946 [2;29mEpoch : 200/500 ===> Total loss = -2.6934e+03[0m
+2026-11-24 21:09:36,666 [2;29mEpoch : 250/500 ===> Total loss = -2.6964e+03[0m
+2026-11-24 21:09:39,394 [2;29mEpoch : 300/500 ===> Total loss = -2.6988e+03[0m
+2026-11-24 21:09:42,123 [2;29mEpoch : 350/500 ===> Total loss = -2.6980e+03[0m
+2026-11-24 21:09:44,853 [2;29mEpoch : 400/500 ===> Total loss = -2.6979e+03[0m
+2026-11-24 21:09:47,567 [2;29mEpoch : 450/500 ===> Total loss = -2.6997e+03[0m
+2026-11-24 21:09:50,327 [2;29mEpoch : 500/500 ===> Total loss = -2.6983e+03[0m
+2026-11-24 21:09:51,245 Fixed final epoch: ACC=0.5729 NMI=0.6231 ARI=0.6581
+
+===== Saved trial random_0.60_3_full =====
+2026-11-24 21:09:51,450 HSACC protocol=course seed=3 rate_parameter=0.60 epochs=500
+2026-11-24 21:09:51,450 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [1690, 1651]}
+2026-11-24 21:09:53,792 [2;29mEpoch : 50/500 ===> Total loss = -2.6392e+03[0m
+2026-11-24 21:09:56,383 [2;29mEpoch : 100/500 ===> Total loss = -2.6811e+03[0m
+2026-11-24 21:09:59,168 [2;29mEpoch : 150/500 ===> Total loss = -2.6918e+03[0m
+2026-11-24 21:10:01,900 [2;29mEpoch : 200/500 ===> Total loss = -2.6834e+03[0m
+2026-11-24 21:10:04,652 [2;29mEpoch : 250/500 ===> Total loss = -2.6902e+03[0m
+2026-11-24 21:10:07,372 [2;29mEpoch : 300/500 ===> Total loss = -2.6908e+03[0m
+2026-11-24 21:10:10,111 [2;29mEpoch : 350/500 ===> Total loss = -2.6927e+03[0m
+2026-11-24 21:10:12,842 [2;29mEpoch : 400/500 ===> Total loss = -2.6971e+03[0m
+2026-11-24 21:10:15,573 [2;29mEpoch : 450/500 ===> Total loss = -2.6896e+03[0m
+2026-11-24 21:10:18,317 [2;29mEpoch : 500/500 ===> Total loss = -2.6956e+03[0m
+2026-11-24 21:10:19,278 Fixed final epoch: ACC=0.7456 NMI=0.7011 ARI=0.8726
+
+===== Saved trial single_view_0.20_1_full =====
+2026-11-24 21:10:19,485 HSACC protocol=course seed=1 rate_parameter=0.20 epochs=500
+2026-11-24 21:10:19,485 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [1909, 2386]}
+2026-11-24 21:10:24,887 [2;29mEpoch : 50/500 ===> Total loss = -6.2555e+03[0m
+2026-11-24 21:10:30,485 [2;29mEpoch : 100/500 ===> Total loss = -6.2777e+03[0m
+2026-11-24 21:10:36,532 [2;29mEpoch : 150/500 ===> Total loss = -6.2788e+03[0m
+2026-11-24 21:10:42,758 [2;29mEpoch : 200/500 ===> Total loss = -6.2841e+03[0m
+2026-11-24 21:10:48,536 [2;29mEpoch : 250/500 ===> Total loss = -6.2919e+03[0m
+2026-11-24 21:10:54,311 [2;29mEpoch : 300/500 ===> Total loss = -6.2763e+03[0m
+2026-11-24 21:11:00,065 [2;29mEpoch : 350/500 ===> Total loss = -6.2882e+03[0m
+2026-11-24 21:11:05,821 [2;29mEpoch : 400/500 ===> Total loss = -6.2892e+03[0m
+2026-11-24 21:11:11,585 [2;29mEpoch : 450/500 ===> Total loss = -6.2915e+03[0m
+2026-11-24 21:11:17,383 [2;29mEpoch : 500/500 ===> Total loss = -6.2842e+03[0m
+2026-11-24 21:11:18,259 Fixed final epoch: ACC=0.7037 NMI=0.6790 ARI=0.7455
+
+===== Saved trial single_view_0.20_2_full =====
+2026-11-24 21:11:18,467 HSACC protocol=course seed=2 rate_parameter=0.20 epochs=500
+2026-11-24 21:11:18,467 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [1909, 2386]}
+2026-11-24 21:11:23,620 [2;29mEpoch : 50/500 ===> Total loss = -6.2596e+03[0m
+2026-11-24 21:11:28,973 [2;29mEpoch : 100/500 ===> Total loss = -6.2862e+03[0m
+2026-11-24 21:11:34,847 [2;29mEpoch : 150/500 ===> Total loss = -6.2914e+03[0m
+2026-11-24 21:11:40,818 [2;29mEpoch : 200/500 ===> Total loss = -6.2885e+03[0m
+2026-11-24 21:11:46,724 [2;29mEpoch : 250/500 ===> Total loss = -6.2839e+03[0m
+2026-11-24 21:11:52,634 [2;29mEpoch : 300/500 ===> Total loss = -6.2832e+03[0m
+2026-11-24 21:11:58,554 [2;29mEpoch : 350/500 ===> Total loss = -6.2894e+03[0m
+2026-11-24 21:12:04,469 [2;29mEpoch : 400/500 ===> Total loss = -6.2908e+03[0m
+2026-11-24 21:12:10,408 [2;29mEpoch : 450/500 ===> Total loss = -6.2859e+03[0m
+2026-11-24 21:12:16,308 [2;29mEpoch : 500/500 ===> Total loss = -6.2957e+03[0m
+2026-11-24 21:12:17,210 Fixed final epoch: ACC=0.6287 NMI=0.6740 ARI=0.6546
+
+===== Saved trial single_view_0.20_3_full =====
+2026-11-24 21:12:17,421 HSACC protocol=course seed=3 rate_parameter=0.20 epochs=500
+2026-11-24 21:12:17,421 Actual mask statistics: {'incomplete_sample_fraction': 0.19991617770326908, 'missing_block_fraction': 0.09995808885163454, 'fully_unobserved_samples': 0, 'observed_per_view': [1909, 2386]}
+2026-11-24 21:12:22,687 [2;29mEpoch : 50/500 ===> Total loss = -6.2579e+03[0m
+2026-11-24 21:12:28,146 [2;29mEpoch : 100/500 ===> Total loss = -6.2670e+03[0m
+2026-11-24 21:12:34,071 [2;29mEpoch : 150/500 ===> Total loss = -6.2743e+03[0m
+2026-11-24 21:12:39,976 [2;29mEpoch : 200/500 ===> Total loss = -6.2667e+03[0m
+2026-11-24 21:12:45,887 [2;29mEpoch : 250/500 ===> Total loss = -6.2670e+03[0m
+2026-11-24 21:12:51,837 [2;29mEpoch : 300/500 ===> Total loss = -6.2724e+03[0m
+2026-11-24 21:12:57,794 [2;29mEpoch : 350/500 ===> Total loss = -6.2794e+03[0m
+2026-11-24 21:13:03,805 [2;29mEpoch : 400/500 ===> Total loss = -6.2728e+03[0m
+2026-11-24 21:13:09,717 [2;29mEpoch : 450/500 ===> Total loss = -6.2754e+03[0m
+2026-11-24 21:13:15,610 [2;29mEpoch : 500/500 ===> Total loss = -6.2718e+03[0m
+2026-11-24 21:13:16,513 Fixed final epoch: ACC=0.7594 NMI=0.7122 ARI=0.8574
+
+===== Saved trial single_view_0.40_1_full =====
+2026-11-24 21:13:16,723 HSACC protocol=course seed=1 rate_parameter=0.40 epochs=500
+2026-11-24 21:13:16,724 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1432, 2386]}
+2026-11-24 21:13:20,519 [2;29mEpoch : 50/500 ===> Total loss = -4.4524e+03[0m
+2026-11-24 21:13:24,558 [2;29mEpoch : 100/500 ===> Total loss = -4.4771e+03[0m
+2026-11-24 21:13:28,855 [2;29mEpoch : 150/500 ===> Total loss = -4.4872e+03[0m
+2026-11-24 21:13:33,456 [2;29mEpoch : 200/500 ===> Total loss = -4.4838e+03[0m
+2026-11-24 21:13:37,783 [2;29mEpoch : 250/500 ===> Total loss = -4.4873e+03[0m
+2026-11-24 21:13:42,111 [2;29mEpoch : 300/500 ===> Total loss = -4.4780e+03[0m
+2026-11-24 21:13:46,416 [2;29mEpoch : 350/500 ===> Total loss = -4.4887e+03[0m
+2026-11-24 21:13:50,725 [2;29mEpoch : 400/500 ===> Total loss = -4.4923e+03[0m
+2026-11-24 21:13:55,011 [2;29mEpoch : 450/500 ===> Total loss = -4.4937e+03[0m
+2026-11-24 21:13:59,306 [2;29mEpoch : 500/500 ===> Total loss = -4.4925e+03[0m
+2026-11-24 21:14:00,235 Fixed final epoch: ACC=0.7096 NMI=0.6879 ARI=0.7281
+
+===== Saved trial single_view_0.40_2_full =====
+2026-11-24 21:14:00,441 HSACC protocol=course seed=2 rate_parameter=0.40 epochs=500
+2026-11-24 21:14:00,441 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1432, 2386]}
+2026-11-24 21:14:04,226 [2;29mEpoch : 50/500 ===> Total loss = -4.4545e+03[0m
+2026-11-24 21:14:08,223 [2;29mEpoch : 100/500 ===> Total loss = -4.4782e+03[0m
+2026-11-24 21:14:12,478 [2;29mEpoch : 150/500 ===> Total loss = -4.4819e+03[0m
+2026-11-24 21:14:16,672 [2;29mEpoch : 200/500 ===> Total loss = -4.4862e+03[0m
+2026-11-24 21:14:20,860 [2;29mEpoch : 250/500 ===> Total loss = -4.4836e+03[0m
+2026-11-24 21:14:25,041 [2;29mEpoch : 300/500 ===> Total loss = -4.4862e+03[0m
+2026-11-24 21:14:29,220 [2;29mEpoch : 350/500 ===> Total loss = -4.4822e+03[0m
+2026-11-24 21:14:33,389 [2;29mEpoch : 400/500 ===> Total loss = -4.4894e+03[0m
+2026-11-24 21:14:37,568 [2;29mEpoch : 450/500 ===> Total loss = -4.4819e+03[0m
+2026-11-24 21:14:41,738 [2;29mEpoch : 500/500 ===> Total loss = -4.4847e+03[0m
+2026-11-24 21:14:42,601 Fixed final epoch: ACC=0.7225 NMI=0.6820 ARI=0.8657
+
+===== Saved trial single_view_0.40_3_full =====
+2026-11-24 21:14:42,800 HSACC protocol=course seed=3 rate_parameter=0.40 epochs=500
+2026-11-24 21:14:42,800 Actual mask statistics: {'incomplete_sample_fraction': 0.39983235540653816, 'missing_block_fraction': 0.19991617770326908, 'fully_unobserved_samples': 0, 'observed_per_view': [1432, 2386]}
+2026-11-24 21:14:46,505 [2;29mEpoch : 50/500 ===> Total loss = -4.4584e+03[0m
+2026-11-24 21:14:50,411 [2;29mEpoch : 100/500 ===> Total loss = -4.4818e+03[0m
+2026-11-24 21:14:54,617 [2;29mEpoch : 150/500 ===> Total loss = -4.4767e+03[0m
+2026-11-24 21:14:58,803 [2;29mEpoch : 200/500 ===> Total loss = -4.4849e+03[0m
+2026-11-24 21:15:02,984 [2;29mEpoch : 250/500 ===> Total loss = -4.4814e+03[0m
+2026-11-24 21:15:07,170 [2;29mEpoch : 300/500 ===> Total loss = -4.4866e+03[0m
+2026-11-24 21:15:11,360 [2;29mEpoch : 350/500 ===> Total loss = -4.4828e+03[0m
+2026-11-24 21:15:15,532 [2;29mEpoch : 400/500 ===> Total loss = -4.4805e+03[0m
+2026-11-24 21:15:19,709 [2;29mEpoch : 450/500 ===> Total loss = -4.4766e+03[0m
+2026-11-24 21:15:23,904 [2;29mEpoch : 500/500 ===> Total loss = -4.4818e+03[0m
+2026-11-24 21:15:24,772 Fixed final epoch: ACC=0.7569 NMI=0.6961 ARI=0.8741
+
+===== Saved trial single_view_0.60_1_full =====
+2026-11-24 21:15:24,969 HSACC protocol=course seed=1 rate_parameter=0.60 epochs=500
+2026-11-24 21:15:24,969 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [955, 2386]}
+2026-11-24 21:15:27,210 [2;29mEpoch : 50/500 ===> Total loss = -2.6312e+03[0m
+2026-11-24 21:15:29,648 [2;29mEpoch : 100/500 ===> Total loss = -2.6823e+03[0m
+2026-11-24 21:15:32,280 [2;29mEpoch : 150/500 ===> Total loss = -2.6917e+03[0m
+2026-11-24 21:15:34,924 [2;29mEpoch : 200/500 ===> Total loss = -2.6942e+03[0m
+2026-11-24 21:15:37,530 [2;29mEpoch : 250/500 ===> Total loss = -2.6909e+03[0m
+2026-11-24 21:15:40,131 [2;29mEpoch : 300/500 ===> Total loss = -2.6889e+03[0m
+2026-11-24 21:15:42,741 [2;29mEpoch : 350/500 ===> Total loss = -2.6964e+03[0m
+2026-11-24 21:15:45,355 [2;29mEpoch : 400/500 ===> Total loss = -2.6949e+03[0m
+2026-11-24 21:15:47,968 [2;29mEpoch : 450/500 ===> Total loss = -2.6972e+03[0m
+2026-11-24 21:15:50,582 [2;29mEpoch : 500/500 ===> Total loss = -2.6913e+03[0m
+2026-11-24 21:15:51,462 Fixed final epoch: ACC=0.6597 NMI=0.6330 ARI=0.6690
+
+===== Saved trial single_view_0.60_2_full =====
+2026-11-24 21:15:51,660 HSACC protocol=course seed=2 rate_parameter=0.60 epochs=500
+2026-11-24 21:15:51,661 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [955, 2386]}
+2026-11-24 21:15:53,902 [2;29mEpoch : 50/500 ===> Total loss = -2.6318e+03[0m
+2026-11-24 21:15:56,392 [2;29mEpoch : 100/500 ===> Total loss = -2.6879e+03[0m
+2026-11-24 21:15:59,016 [2;29mEpoch : 150/500 ===> Total loss = -2.6959e+03[0m
+2026-11-24 21:16:01,630 [2;29mEpoch : 200/500 ===> Total loss = -2.7019e+03[0m
+2026-11-24 21:16:04,286 [2;29mEpoch : 250/500 ===> Total loss = -2.7032e+03[0m
+2026-11-24 21:16:06,902 [2;29mEpoch : 300/500 ===> Total loss = -2.6991e+03[0m
+2026-11-24 21:16:09,516 [2;29mEpoch : 350/500 ===> Total loss = -2.7021e+03[0m
+2026-11-24 21:16:12,129 [2;29mEpoch : 400/500 ===> Total loss = -2.6991e+03[0m
+2026-11-24 21:16:14,759 [2;29mEpoch : 450/500 ===> Total loss = -2.7023e+03[0m
+2026-11-24 21:16:17,359 [2;29mEpoch : 500/500 ===> Total loss = -2.7000e+03[0m
+2026-11-24 21:16:18,208 Fixed final epoch: ACC=0.4786 NMI=0.5959 ARI=0.4661
+
+===== Saved trial single_view_0.60_3_full =====
+2026-11-24 21:16:18,405 HSACC protocol=course seed=3 rate_parameter=0.60 epochs=500
+2026-11-24 21:16:18,405 Actual mask statistics: {'incomplete_sample_fraction': 0.5997485331098072, 'missing_block_fraction': 0.2998742665549036, 'fully_unobserved_samples': 0, 'observed_per_view': [955, 2386]}
+2026-11-24 21:16:20,651 [2;29mEpoch : 50/500 ===> Total loss = -2.6375e+03[0m
+2026-11-24 21:16:23,108 [2;29mEpoch : 100/500 ===> Total loss = -2.6810e+03[0m
+2026-11-24 21:16:25,727 [2;29mEpoch : 150/500 ===> Total loss = -2.6938e+03[0m
+2026-11-24 21:16:28,351 [2;29mEpoch : 200/500 ===> Total loss = -2.6879e+03[0m
+2026-11-24 21:16:30,974 [2;29mEpoch : 250/500 ===> Total loss = -2.6907e+03[0m
+2026-11-24 21:16:33,588 [2;29mEpoch : 300/500 ===> Total loss = -2.6898e+03[0m
+2026-11-24 21:16:36,199 [2;29mEpoch : 350/500 ===> Total loss = -2.6869e+03[0m
+2026-11-24 21:16:38,808 [2;29mEpoch : 400/500 ===> Total loss = -2.6928e+03[0m
+2026-11-24 21:16:41,399 [2;29mEpoch : 450/500 ===> Total loss = -2.6911e+03[0m
+2026-11-24 21:16:43,996 [2;29mEpoch : 500/500 ===> Total loss = -2.6971e+03[0m
+2026-11-24 21:16:44,856 Fixed final epoch: ACC=0.7728 NMI=0.7126 ARI=0.8505

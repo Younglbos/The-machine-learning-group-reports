@@ -346,7 +346,8 @@ def main():
     cache=ROOT/args.cache_dir
     cache.mkdir(parents=True,exist_ok=True)
     rows=[export_one(kind,cache,args.sources_only) for kind in ['course_report','literature_review']]
-    (OUT/'word_export_manifest.json').write_text(json.dumps({'documents':rows,'experimental_results_changed':False,
+    (OUT/'verification').mkdir(exist_ok=True)
+    (OUT/'verification/word_export_manifest.json').write_text(json.dumps({'documents':rows,'experimental_results_changed':False,
         'format':'Office Open XML .docx','ppt_status':'deferred_by_user'},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(rows,ensure_ascii=False,indent=2))
 

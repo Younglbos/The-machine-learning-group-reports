@@ -15,7 +15,7 @@ NAMES={'hsacc_course':'HSACC课程适配','mean_fill_kmeans':'均值填充+K-mea
     'random':'随机缺失','single_view':'单视图集中缺失','class_related':'类别相关缺失'}
 
 
-def read(name): return pd.read_csv(OUT/name)
+def read(name): return pd.read_csv(OUT/'tables'/name)
 def escape(value): return html.escape(str(value))
 def name(value): return NAMES.get(value,value)
 def ms(row,key,scale=100,digits=2):
@@ -34,8 +34,8 @@ def figure(file,caption):
 
 
 def main():
-    verification=json.loads((OUT/'analysis_verification.json').read_text(encoding='utf-8'))
-    predictions=json.loads((OUT/'prediction_verification.json').read_text(encoding='utf-8'))
+    verification=json.loads((OUT/'verification/analysis_verification.json').read_text(encoding='utf-8'))
+    predictions=json.loads((OUT/'verification/prediction_verification.json').read_text(encoding='utf-8'))
     if not predictions['all_metrics_recomputed']: raise ValueError('Unverified predictions')
     a=read('scenario_a_summary.csv')
     gains=read('scenario_a_paired_gains.csv')
@@ -175,7 +175,8 @@ def main():
     (intermediate/'course_report.html').write_text(document,encoding='utf-8')
     write={'report':'reports/多视图聚类课程设计_实验报告.docx','sections':len(sections),'figures':len(list((OUT/'figures').glob('*.png'))),
         'ppt_status':'deferred_by_user','source_verification':verification,'prediction_records':predictions['verified_records']}
-    (OUT/'report_manifest.json').write_text(json.dumps(write,ensure_ascii=False,indent=2),encoding='utf-8')
+    (OUT/'verification').mkdir(exist_ok=True)
+    (OUT/'verification/report_manifest.json').write_text(json.dumps(write,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(write,ensure_ascii=False))
 
 

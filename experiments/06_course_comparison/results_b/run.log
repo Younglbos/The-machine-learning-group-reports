@@ -1,24 +1,191 @@
-2026-11-24 21:23:15,324 Run none_11_warm_start
-2026-11-24 21:23:16,966 Run none_11_sliding_window
-2026-11-24 21:23:18,721 Run none_11_full_retrain
-2026-11-24 21:23:21,844 Run none_11_dsvc_course
-2026-11-24 21:25:03,557 Run none_21_warm_start
-2026-11-24 21:25:05,583 Run none_21_sliding_window
-2026-11-24 21:25:07,401 Run none_21_full_retrain
-2026-11-24 21:25:10,478 Run none_21_dsvc_course
-2026-11-24 21:26:58,610 Run none_22_warm_start
-2026-11-24 21:27:00,176 Run none_22_sliding_window
-2026-11-24 21:27:01,972 Run none_22_full_retrain
-2026-11-24 21:27:05,192 Run none_22_dsvc_course
-2026-11-24 21:28:49,979 Run view_noise_11_warm_start
-2026-11-24 21:28:51,532 Run view_noise_11_sliding_window
-2026-11-24 21:28:53,333 Run view_noise_11_full_retrain
-2026-11-24 21:28:56,411 Run view_noise_11_dsvc_course
-2026-11-24 21:30:39,350 Run view_noise_21_warm_start
-2026-11-24 21:30:40,928 Run view_noise_21_sliding_window
-2026-11-24 21:30:42,725 Run view_noise_21_full_retrain
-2026-11-24 21:30:45,900 Run view_noise_21_dsvc_course
-2026-11-24 21:32:28,808 Run view_noise_22_warm_start
-2026-11-24 21:32:30,366 Run view_noise_22_sliding_window
-2026-11-24 21:32:32,161 Run view_noise_22_full_retrain
-2026-11-24 21:32:35,223 Run view_noise_22_dsvc_course
+===== Saved view-stream case none_11_dsvc_course =====
+2026-11-24 21:24:10,471 dsvc_course none seed=11 view=1 ACC=0.5675 elapsed=45.22s
+2026-11-24 21:24:20,845 dsvc_course none seed=11 view=2 ACC=0.6985 elapsed=10.36s
+2026-11-24 21:24:31,183 dsvc_course none seed=11 view=3 ACC=0.7180 elapsed=10.33s
+2026-11-24 21:24:41,657 dsvc_course none seed=11 view=4 ACC=0.6880 elapsed=10.47s
+2026-11-24 21:24:52,072 dsvc_course none seed=11 view=5 ACC=0.6845 elapsed=10.41s
+2026-11-24 21:25:03,080 dsvc_course none seed=11 view=6 ACC=0.8370 elapsed=11.00s
+
+===== Saved view-stream case none_11_full_retrain =====
+2026-11-24 21:23:20,269 full_retrain none seed=11 view=1 ACC=0.7370 elapsed=0.16s
+2026-11-24 21:23:20,458 full_retrain none seed=11 view=2 ACC=0.7545 elapsed=0.18s
+2026-11-24 21:23:20,759 full_retrain none seed=11 view=3 ACC=0.7575 elapsed=0.29s
+2026-11-24 21:23:21,090 full_retrain none seed=11 view=4 ACC=0.7655 elapsed=0.32s
+2026-11-24 21:23:21,436 full_retrain none seed=11 view=5 ACC=0.7750 elapsed=0.34s
+2026-11-24 21:23:21,763 full_retrain none seed=11 view=6 ACC=0.8040 elapsed=0.32s
+
+===== Saved view-stream case none_11_sliding_window =====
+2026-11-24 21:23:18,395 sliding_window none seed=11 view=1 ACC=0.8600 elapsed=0.05s
+2026-11-24 21:23:18,446 sliding_window none seed=11 view=2 ACC=0.6750 elapsed=0.05s
+2026-11-24 21:23:18,501 sliding_window none seed=11 view=3 ACC=0.7670 elapsed=0.05s
+2026-11-24 21:23:18,556 sliding_window none seed=11 view=4 ACC=0.5895 elapsed=0.05s
+2026-11-24 21:23:18,610 sliding_window none seed=11 view=5 ACC=0.7870 elapsed=0.05s
+2026-11-24 21:23:18,652 sliding_window none seed=11 view=6 ACC=0.4315 elapsed=0.04s
+
+===== Saved view-stream case none_11_warm_start =====
+2026-11-24 21:23:16,836 warm_start none seed=11 view=1 ACC=0.8600 elapsed=0.05s
+2026-11-24 21:23:16,847 warm_start none seed=11 view=2 ACC=0.6470 elapsed=0.01s
+2026-11-24 21:23:16,860 warm_start none seed=11 view=3 ACC=0.8350 elapsed=0.01s
+2026-11-24 21:23:16,870 warm_start none seed=11 view=4 ACC=0.6485 elapsed=0.00s
+2026-11-24 21:23:16,880 warm_start none seed=11 view=5 ACC=0.8025 elapsed=0.00s
+2026-11-24 21:23:16,888 warm_start none seed=11 view=6 ACC=0.5760 elapsed=0.00s
+
+===== Saved view-stream case none_21_dsvc_course =====
+2026-11-24 21:26:01,312 dsvc_course none seed=21 view=1 ACC=0.4975 elapsed=47.42s
+2026-11-24 21:26:13,899 dsvc_course none seed=21 view=2 ACC=0.5995 elapsed=12.58s
+2026-11-24 21:26:24,979 dsvc_course none seed=21 view=3 ACC=0.6100 elapsed=11.07s
+2026-11-24 21:26:36,078 dsvc_course none seed=21 view=4 ACC=0.6210 elapsed=11.09s
+2026-11-24 21:26:47,127 dsvc_course none seed=21 view=5 ACC=0.5715 elapsed=11.04s
+2026-11-24 21:26:58,116 dsvc_course none seed=21 view=6 ACC=0.6980 elapsed=10.98s
+
+===== Saved view-stream case none_21_full_retrain =====
+2026-11-24 21:25:08,953 full_retrain none seed=21 view=1 ACC=0.7380 elapsed=0.16s
+2026-11-24 21:25:09,134 full_retrain none seed=21 view=2 ACC=0.7440 elapsed=0.18s
+2026-11-24 21:25:09,393 full_retrain none seed=21 view=3 ACC=0.7500 elapsed=0.25s
+2026-11-24 21:25:09,713 full_retrain none seed=21 view=4 ACC=0.8895 elapsed=0.31s
+2026-11-24 21:25:10,066 full_retrain none seed=21 view=5 ACC=0.8260 elapsed=0.35s
+2026-11-24 21:25:10,404 full_retrain none seed=21 view=6 ACC=0.7665 elapsed=0.33s
+
+===== Saved view-stream case none_21_sliding_window =====
+2026-11-24 21:25:07,072 sliding_window none seed=21 view=1 ACC=0.8585 elapsed=0.05s
+2026-11-24 21:25:07,123 sliding_window none seed=21 view=2 ACC=0.6705 elapsed=0.05s
+2026-11-24 21:25:07,182 sliding_window none seed=21 view=3 ACC=0.7680 elapsed=0.05s
+2026-11-24 21:25:07,229 sliding_window none seed=21 view=4 ACC=0.5900 elapsed=0.04s
+2026-11-24 21:25:07,284 sliding_window none seed=21 view=5 ACC=0.7150 elapsed=0.05s
+2026-11-24 21:25:07,330 sliding_window none seed=21 view=6 ACC=0.4315 elapsed=0.04s
+
+===== Saved view-stream case none_21_warm_start =====
+2026-11-24 21:25:05,452 warm_start none seed=21 view=1 ACC=0.8585 elapsed=0.05s
+2026-11-24 21:25:05,463 warm_start none seed=21 view=2 ACC=0.5970 elapsed=0.01s
+2026-11-24 21:25:05,479 warm_start none seed=21 view=3 ACC=0.6960 elapsed=0.01s
+2026-11-24 21:25:05,489 warm_start none seed=21 view=4 ACC=0.6485 elapsed=0.00s
+2026-11-24 21:25:05,499 warm_start none seed=21 view=5 ACC=0.7890 elapsed=0.00s
+2026-11-24 21:25:05,508 warm_start none seed=21 view=6 ACC=0.5760 elapsed=0.00s
+
+===== Saved view-stream case none_22_dsvc_course =====
+2026-11-24 21:27:54,299 dsvc_course none seed=22 view=1 ACC=0.5520 elapsed=45.57s
+2026-11-24 21:28:05,833 dsvc_course none seed=22 view=2 ACC=0.7120 elapsed=11.53s
+2026-11-24 21:28:16,739 dsvc_course none seed=22 view=3 ACC=0.7215 elapsed=10.90s
+2026-11-24 21:28:27,643 dsvc_course none seed=22 view=4 ACC=0.7720 elapsed=10.90s
+2026-11-24 21:28:38,516 dsvc_course none seed=22 view=5 ACC=0.6995 elapsed=10.87s
+2026-11-24 21:28:49,484 dsvc_course none seed=22 view=6 ACC=0.8040 elapsed=10.96s
+
+===== Saved view-stream case none_22_full_retrain =====
+2026-11-24 21:27:03,537 full_retrain none seed=22 view=1 ACC=0.7435 elapsed=0.18s
+2026-11-24 21:27:03,732 full_retrain none seed=22 view=2 ACC=0.7555 elapsed=0.19s
+2026-11-24 21:27:04,045 full_retrain none seed=22 view=3 ACC=0.9015 elapsed=0.31s
+2026-11-24 21:27:04,355 full_retrain none seed=22 view=4 ACC=0.7635 elapsed=0.30s
+2026-11-24 21:27:04,753 full_retrain none seed=22 view=5 ACC=0.7535 elapsed=0.39s
+2026-11-24 21:27:05,109 full_retrain none seed=22 view=6 ACC=0.8025 elapsed=0.35s
+
+===== Saved view-stream case none_22_sliding_window =====
+2026-11-24 21:27:01,652 sliding_window none seed=22 view=1 ACC=0.7420 elapsed=0.04s
+2026-11-24 21:27:01,698 sliding_window none seed=22 view=2 ACC=0.6720 elapsed=0.04s
+2026-11-24 21:27:01,753 sliding_window none seed=22 view=3 ACC=0.7670 elapsed=0.05s
+2026-11-24 21:27:01,806 sliding_window none seed=22 view=4 ACC=0.5880 elapsed=0.05s
+2026-11-24 21:27:01,856 sliding_window none seed=22 view=5 ACC=0.7890 elapsed=0.04s
+2026-11-24 21:27:01,901 sliding_window none seed=22 view=6 ACC=0.4315 elapsed=0.04s
+
+===== Saved view-stream case none_22_warm_start =====
+2026-11-24 21:27:00,056 warm_start none seed=22 view=1 ACC=0.7420 elapsed=0.04s
+2026-11-24 21:27:00,067 warm_start none seed=22 view=2 ACC=0.5455 elapsed=0.00s
+2026-11-24 21:27:00,080 warm_start none seed=22 view=3 ACC=0.8360 elapsed=0.01s
+2026-11-24 21:27:00,090 warm_start none seed=22 view=4 ACC=0.6500 elapsed=0.00s
+2026-11-24 21:27:00,099 warm_start none seed=22 view=5 ACC=0.8010 elapsed=0.00s
+2026-11-24 21:27:00,106 warm_start none seed=22 view=6 ACC=0.5760 elapsed=0.00s
+
+===== Saved view-stream case view_noise_11_dsvc_course =====
+2026-11-24 21:29:44,424 dsvc_course view_noise seed=11 view=1 ACC=0.5675 elapsed=44.78s
+2026-11-24 21:29:55,361 dsvc_course view_noise seed=11 view=2 ACC=0.6985 elapsed=10.93s
+2026-11-24 21:30:06,233 dsvc_course view_noise seed=11 view=3 ACC=0.6915 elapsed=10.86s
+2026-11-24 21:30:17,126 dsvc_course view_noise seed=11 view=4 ACC=0.6475 elapsed=10.88s
+2026-11-24 21:30:27,992 dsvc_course view_noise seed=11 view=5 ACC=0.5620 elapsed=10.86s
+2026-11-24 21:30:38,873 dsvc_course view_noise seed=11 view=6 ACC=0.5815 elapsed=10.87s
+
+===== Saved view-stream case view_noise_11_full_retrain =====
+2026-11-24 21:28:54,880 full_retrain view_noise seed=11 view=1 ACC=0.7370 elapsed=0.16s
+2026-11-24 21:28:55,068 full_retrain view_noise seed=11 view=2 ACC=0.7545 elapsed=0.18s
+2026-11-24 21:28:55,349 full_retrain view_noise seed=11 view=3 ACC=0.8020 elapsed=0.27s
+2026-11-24 21:28:55,666 full_retrain view_noise seed=11 view=4 ACC=0.9035 elapsed=0.31s
+2026-11-24 21:28:56,011 full_retrain view_noise seed=11 view=5 ACC=0.7540 elapsed=0.34s
+2026-11-24 21:28:56,337 full_retrain view_noise seed=11 view=6 ACC=0.7990 elapsed=0.32s
+
+===== Saved view-stream case view_noise_11_sliding_window =====
+2026-11-24 21:28:52,953 sliding_window view_noise seed=11 view=1 ACC=0.8600 elapsed=0.05s
+2026-11-24 21:28:53,005 sliding_window view_noise seed=11 view=2 ACC=0.6750 elapsed=0.05s
+2026-11-24 21:28:53,068 sliding_window view_noise seed=11 view=3 ACC=0.7660 elapsed=0.05s
+2026-11-24 21:28:53,123 sliding_window view_noise seed=11 view=4 ACC=0.5705 elapsed=0.05s
+2026-11-24 21:28:53,189 sliding_window view_noise seed=11 view=5 ACC=0.6065 elapsed=0.06s
+2026-11-24 21:28:53,263 sliding_window view_noise seed=11 view=6 ACC=0.3885 elapsed=0.07s
+
+===== Saved view-stream case view_noise_11_warm_start =====
+2026-11-24 21:28:51,399 warm_start view_noise seed=11 view=1 ACC=0.8600 elapsed=0.05s
+2026-11-24 21:28:51,410 warm_start view_noise seed=11 view=2 ACC=0.6470 elapsed=0.01s
+2026-11-24 21:28:51,429 warm_start view_noise seed=11 view=3 ACC=0.8325 elapsed=0.01s
+2026-11-24 21:28:51,442 warm_start view_noise seed=11 view=4 ACC=0.5365 elapsed=0.01s
+2026-11-24 21:28:51,452 warm_start view_noise seed=11 view=5 ACC=0.6725 elapsed=0.00s
+2026-11-24 21:28:51,461 warm_start view_noise seed=11 view=6 ACC=0.3865 elapsed=0.00s
+
+===== Saved view-stream case view_noise_21_dsvc_course =====
+2026-11-24 21:31:33,958 dsvc_course view_noise seed=21 view=1 ACC=0.4975 elapsed=44.77s
+2026-11-24 21:31:45,031 dsvc_course view_noise seed=21 view=2 ACC=0.5995 elapsed=11.07s
+2026-11-24 21:31:55,883 dsvc_course view_noise seed=21 view=3 ACC=0.6635 elapsed=10.84s
+2026-11-24 21:32:06,708 dsvc_course view_noise seed=21 view=4 ACC=0.6560 elapsed=10.82s
+2026-11-24 21:32:17,500 dsvc_course view_noise seed=21 view=5 ACC=0.5610 elapsed=10.78s
+2026-11-24 21:32:28,327 dsvc_course view_noise seed=21 view=6 ACC=0.5680 elapsed=10.82s
+
+===== Saved view-stream case view_noise_21_full_retrain =====
+2026-11-24 21:30:44,268 full_retrain view_noise seed=21 view=1 ACC=0.7380 elapsed=0.15s
+2026-11-24 21:30:44,446 full_retrain view_noise seed=21 view=2 ACC=0.7440 elapsed=0.17s
+2026-11-24 21:30:44,723 full_retrain view_noise seed=21 view=3 ACC=0.8045 elapsed=0.26s
+2026-11-24 21:30:45,077 full_retrain view_noise seed=21 view=4 ACC=0.9085 elapsed=0.35s
+2026-11-24 21:30:45,452 full_retrain view_noise seed=21 view=5 ACC=0.7520 elapsed=0.37s
+2026-11-24 21:30:45,805 full_retrain view_noise seed=21 view=6 ACC=0.7520 elapsed=0.35s
+
+===== Saved view-stream case view_noise_21_sliding_window =====
+2026-11-24 21:30:42,361 sliding_window view_noise seed=21 view=1 ACC=0.8585 elapsed=0.05s
+2026-11-24 21:30:42,410 sliding_window view_noise seed=21 view=2 ACC=0.6705 elapsed=0.04s
+2026-11-24 21:30:42,469 sliding_window view_noise seed=21 view=3 ACC=0.7700 elapsed=0.05s
+2026-11-24 21:30:42,525 sliding_window view_noise seed=21 view=4 ACC=0.5695 elapsed=0.05s
+2026-11-24 21:30:42,586 sliding_window view_noise seed=21 view=5 ACC=0.5815 elapsed=0.05s
+2026-11-24 21:30:42,652 sliding_window view_noise seed=21 view=6 ACC=0.3600 elapsed=0.06s
+
+===== Saved view-stream case view_noise_21_warm_start =====
+2026-11-24 21:30:40,796 warm_start view_noise seed=21 view=1 ACC=0.8585 elapsed=0.05s
+2026-11-24 21:30:40,806 warm_start view_noise seed=21 view=2 ACC=0.5970 elapsed=0.00s
+2026-11-24 21:30:40,826 warm_start view_noise seed=21 view=3 ACC=0.6930 elapsed=0.01s
+2026-11-24 21:30:40,838 warm_start view_noise seed=21 view=4 ACC=0.5325 elapsed=0.00s
+2026-11-24 21:30:40,849 warm_start view_noise seed=21 view=5 ACC=0.6480 elapsed=0.01s
+2026-11-24 21:30:40,858 warm_start view_noise seed=21 view=6 ACC=0.3830 elapsed=0.00s
+
+===== Saved view-stream case view_noise_22_dsvc_course =====
+2026-11-24 21:33:23,185 dsvc_course view_noise seed=22 view=1 ACC=0.5520 elapsed=44.73s
+2026-11-24 21:33:34,040 dsvc_course view_noise seed=22 view=2 ACC=0.7120 elapsed=10.85s
+2026-11-24 21:33:44,811 dsvc_course view_noise seed=22 view=3 ACC=0.6855 elapsed=10.76s
+2026-11-24 21:33:55,620 dsvc_course view_noise seed=22 view=4 ACC=0.6925 elapsed=10.80s
+2026-11-24 21:34:06,422 dsvc_course view_noise seed=22 view=5 ACC=0.6375 elapsed=10.79s
+2026-11-24 21:34:17,292 dsvc_course view_noise seed=22 view=6 ACC=0.6545 elapsed=10.86s
+
+===== Saved view-stream case view_noise_22_full_retrain =====
+2026-11-24 21:32:33,707 full_retrain view_noise seed=22 view=1 ACC=0.7435 elapsed=0.17s
+2026-11-24 21:32:33,889 full_retrain view_noise seed=22 view=2 ACC=0.7555 elapsed=0.17s
+2026-11-24 21:32:34,171 full_retrain view_noise seed=22 view=3 ACC=0.9015 elapsed=0.27s
+2026-11-24 21:32:34,466 full_retrain view_noise seed=22 view=4 ACC=0.8840 elapsed=0.29s
+2026-11-24 21:32:34,796 full_retrain view_noise seed=22 view=5 ACC=0.7545 elapsed=0.32s
+2026-11-24 21:32:35,149 full_retrain view_noise seed=22 view=6 ACC=0.8010 elapsed=0.35s
+
+===== Saved view-stream case view_noise_22_sliding_window =====
+2026-11-24 21:32:31,787 sliding_window view_noise seed=22 view=1 ACC=0.7420 elapsed=0.04s
+2026-11-24 21:32:31,834 sliding_window view_noise seed=22 view=2 ACC=0.6720 elapsed=0.04s
+2026-11-24 21:32:31,897 sliding_window view_noise seed=22 view=3 ACC=0.7650 elapsed=0.05s
+2026-11-24 21:32:31,955 sliding_window view_noise seed=22 view=4 ACC=0.5455 elapsed=0.05s
+2026-11-24 21:32:32,014 sliding_window view_noise seed=22 view=5 ACC=0.6220 elapsed=0.05s
+2026-11-24 21:32:32,089 sliding_window view_noise seed=22 view=6 ACC=0.3700 elapsed=0.07s
+
+===== Saved view-stream case view_noise_22_warm_start =====
+2026-11-24 21:32:30,233 warm_start view_noise seed=22 view=1 ACC=0.7420 elapsed=0.04s
+2026-11-24 21:32:30,244 warm_start view_noise seed=22 view=2 ACC=0.5455 elapsed=0.00s
+2026-11-24 21:32:30,263 warm_start view_noise seed=22 view=3 ACC=0.8295 elapsed=0.01s
+2026-11-24 21:32:30,275 warm_start view_noise seed=22 view=4 ACC=0.5670 elapsed=0.01s
+2026-11-24 21:32:30,286 warm_start view_noise seed=22 view=5 ACC=0.6690 elapsed=0.00s
+2026-11-24 21:32:30,295 warm_start view_noise seed=22 view=6 ACC=0.3715 elapsed=0.00s
