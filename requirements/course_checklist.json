@@ -49,7 +49,7 @@
       "note": "作者代码试验与课程统一协议分开报告，固定最终轮，不以最佳标签指标选模型。",
       "evidence": [
         "reports/scenario_a_paired_gains.csv",
-        "reports/course_report.html"
+        "reports/多视图聚类课程设计_实验报告.docx"
       ],
       "progress_note": "统一协议三个随机缺失比例的三个种子均相对均值填充为正收益；固定500轮，不按标签挑选轮次。"
     },
@@ -149,7 +149,7 @@
       "status": "complete",
       "evidence": [
         "reports/figures",
-        "reports/course_report.html"
+        "reports/多视图聚类课程设计_实验报告.docx"
       ],
       "progress_note": "质量表、缺失曲线、逐批曲线、消融、二维PCA、效率与邻域图已生成并说明统计口径。"
     },
@@ -173,7 +173,7 @@
       "evidence": [
         "reports/prediction_verification.json",
         "reports/course_predictions.jsonl.gz",
-        "reports/course_report.html"
+        "reports/多视图聚类课程设计_实验报告.docx"
       ],
       "progress_note": "保存配置/环境/日志/标签/CSV；252条课程记录重算主指标；公开紧凑标签档案可无数据核验。"
     },
@@ -182,7 +182,7 @@
       "requirement": "文献真实可检索，说明研究缺口，区分正式发表与预印本/公开页面。",
       "status": "complete",
       "evidence": [
-        "reports/literature_review.html",
+        "reports/多视图聚类课程设计_文献综述.docx",
         "THIRD_PARTY.md"
       ],
       "progress_note": "教师条目逐项核验，重点复现两篇；区分正式版本、预印本和摘要；第7条未核实，不冒充已确认文献。"
@@ -192,7 +192,7 @@
       "requirement": "提交最终报告、完整代码、演示/汇报材料。",
       "status": "partial",
       "evidence": [
-        "reports/course_report.html",
+        "reports/多视图聚类课程设计_实验报告.docx",
         "scripts/demo_course.py",
         "reports/README.md"
       ],

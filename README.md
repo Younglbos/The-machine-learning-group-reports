@@ -4,7 +4,7 @@
 
 **当前进度：课程A/B主实验、消融、单视图噪声、独立进程效率、误差分析和报告均已完成。** 252条课程预测记录已重新计算ACC/NMI/ARI，12项协议测试通过。PPT按用户要求最后制作，目前未制作PPT，也未完成现场答辩；不将作者单数据集试验说成整篇论文的全部复现。
 
-主文档：[实验报告（HTML）](reports/course_report.html)、[文献综述与教师条目核验](reports/literature_review.html)、[报告文件与演示说明](reports/README.md)。HTML报告下载后在浏览器打开，保留旁边的 `figures/` 文件夹。
+主文档：[实验报告（Word）](reports/多视图聚类课程设计_实验报告.docx)、[文献综述与教师条目核验（Word）](reports/多视图聚类课程设计_文献综述.docx)、[报告文件与演示说明](reports/README.md)。两个Word文件均可编辑，图表已嵌入文档，可单独下载打开。
 
 ## 实验目录
 
@@ -128,7 +128,7 @@ configs/               拆分前的统一基线配置，保留用于原始结果
 scripts/               数据与固定版本论文资源下载工具
 tests/                 协议测试，使用Python unittest
 references/            公开论文/源码下载清单，不提交PDF或源码压缩包
-reports/               HTML报告、文献综述、统计CSV、图表与公开预测标签档案
+reports/               Word报告、Word文献综述、统计CSV、图表与公开预测标签档案
 requirements/          课程验收进度清单
 third_party/           运行下载脚本后生成，Git忽略
 ```

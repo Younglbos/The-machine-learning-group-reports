@@ -1,0 +1,69 @@
+{
+  "documents": [
+    {
+      "file": "reports/多视图聚类课程设计_实验报告.docx",
+      "source": "reports/sources/course_report.json",
+      "source_sha256": "94a1c5aaccd0c5758e9eb3d59327735ad5449c6327c269f96df570effee536e1",
+      "sha256": "2f9c9f3d0519e744ab8bc53a10ec22cb72bbc079e013f42717ce3ca1ad60cccd",
+      "tables": 14,
+      "source_figures": 10,
+      "embedded_panels": 27,
+      "paragraphs": 158,
+      "render_qa": "passed",
+      "pages": 25,
+      "all_pages_visually_reviewed": true,
+      "source_table_text_matches": true,
+      "render_engine": "Native WPS Office 12.0 read-only PDF export with packaged render_docx.py and runtime Poppler",
+      "page_image_sha256": {
+        "1": "bab6f1eaa399f84b28c28f02b5918c1470258e347b2e2bc361419119e4dbf701",
+        "2": "e37595581de2d68efbf80d5b42e30c31bd4f52289551a4359b111708fe5f2210",
+        "3": "f9c8a663d9c9b10901d13cf89eac031c4834857f39c902f46f034e99dd861c5c",
+        "4": "23c26105a0f99876a06b5dd2349a8453b68969732de5cc9de922664f8263c407",
+        "5": "7aa976cddebe7362d2014696ab0a9cb837e3b8bc016a2b225d3d24f91e307848",
+        "6": "0caba63d3e2202276af95d207cce1291c4c7e65488fa24fc82072774264c994f",
+        "7": "c1e4adc1edc4b75e18f46cd28be8719a4c3ef8e6ab55dde45e3e3abefdd06475",
+        "8": "3a06d8b507c5250eca6fc28a3d9b674d3b9a4f26e1956d193a100cea15ee41e4",
+        "9": "34852289c67c1aa95336a701f8f93e314f51c60c3cebc7a14d5d5d983f1c91ff",
+        "10": "e291106a531121b536beceddb0d7bd51ae2f6b75f539adb19310a7bee8e5401b",
+        "11": "642a4475a252e604f1df24b0d88ecceb88a0d7fb8021e9902b26080f1fdfefc4",
+        "12": "8159410d0547c5210f163e2c4e1cb653346b8bc3f852bd40c0f4431bc71a8e2c",
+        "13": "2628f0779053394f72fef56f4459eab770da1886e895d03325e45cfa187f88cf",
+        "14": "c88d2f4ede7c9c3fbb32a91fcfd434f3c105d142f6548b123ee0e1970c14f031",
+        "15": "6c5146769a31130392050397ba31d140e227f072fe7787240a5e856527d1de31",
+        "16": "b05e598884fa2eb82225e534315579ff1e1f1b6c01f7de90626e3393d0643b38",
+        "17": "b734d13e63e61779ffbf138abcf73ad016507bfebc7b3fe1f4547c1c25483576",
+        "18": "50d0810c7820ed9bc5b9a74b9d1418224681cc9b8469ed3ce02ec869352a15cb",
+        "19": "ecc9ac446a019d14bbf19e1c61395a9fa5ffc62fc89da1615bd892b6d8d57a4a",
+        "20": "5a380dc5d9fac9fb8b02385ca7f44b7469e6d86af10905643d9746160ba6647d",
+        "21": "2337862448841904a97ac4f9c71c84a221861a910e618beaa10b65437245c5d7",
+        "22": "8d7d2a5ebacf1453ed1c45b3e9104d5de2338668f2eabf7866e9c557be8a552b",
+        "23": "2338b1723d8770b003c49e04dff7e72ab41f06eed0fda3c457efb6020af3575d",
+        "24": "204a707e4fe815fcb0ed96d6b0fd5ef1889eec76ffef8fefeb53cd09d04ad712",
+        "25": "a3b6daeb8ef42d26b1729f74436e5fd9383181f5560b48d2e212ef21a8dc2232"
+      }
+    },
+    {
+      "file": "reports/多视图聚类课程设计_文献综述.docx",
+      "source": "reports/sources/literature_review.json",
+      "source_sha256": "8bdc18b97e4f76bc416fd9f1674dcf1f61390ec7cf9b43d7a424eb0417e40c08",
+      "sha256": "2f50b339945e8bdde1cf68b694dcee0817f625e22f0354b8a3df68d12796b10f",
+      "tables": 1,
+      "source_figures": 0,
+      "embedded_panels": 0,
+      "paragraphs": 29,
+      "render_qa": "passed",
+      "pages": 3,
+      "all_pages_visually_reviewed": true,
+      "source_table_text_matches": true,
+      "render_engine": "Native WPS Office 12.0 read-only PDF export with packaged render_docx.py and runtime Poppler",
+      "page_image_sha256": {
+        "1": "1d04e0a176f85df457b386c709f5c0b482d11b3f601c77078e4986e2667b4f22",
+        "2": "99abe0c65410e23cd64a6741b24dcfd1dd38b8ce0aeefa166c9e17095578a40d",
+        "3": "43b62fc9ccfa12945f81f4890ee752759e0f7320d116230c2262ecec345e0bad"
+      }
+    }
+  ],
+  "experimental_results_changed": false,
+  "format": "Office Open XML .docx",
+  "ppt_status": "deferred_by_user"
+}

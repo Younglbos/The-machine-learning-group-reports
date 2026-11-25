@@ -1,13 +1,15 @@
 # 课程报告与核验材料
 
-主报告为 `course_report.html`（全部实验及预测核验后生成），浏览器可直接打开；图片保存在同目录的 `figures/`，移动报告时一并复制。它是HTML报告，不是Word或PPT文件。姓名、学号、班级及教师信息提交时按实际填写。
+正式报告为 `多视图聚类课程设计_实验报告.docx`，文献综述为 `多视图聚类课程设计_文献综述.docx`。两个文件均为可编辑的Word文档，图片、表格、公式和引用已嵌入，可单独下载。正式交付不使用HTML，PPT仍按用户安排最后制作。
 
 当前主实验、消融、噪声、独立效率和报告均已完成并核验；252条课程预测已重算ACC/NMI/ARI。PPT仍待后续制作。
 
 | 文件 | 用途 |
 | --- | --- |
-| `literature_review.html` | 教师8条论文的逐项核验、方法脉络、复现选择与来源链接 |
-| `course_report.html` | 问题、算法、统一实验、消融、误差、漂移、效率、复现边界 |
+| `多视图聚类课程设计_文献综述.docx` | 教师8条论文的逐项核验、方法脉络、复现选择与可点击来源链接 |
+| `多视图聚类课程设计_实验报告.docx` | 问题、算法、统一实验、消融、误差、漂移、效率、复现边界 |
+| `sources/*.json` | 文档内容源，供导出工具重建Word，不是提交给教师的文档格式 |
+| `word_export_manifest.json` | Word内容来源、文件校验值、表格和图表数量、最终分页检查记录 |
 | `scenario_a_*.csv` | 场景A逐次指标、3种子汇总与相对均值填充的配对收益 |
 | `geometry_*.csv` | 真实原始视图、均值填充、解码补全和共识的10-NN诊断 |
 | `scenario_b_*.csv` | 场景B质量、历史查询、累计时间、噪声配对影响与恢复 |
@@ -28,7 +30,11 @@ python scripts/run_in_environment.py -- -m evaluation.course_geometry
 python scripts/run_in_environment.py -- -m evaluation.build_course_analysis
 python scripts/run_in_environment.py -- -m evaluation.verify_course_outputs
 python scripts/run_in_environment.py -- -m evaluation.build_report
+# 使用包含python-docx、lxml、NumPy、Pillow的文档环境运行
+python scripts/export_word_reports.py
 ```
+
+Codex中使用Documents工作区自带Python生成Word，不需要改变原Conda训练环境。命令行用户可在单独文档环境安装 `requirements-documents.txt`，不包含PyTorch。`evaluation.finalize_course` 支持 `--document-python` 指定该解释器。生成后须用Word/WPS或文档渲染器检查全部分页，不能仅凭文件存在认定排版通过。
 
 只下载仓库即可核对公开预测，执行：
 

@@ -1,0 +1,695 @@
+{
+  "tag": "html",
+  "attributes": {
+    "lang": "zh-CN"
+  },
+  "text": null,
+  "tail": null,
+  "children": [
+    {
+      "tag": "head",
+      "attributes": {},
+      "text": null,
+      "tail": null,
+      "children": [
+        {
+          "tag": "meta",
+          "attributes": {
+            "charset": "utf-8"
+          },
+          "text": null,
+          "tail": null,
+          "children": []
+        },
+        {
+          "tag": "meta",
+          "attributes": {
+            "name": "viewport",
+            "content": "width=device-width,initial-scale=1"
+          },
+          "text": null,
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "title",
+          "attributes": {},
+          "text": "课程文献综述与复现选择",
+          "tail": null,
+          "children": []
+        },
+        {
+          "tag": "style",
+          "attributes": {},
+          "text": "body{font-family:\"Microsoft YaHei\",sans-serif;color:#172b3a;max-width:1000px;margin:40px auto;padding:0 24px;line-height:1.9}h1,h2{line-height:1.4}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #ccd5dc;padding:12px;text-align:left;vertical-align:top}th{background:#eef3f7}a{color:#125b91}.note{background:#f4f6f8;padding:16px} @media print{body{margin:0}tr{break-inside:avoid}}",
+          "tail": "\n",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "body",
+      "attributes": {},
+      "text": null,
+      "tail": null,
+      "children": [
+        {
+          "tag": "h1",
+          "attributes": {},
+          "text": "不完整多视图与流式多视图聚类：文献综述与复现选择",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "核验日期：2026年11月24日。本文围绕教师列出的论文组织方法脉络；论文介绍、作者代码试验、课程统一对照分别说明。未实际运行的方法不出现在本地性能排名中。",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "h2",
+          "attributes": {},
+          "text": "1. 问题与研究缺口",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "多视图聚类依赖对象之间的跨视图对应。整块视图缺失使直接拼接不可用，也使补全误差进入融合过程；视图逐批到达则要求方法在有限历史状态中保留有效知识。二者共同关心一致性与互补性，但可访问的信息不同：静态缺失模型可以反复访问已有观测，在线模型不能在每批重新读取全部历史原始视图。",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "文杰等的综述系统整理不完整多视图聚类框架及其比较，为理解表示学习与缺失恢复提供基础。本文将其用作背景文献，按教师说明不计为近两年论文。采用可直接读取的2022年预印本，并另标注2023年正式期刊版本，不混淆两个年份。",
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://arxiv.org/abs/2208.08040"
+              },
+              "text": "原文与版本信息",
+              "tail": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "h2",
+          "attributes": {},
+          "text": "2. 从补全到一致性表示",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "COMPLETER将跨视图互信息与双向预测结合，说明表示一致性与视图恢复可以共同优化。它提示课程实验应分别测量聚类质量和补全质量：前者改善并不直接证明后者准确。该文作为2021年的基础工作使用，未在本项目中重新训练。",
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://openaccess.thecvf.com/content/CVPR2021/html/Lin_COMPLETER_Incomplete_Multi-View_Clustering_via_Contrastive_Prediction_CVPR_2021_paper.html"
+              },
+              "text": "CVPR正式页面",
+              "tail": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "MIMB以双一致性约束和流形结构引导缺失恢复，同时通过视图权重平衡信息贡献。它对应教师提出的“补全不能只看数值”的问题，因此本项目另外计算真实视图、均值填充、解码补全与共识表示的邻域重合率。本文引用其arXiv:2405.10987版本；未运行该方法，不转述其表格数字作为本地结论。",
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://arxiv.org/abs/2405.10987"
+              },
+              "text": "作者预印本",
+              "tail": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "HSACC通过分层语义对齐和协作补全处理缺失视图。本文选择它作为场景A的深度表示方法，使用固定提交的作者网络和训练流程，并增加课程掩码、已观测行标准化和最终轮次评价。作者论文的权重机制是方法描述；本项目的双视图实现是否真正产生差异化权重，须通过源码和消融检验。",
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://papers.nips.cc/paper_files/paper/2025/hash/4b2a917e30e1bb1aff055b4d8c6c081c-Abstract-Conference.html"
+              },
+              "text": "NeurIPS 2025正式页面",
+              "tail": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "h2",
+          "attributes": {},
+          "text": "3. 从静态融合到视图流",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "FDMVC面向新视图逐步到达，通过矩阵分解区分语义一致部分与非语义部分，只继承语义一致信息。这一设计提出了明确的历史选择问题：保留全部特征会增加存储，也可能传递无关信息。本文仅依据出版社摘要讨论其机制，没有将未读的完整推导写入算法实现。",
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.sciencedirect.com/science/article/abs/pii/S0950705124008815"
+              },
+              "text": "出版社摘要",
+              "tail": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "DSVC使用原型知识库，将新视图知识提取、历史分布对齐和知识引导结合起来。它与教师的有限历史摘要及漂移任务直接相关，因此选为场景B的论文依据。本文同时保留作者入口试验和单独命名的课程适配：后者统一输入与预算，改变了推断注意力、批次原型对应及历史融合。",
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://proceedings.mlr.press/v267/yuan25d.html"
+              },
+              "text": "ICML 2025正式论文",
+              "tail": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "教师列出的CDIMVC与SCVT保留为扩展文献。CDIMVC的题名、作者和TKDE归属由作者主页核验；SCVT由作者主页核验为TIP 2025工作，教师条目的首作者“Wang J”与该来源不一致。由于尚未完成全文及版本核对，这两项不展开公式或声称已经复现。",
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://wanxinhang.github.io/"
+              },
+              "text": "CDIMVC作者记录",
+              "tail": "；",
+              "children": []
+            },
+            {
+              "tag": "a",
+              "attributes": {
+                "href": "https://dzboop.github.io/"
+              },
+              "text": "SCVT作者记录",
+              "tail": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "h2",
+          "attributes": {},
+          "text": "4. 教师论文与本项目的对应关系",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "table",
+          "attributes": {},
+          "text": null,
+          "tail": "\n",
+          "children": [
+            {
+              "tag": "thead",
+              "attributes": {},
+              "text": null,
+              "tail": null,
+              "children": [
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": null,
+                  "children": [
+                    {
+                      "tag": "th",
+                      "attributes": {},
+                      "text": "教师编号/工作",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "th",
+                      "attributes": {},
+                      "text": "核验与阅读范围",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "th",
+                      "attributes": {},
+                      "text": "项目用途与运行范围",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "tbody",
+              "attributes": {},
+              "text": "\n",
+              "tail": null,
+              "children": [
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[1] MIMB，2024",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "已核验arXiv原文版本",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "补全与邻域误差分析依据；未运行",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[2] FDMVC，2024",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "出版社摘要，KBS 300:112247，DOI 10.1016/j.knosys.2024.112247",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "历史语义选择的对照思路；未运行",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[3] CDIMVC，2025",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "作者主页核验题名、作者与TKDE归属；全文待精读",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "扩展文献；未运行",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[4] DSVC，2025",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "ICML正式全文，PMLR 267:73526–73540",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "实验05：作者单数据集；实验06B：明确标注的课程适配",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[5] HSACC，2025",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "NeurIPS正式全文与固定提交代码",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "实验04：作者单配置；实验06A/07：课程对照、消融和噪声",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[6] SCVT，2025",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "作者主页；首作者应为Zhibin Dong，详细书目以正式记录为准",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "扩展文献；未运行",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[7] 张量噪声抑制与补全，2026",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "尚未取得足以核验的出版社或作者原文",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "保留核验事项，不作为已确认正式参考文献，不补造DOI、卷期或实验结果",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "attributes": {},
+                  "text": null,
+                  "tail": "\n",
+                  "children": [
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "[8] IMVC综述",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "2022预印本；2023正式版本由作者发表记录确认",
+                      "tail": null,
+                      "children": []
+                    },
+                    {
+                      "tag": "td",
+                      "attributes": {},
+                      "text": "基础概念与实验协议；不计入近两年文献",
+                      "tail": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "h2",
+          "attributes": {},
+          "text": "5. 可检验的课程问题",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "p",
+          "attributes": {},
+          "text": "本项目不提出新算法优于所有既有方法的结论，而检验三件事：在相同缺失掩码下，学习表示能否稳定优于简单填充；聚类收益是否伴随真实邻域保持；在相同视图流和预算下，原型摘要能否以可接受资源维护质量和历史查询。消融同时检查实现层面的可辨识性，特别是双视图等权退化。课程贡献是透明的比较和误差解释，不能将已有网络和增加的评测包装成原创论文算法。",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "h2",
+          "attributes": {},
+          "text": "参考文献",
+          "tail": "\n",
+          "children": []
+        },
+        {
+          "tag": "ol",
+          "attributes": {},
+          "text": "\n",
+          "tail": null,
+          "children": [
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Wen J, Zhang Z, Fei L, et al. A Survey on Incomplete Multi-view Clustering. arXiv:2208.08040, 2022；正式版本：IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2023. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://sites.google.com/view/jerry-wen-hit/publications"
+                  },
+                  "text": "作者发表记录",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Lin Y, Gou Y, Liu Z, et al. COMPLETER: Incomplete Multi-View Clustering via Contrastive Prediction. CVPR, 2021. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://openaccess.thecvf.com/content/CVPR2021/html/Lin_COMPLETER_Incomplete_Multi-View_Clustering_via_Contrastive_Prediction_CVPR_2021_paper.html"
+                  },
+                  "text": "正式页面",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Wang H, Yao M, Chen Y, et al. Manifold-based Incomplete Multi-view Clustering via Bi-Consistency Guidance. arXiv:2405.10987, 2024. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://arxiv.org/abs/2405.10987"
+                  },
+                  "text": "预印本",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Lu S, Xu D, Zhang C, Zhu Z. Fast Dynamic Multi-view Clustering with semantic-consistency inheritance. Knowledge-Based Systems, 2024, 300:112247. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://doi.org/10.1016/j.knosys.2024.112247"
+                  },
+                  "text": "DOI",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Yuan H, Li X, Dai J, et al. Deep Streaming View Clustering. ICML, PMLR 267:73526–73540, 2025. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://proceedings.mlr.press/v267/yuan25d.html"
+                  },
+                  "text": "正式页面",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Ding X, Zhao L, Li X, Zhu X. Incomplete Multi-view Clustering via Hierarchical Semantic Alignment and Cooperative Completion. NeurIPS 38, 2025. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://papers.nips.cc/paper_files/paper/2025/hash/4b2a917e30e1bb1aff055b4d8c6c081c-Abstract-Conference.html"
+                  },
+                  "text": "正式页面",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Feng Y, Liang W, Wan X, et al. Incremental Multi-View Clustering: Exploring Stream-View Correlations to Learn Consistency and Diversity. IEEE Transactions on Knowledge and Data Engineering, 2025. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://wanxinhang.github.io/"
+                  },
+                  "text": "作者记录",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "attributes": {},
+              "text": "Dong Z, et al. Selective Cross-view Topology for Deep Incomplete Multi-view Clustering. IEEE Transactions on Image Processing, 2025. ",
+              "tail": "\n",
+              "children": [
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://dzboop.github.io/"
+                  },
+                  "text": "作者记录",
+                  "tail": null,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "p",
+          "attributes": {
+            "class": "note"
+          },
+          "text": "检索范围与限制：完整复现只覆盖两篇选定论文的一个数据集/配置；其他文献承担背景和设计依据。未核验条目明确保留，不能将“文献存在”“阅读摘要”“运行作者代码”“复现整篇论文”混为一谈。",
+          "tail": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

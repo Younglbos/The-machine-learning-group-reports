@@ -1,6 +1,8 @@
 """Finalize only completed experiments: recompute, document, and validate artifacts."""
 
+import argparse
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -9,12 +11,16 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--document-python',default=os.environ.get('MVC_DOCUMENT_PYTHON',sys.executable),help='Python with document dependencies; use the Documents workspace runtime in Codex')
+    args=parser.parse_args()
     progress=ROOT/'experiments/06_course_comparison/progress.json'
     saved=json.loads(progress.read_text(encoding='utf-8'))
     if saved['phase']!='experiments_complete': raise RuntimeError('Wait for all frozen experiments to complete first')
     for module in ['evaluation.course_geometry','evaluation.build_course_analysis','evaluation.verify_course_outputs',
                    'evaluation.build_report']:
         subprocess.run([sys.executable,'-m',module],cwd=ROOT,check=True)
+    subprocess.run([args.document_python,'-B','scripts/export_word_reports.py'],cwd=ROOT,check=True)
     subprocess.run([sys.executable,'scripts/validate_repository.py','--include-paper-results','--include-course-results'],cwd=ROOT,check=True)
     subprocess.run([sys.executable,'-m','evaluation.verify_course_outputs','--public-only'],cwd=ROOT,check=True)
     analysis=json.loads((ROOT/'reports/analysis_verification.json').read_text(encoding='utf-8'))
@@ -22,7 +28,7 @@ def main():
     file=ROOT/'requirements/course_checklist.json'
     checklist=json.loads(file.read_text(encoding='utf-8'))
     updates={
-        'A4':('complete',['reports/scenario_a_paired_gains.csv','reports/course_report.html'],
+        'A4':('complete',['reports/scenario_a_paired_gains.csv','reports/多视图聚类课程设计_实验报告.docx'],
               '统一协议三个随机缺失比例的三个种子均相对均值填充为正收益；固定500轮，不按标签挑选轮次。'),
         'A5':('complete',['reports/geometry_summary.csv','reports/figures/course_a_geometry_pca.png','reports/figures/course_a_geometry_neighbors.png'],
               '真实原始特征、均值填充、解码补全与共识的10-NN误差分析及两张图已完成；隐藏真值仅离线诊断。'),
@@ -40,15 +46,15 @@ def main():
               '匹配标签变化、固定旧表示探针、遗忘和恢复均已分析；报告查询空间差异的限制。'),
         'metrics':('complete',['reports/scenario_a_summary.csv','reports/scenario_b_final.csv','reports/isolated_efficiency_summary.csv','reports/geometry_summary.csv'],
               'ACC/NMI/ARI均值±样本SD，Silhouette、邻域，单批/总时长、原生峰值、GPU峰值和恢复均有证据。'),
-        'figures':('complete',['reports/figures','reports/course_report.html'],
+        'figures':('complete',['reports/figures','reports/多视图聚类课程设计_实验报告.docx'],
               '质量表、缺失曲线、逐批曲线、消融、二维PCA、效率与邻域图已生成并说明统计口径。'),
         'modules':('complete',['data','models','train_or_update','evaluation','visualization'],
               '五个模块用于实际基线、作者试验和课程适配；12项协议测试通过。'),
-        'reproducibility':('complete',['reports/prediction_verification.json','reports/course_predictions.jsonl.gz','reports/course_report.html'],
+        'reproducibility':('complete',['reports/prediction_verification.json','reports/course_predictions.jsonl.gz','reports/多视图聚类课程设计_实验报告.docx'],
               '保存配置/环境/日志/标签/CSV；252条课程记录重算主指标；公开紧凑标签档案可无数据核验。'),
-        'literature':('complete',['reports/literature_review.html','THIRD_PARTY.md'],
+        'literature':('complete',['reports/多视图聚类课程设计_文献综述.docx','THIRD_PARTY.md'],
               '教师条目逐项核验，重点复现两篇；区分正式版本、预印本和摘要；第7条未核实，不冒充已确认文献。'),
-        'delivery':('partial',['reports/course_report.html','scripts/demo_course.py','reports/README.md'],
+        'delivery':('partial',['reports/多视图聚类课程设计_实验报告.docx','scripts/demo_course.py','reports/README.md'],
               '报告、代码与可运行演示已完成；PPT按用户要求最后制作，目前尚未交付PPT或完成现场答辩。'),
     }
     for check in checklist['checks']:
@@ -68,7 +74,7 @@ def main():
         local=json.loads(private.read_text(encoding='utf-8'))
         local.update(checks=checklist['checks'],ppt_status=checklist['ppt_status'])
         private.write_text(json.dumps(local,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    saved.update(reporting_pending=False,report='reports/course_report.html',prediction_records_verified=252,ppt_status='deferred_by_user')
+    saved.update(reporting_pending=False,report='reports/多视图聚类课程设计_实验报告.docx',prediction_records_verified=252,ppt_status='deferred_by_user')
     progress.write_text(json.dumps(saved,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Experiment/report/code/demo checks complete. PPT remains deferred by the user.')
 

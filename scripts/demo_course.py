@@ -31,7 +31,7 @@ def main():
         else:
             frame=pd.read_csv(ROOT/'reports/scenario_b_summary.csv')
             print(frame[frame.method=='dsvc_course'][['condition','view','acc_mean','acc_std','cumulative_s_mean','retained_state_mb_mean']].to_string(index=False))
-        print('All means use three seeds; SD uses ddof=1. See reports/course_report.html for limitations.')
+        print('All means use three seeds; SD uses ddof=1. See reports/多视图聚类课程设计_实验报告.docx for limitations.')
         return
     if args.scenario=='b':
         from scipy.io import loadmat

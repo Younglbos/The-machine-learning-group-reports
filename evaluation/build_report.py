@@ -66,7 +66,7 @@ def main():
     max_batch=stream[stream.method=='dsvc_course'].update_s.max()
     section('摘要',p(f'围绕整块视图缺失与视图逐批到达两个场景，建立共享数据处理、训练、评估和绘图模块。场景A采用Caltech101-20的HOG/GIST，三种缺失模式、三种不完整样本比例、三个随机种子，对比简单填充与HSACC表示学习；场景B采用HandWritten六视图流，在相同输入、历史约束和预先固定的90秒预算下，对比三个指定基线与DSVC课程适配。随机缺失下，相对均值填充的配对ACC收益为：{gain_text}。DSVC课程适配最终ACC在无漂移下为{ms(ds,"acc")}%，加噪下为{ms(dn,"acc")}%。同时报告补全误差、邻域保持、消融与隔离进程效率，区分作者代码试验和课程适配。结论仅适用于选定数据与配置，三个种子的结果为描述统计。')+p('<b>关键词：</b>不完整多视图聚类；视图流；协作补全；原型摘要；概念漂移；可复现比较。'))
     section('1. 问题定义与文献依据',p('场景A给定样本对齐的多视图特征与观测掩码M，目标是在不读取隐藏视图的条件下输出K个簇。场景B固定对象集合，第t批只开放新视图X(t)，在线学习器只能使用当前特征和有限历史摘要；全量重训练作为任务书允许的额外信息参考。')+
-        p('文献路线包括COMPLETER的信息一致性与预测、MIMB的双一致性与流形约束、HSACC的分层语义对齐，以及FDMVC的语义继承和DSVC的原型知识库。本文据此选择教师列出的HSACC、DSVC分别实现两个场景。完整综述、来源链接和教师条目逐项核验见<a href="literature_review.html">文献综述与复现选择</a>。教师第7条尚缺可靠原文，未冒充已核实文献。')+
+        p('文献路线包括COMPLETER的信息一致性与预测、MIMB的双一致性与流形约束、HSACC的分层语义对齐，以及FDMVC的语义继承和DSVC的原型知识库。本文据此选择教师列出的HSACC、DSVC分别实现两个场景。完整综述、来源链接和教师条目逐项核验见<a href="多视图聚类课程设计_文献综述.docx">文献综述与复现选择</a>。教师第7条尚缺可靠原文，未冒充已核实文献。')+
         p('这里的研究问题是：相同观测条件下学习表示能否稳定改善聚类；聚类收益能否解释为真实邻域恢复；有限摘要能否在漂移与预算约束下保留质量。本文不主张提出了超越既有论文的新算法。'))
     datasets=[['BBCSport',544,2,5,'3183 / 3203'],['BBC4view',685,4,5,'4659 / 4633 / 4665 / 4684'],
         ['Caltech101-20',2386,6,20,'48 / 40 / 254 / 1984 / 512 / 928'],['NUS-WIDE子集',2400,5,12,'64 / 144 / 73 / 128 / 225'],
@@ -159,7 +159,7 @@ def main():
         p('原始实验01—03来自此前Python3.12环境，仅作历史基线资料。课程06/07在同一已有Micro环境中重新运行可比基线与深度方法，避免把不同版本结果混入主比较。未重新安装PyTorch，临时文件与缓存均由启动器重定向到D盘项目.cache。')+
         p(f'核验通过：A质量记录{verification["a_records"]}条，B批次记录{verification["b_records"]}条；消融表含{verification["ablation_records"]}条（含复用完整方法），鲁棒性表含{verification["robustness_records"]}条（含复用无噪声控制），A独立效率9个病例。另有9条完整信息参考。合计{predictions["verified_records"]}条课程预测记录已由保存标签重新计算ACC/NMI/ARI，绝对误差阈值1e-12，不能把复用控制或效率重跑当成额外独立样本。')+
         p('配置、日志和CSV位于各实验目录；最终标签、掩码、模型权重保存在本地输出。公共course_predictions.jsonl.gz只含真实标签、预测标签与条件标识，供离线核验；不含原始特征、潜变量或模型权重。数据与作者源码按固定地址下载，不随仓库复制。')+
-        '<pre>python scripts/run_in_environment.py experiments/06_course_comparison/run.py --stage all\npython scripts/run_in_environment.py -- -m evaluation.course_geometry\npython scripts/run_in_environment.py -- -m evaluation.build_course_analysis\npython scripts/run_in_environment.py -- -m evaluation.verify_course_outputs\npython scripts/run_in_environment.py -- -m evaluation.build_report\npython scripts/run_in_environment.py scripts/validate_repository.py --include-paper-results --include-course-results\npython scripts/run_in_environment.py -- -m unittest discover -s tests -v</pre>')
+        '<pre>python scripts/run_in_environment.py experiments/06_course_comparison/run.py --stage all\npython scripts/run_in_environment.py -- -m evaluation.course_geometry\npython scripts/run_in_environment.py -- -m evaluation.build_course_analysis\npython scripts/run_in_environment.py -- -m evaluation.verify_course_outputs\npython scripts/run_in_environment.py -- -m evaluation.build_report\npython scripts/export_word_reports.py\npython scripts/run_in_environment.py scripts/validate_repository.py --include-paper-results --include-course-results\npython scripts/run_in_environment.py -- -m unittest discover -s tests -v</pre>')
     section('11. 作者协议试验与复现边界',p('实验04/05保留固定作者提交，分别完成单数据集与单配置的完整训练预算。HSACC作者掩码参数0.5实际约12.5%视图块缺失，不是50%；标准化也不同于课程协议。DSVC作者入口含与课程适配不同的推断路径。作者试验结果不能混入课程公平对比。')+
         table(['作者代码试验','本地最终ACC %','范围'],[['HSACC', '71.88 ± 8.26','Caltech HOG/GIST；500轮；种子1/2/3；作者模型初始化规则'],
             ['DSVC','83.53 ± 11.06','HandWritten；6视图；每视图200轮；种子11/21/22']],
@@ -170,8 +170,10 @@ def main():
         p('后续可以扩展三个以上视图检验权重、增加到达顺序及噪声强度、将对象级摘要压缩为簇级统计，并用独立划分评价表示迁移。按用户安排，PPT在实验、报告与代码核验后再制作；本报告不把尚未制作的PPT列为已交付。'))
     style='''body{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:#183044;background:#edf1f4;margin:0;line-height:1.85}main{max-width:1120px;margin:36px auto;padding:48px 54px;background:white;border-radius:12px}header{border-bottom:4px solid #164a6b;padding-bottom:24px}h1{font-size:30px;line-height:1.45;margin:8px 0}h2{font-size:23px;margin:36px 0 14px;color:#164a6b}p{margin:12px 0;text-align:justify}a{color:#146e9b}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.65}td,th{border:1px solid #d6e0e7;padding:8px 10px;vertical-align:top}th{background:#eaf1f6;text-align:left}caption{text-align:left;font-weight:bold;padding:12px 0}tr:nth-child(even){background:#f7f9fa}.table{overflow:auto;margin:18px 0}figure{margin:25px 0}figure img{display:block;width:100%;height:auto}figcaption{font-size:13px;color:#506777;margin-top:8px}pre{background:#edf3f7;padding:18px;overflow:auto;line-height:1.6;font-size:12px}.meta{color:#617785;font-size:14px}@media print{body{background:white}main{padding:0;margin:0;max-width:none}h2{break-after:avoid}tr,figure{break-inside:avoid}pre{white-space:pre-wrap}}'''
     document='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>多视图聚类课程设计实验报告</title><style>'+style+'</style><main><header><div class="meta">课程设计 · 实验报告 · 2026年11月24日</div><h1>不完整视图与多视图流：<br>统一协议比较、误差分析与可复现实现</h1><p class="meta">姓名、学号、班级与指导教师：提交时由学生按实际信息填写。<br>统计口径：3个随机种子，均值±样本标准差；全部课程主指标由保存预测核验。</p></header>'+''.join(sections)+'</main></html>'
-    (OUT/'course_report.html').write_text(document,encoding='utf-8')
-    write={'report':'reports/course_report.html','sections':len(sections),'figures':len(list((OUT/'figures').glob('*.png'))),
+    intermediate=ROOT/'.cache/word_sources'
+    intermediate.mkdir(parents=True,exist_ok=True)
+    (intermediate/'course_report.html').write_text(document,encoding='utf-8')
+    write={'report':'reports/多视图聚类课程设计_实验报告.docx','sections':len(sections),'figures':len(list((OUT/'figures').glob('*.png'))),
         'ppt_status':'deferred_by_user','source_verification':verification,'prediction_records':predictions['verified_records']}
     (OUT/'report_manifest.json').write_text(json.dumps(write,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(write,ensure_ascii=False))
